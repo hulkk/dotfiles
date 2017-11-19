@@ -23,6 +23,12 @@ let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 highlight Comment cterm=italic
 
+" use spaces instead of tabs
+set expandtab
+
+" indent/outdent 4 spaces at a time
+set shiftwidth=4
+
 " show cursorline
 set cursorline
 
