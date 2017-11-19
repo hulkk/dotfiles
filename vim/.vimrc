@@ -57,6 +57,12 @@ set incsearch
 " highlight all search results
 set hlsearch
 
+" ignore letter case when searching
+set ignorecase
+
+" except when search contains uppercase letters
+set smartcase
+
 " fix backspace in insert mode
 set backspace=2
 
