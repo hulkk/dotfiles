@@ -77,3 +77,6 @@ set noswapfile
 
 " disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" start scrolling earlier
+set scrolloff=3
