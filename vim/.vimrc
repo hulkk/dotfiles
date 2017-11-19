@@ -1,3 +1,6 @@
+" encoding must be set at first line or not at all
+set encoding=utf-8
+
 " vim-plug section begins
 call plug#begin('~/.vim/plugged')
 
