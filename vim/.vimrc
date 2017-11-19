@@ -65,3 +65,6 @@ set softtabstop=2
 
 " enable true colors support
 set termguicolors
+
+" disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
