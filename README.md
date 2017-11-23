@@ -1,5 +1,11 @@
 # dotfiles
 
+## Zsh
+
+```bash
+ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
+```
+
 ## Vim
 
 ```bash
