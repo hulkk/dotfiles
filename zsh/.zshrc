@@ -2,7 +2,7 @@
 export ZSH=~/.oh-my-zsh
 
 # configure theme
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -18,3 +18,6 @@ DEFAULT_USER=`whoami`
 
 # load syntax highlighting plugin
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# powerlevel settings
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator time battery)

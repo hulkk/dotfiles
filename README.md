@@ -4,6 +4,8 @@
 
 ```bash
 ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
+
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
 
 ## Vim
