@@ -4,10 +4,11 @@ set encoding=utf-8
 " vim-plug section begins
 call plug#begin('~/.vim/plugged')
 
-Plug 'itchyny/lightline.vim'  " lightline
-Plug 'sheerun/vim-polyglot'   " syntax highlighting
-Plug 'Yggdroot/indentLine'    " indent guides
-Plug 'airblade/vim-gitgutter' " git diff utility
+Plug 'itchyny/lightline.vim'    " lightline
+Plug 'sheerun/vim-polyglot'     " syntax highlighting
+Plug 'Yggdroot/indentLine'      " indent guides
+Plug 'airblade/vim-gitgutter'   " git diff utility
+Plug 'pearofducks/ansible-vim'  " ansible syntax plugin
 
 call plug#end()
 " vim-plug section ends
@@ -15,6 +16,9 @@ call plug#end()
 " Plug automatically executes following commands 
 " filetype plugin indent on
 " syntax enable
+
+" set ansible inventory filetype
+autocmd BufRead,BufNewFile */environments/*/inventory* set filetype=ansible
 
 " lightline settings
 let g:lightline = {
