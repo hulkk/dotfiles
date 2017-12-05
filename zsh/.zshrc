@@ -4,8 +4,31 @@ export ZSH=~/.oh-my-zsh
 # configure theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+# enable patched fonts
+POWERLEVEL9K_MODE='awesome-patched'
+
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# disable dir/git icons, leave home icon enabled
+POWERLEVEL9K_HOME_SUB_ICON=''
+POWERLEVEL9K_FOLDER_ICON=''
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
+
+# modify git icons
+POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
+POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
+
+#POWERLEVEL9K_VCS_STAGED_ICON='\u00b1'
+#POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
+#POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
+
+# modify git colours
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+
+# show status only on errors
+POWERLEVEL9K_STATUS_VERBOSE=false
 
 # fuck plugin
 eval $(thefuck --alias)
@@ -20,4 +43,8 @@ DEFAULT_USER=`whoami`
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # powerlevel settings
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator time battery)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(battery time)
+
+# remove default battery icon
+POWERLEVEL9K_BATTERY_ICON=""
