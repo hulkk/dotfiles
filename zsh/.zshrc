@@ -46,5 +46,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(battery time)
 
-# remove default battery icon
-POWERLEVEL9K_BATTERY_ICON=""
+# battery element settings
+POWERLEVEL9K_BATTERY_ICON=''
+POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='yellow'
+POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='green'
+POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='white'
+POWERLEVEL9K_BATTERY_LOW_FOREGROUND='red'
