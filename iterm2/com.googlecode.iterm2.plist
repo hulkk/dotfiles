@@ -10,8 +10,18 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>CopyLastNewline</key>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>019EF825-024A-4E2C-A5CE-5EC816AD4EF9</string>
+	<key>DimBackgroundWindows</key>
+	<true/>
+	<key>DisableFullscreenTransparency</key>
+	<true/>
+	<key>HideActivityIndicator</key>
+	<true/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -57,7 +67,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>794 272 796 473 0 0 1680 1028 </string>
+	<string>884 293 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>696 301 585 452 0 0 1680 1028 </string>
 	<key>New Bookmarks</key>
@@ -695,12 +705,24 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/timo/src/github.com/hulkk/dotfiles/iterm2</string>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
 	<string>https://iterm2.com/appcasts/final.xml?shard=99</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
+	<key>ShowPaneTitles</key>
+	<false/>
+	<key>SmartPlacement</key>
+	<true/>
+	<key>UseLionStyleFullscreen</key>
+	<false/>
+	<key>WindowNumber</key>
+	<false/>
+	<key>WordCharacters</key>
+	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
 	<string>3.1.5</string>
 </dict>
