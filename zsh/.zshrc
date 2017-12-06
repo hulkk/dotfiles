@@ -56,3 +56,6 @@ source $ZSH/oh-my-zsh.sh
 
 # let macos control ls colours
 unset LSCOLORS
+
+# update automatically without prompt
+DISABLE_UPDATE_PROMPT=true
