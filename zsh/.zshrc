@@ -51,11 +51,11 @@ DEFAULT_USER=`whoami`
 # load syntax highlighting plugin
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# initialize oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
 # let macos control ls colours
 unset LSCOLORS
 
-# update automatically without prompt
+# update oh-my-zsh automatically without prompt
 DISABLE_UPDATE_PROMPT=true
+
+# initialize oh-my-zsh
+source $ZSH/oh-my-zsh.sh
