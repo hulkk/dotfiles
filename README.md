@@ -1,5 +1,7 @@
 # dotfiles
 
+![terminal screenshot](/screenshots/terminal.png?raw=true)
+
 ## Zsh
 
 ```bash
