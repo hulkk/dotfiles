@@ -87,3 +87,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " start scrolling earlier
 set scrolloff=3
+
+" faster update frequency for git gutter
+set updatetime=250
