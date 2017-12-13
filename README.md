@@ -2,6 +2,8 @@
 
 ![terminal screenshot](/screenshots/terminal.png?raw=true)
 
+![vim screenshot](/screenshots/vim.png?raw=true)
+
 ## Zsh
 
 ```bash
