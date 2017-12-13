@@ -25,6 +25,9 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
 
+" always show sign column
+set signcolumn=yes
+
 " fix commented text
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
