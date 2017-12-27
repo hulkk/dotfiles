@@ -43,6 +43,9 @@ POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='white'
 POWERLEVEL9K_BATTERY_LOW_FOREGROUND='red'
 POWERLEVEL9K_BATTERY_LOW_THRESHOLD='20'
 
+# custom aliases
+alias 'password=openssl rand -base64 15'
+
 # fuck plugin
 eval $(thefuck --alias)
 
