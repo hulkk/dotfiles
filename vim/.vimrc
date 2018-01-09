@@ -93,3 +93,9 @@ set scrolloff=3
 
 " faster update frequency for git gutter
 set updatetime=250
+
+" highlight tab characters
+highlight SpecialKey ctermfg=1
+set list
+set listchars=tab:>-
+highlight SpecialKey guifg=#dc322f
