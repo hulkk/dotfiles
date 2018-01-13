@@ -4,6 +4,11 @@
 
 ![vim screenshot](/screenshots/vim.png?raw=true)
 
+## Brew
+```bash
+brew install nmap openssl testssl thefuck tldr vim wget zsh-syntax-highlighting
+```
+
 ## Zsh
 
 ```bash
