@@ -58,6 +58,9 @@ DEFAULT_USER=`whoami`
 # load syntax highlighting plugin
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# load zsh plugins
+plugins=(solarized-man)
+
 # let macos control ls colours
 unset LSCOLORS
 
