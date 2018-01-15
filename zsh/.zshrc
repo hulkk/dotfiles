@@ -55,8 +55,8 @@ export EDITOR=/usr/bin/vim
 # hide the "user@hostname" info when you’re logged in as yourself on your local machine
 DEFAULT_USER=`whoami`
 
-# load syntax highlighting plugin
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# load fast syntax highlighting plugin
+source $ZSH/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # load zsh plugins
 plugins=(solarized-man)

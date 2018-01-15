@@ -17,6 +17,8 @@ ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 git clone https://github.com/zlsun/solarized-man.git ~/.oh-my-zsh/custom/plugins/solarized-man
+
+git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 ```
 
 ## Vim
