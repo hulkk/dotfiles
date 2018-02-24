@@ -99,3 +99,6 @@ highlight SpecialKey ctermfg=1
 set list
 set listchars=tab:>-
 highlight SpecialKey guifg=#dc322f
+
+" enable mouse support
+set mouse=a
