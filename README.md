@@ -6,7 +6,7 @@
 
 ## Brew
 ```bash
-brew install nmap openssl testssl thefuck tldr vim wget zsh-syntax-highlighting ccat
+brew install nmap openssl testssl thefuck tldr vim wget zsh-syntax-highlighting ccat tree
 ```
 
 ## Zsh
