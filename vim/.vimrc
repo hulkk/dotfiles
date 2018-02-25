@@ -9,6 +9,7 @@ Plug 'sheerun/vim-polyglot'     " syntax highlighting
 Plug 'Yggdroot/indentLine'      " indent guides
 Plug 'airblade/vim-gitgutter'   " git diff utility
 Plug 'pearofducks/ansible-vim'  " ansible syntax plugin
+Plug 'morhetz/gruvbox'          " gruvbox theme
 
 call plug#end()
 " vim-plug section ends
@@ -22,7 +23,7 @@ autocmd BufRead,BufNewFile */environments/*/inventory* set filetype=ansible
 
 " lightline settings
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
 " always show sign column
@@ -47,7 +48,7 @@ let g:indentLine_char = ':'
 
 " color configurations
 set background=dark
-colorscheme solarized8_high
+colorscheme gruvbox
 
 " disable duplicate mode info
 set noshowmode
