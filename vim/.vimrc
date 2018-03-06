@@ -103,3 +103,6 @@ highlight SpecialKey guifg=#dc322f
 
 " enable mouse support
 set mouse=a
+
+" enable system clipboard usage
+set clipboard=unnamed
