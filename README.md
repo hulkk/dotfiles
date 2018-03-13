@@ -23,6 +23,8 @@ git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/c
 
 ## Tmux
 ```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 ln -sf ~/your-path/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
