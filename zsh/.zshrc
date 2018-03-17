@@ -34,8 +34,8 @@ POWERLEVEL9K_STATUS_CROSS=true
 POWERLEVEL9K_STATUS_OK=true
 
 # prompt element settings
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status battery time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon status context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( )
 
 # battery element settings
 POWERLEVEL9K_BATTERY_ICON=''
