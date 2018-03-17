@@ -10,6 +10,7 @@ Plug 'Yggdroot/indentLine'      " indent guides
 Plug 'airblade/vim-gitgutter'   " git diff utility
 Plug 'pearofducks/ansible-vim'  " ansible syntax plugin
 Plug 'morhetz/gruvbox'          " gruvbox theme
+Plug 'edkolev/tmuxline.vim'     " tmux statusline plugin
 
 call plug#end()
 " vim-plug section ends
