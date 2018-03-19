@@ -6,7 +6,7 @@
 
 ## Brew
 ```bash
-brew install nmap openssl testssl thefuck tldr vim wget zsh-syntax-highlighting ccat tree watch tig httpie
+brew install nmap openssl testssl thefuck tldr vim wget zsh-syntax-highlighting ccat tree watch tig httpie reattach-to-user-namespace
 ```
 
 ## Zsh
@@ -24,6 +24,8 @@ git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/c
 ## Tmux
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+gem install tmuxinator
 
 ln -sf ~/your-path/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
