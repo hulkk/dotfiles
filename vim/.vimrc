@@ -105,5 +105,8 @@ highlight SpecialKey guifg=#dc322f
 " enable mouse support
 set mouse=a
 
+" fix mouse behaviour in tmux
+set ttymouse=xterm2
+
 " enable system clipboard usage
 set clipboard=unnamed
