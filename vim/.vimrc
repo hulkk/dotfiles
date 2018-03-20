@@ -110,3 +110,6 @@ set ttymouse=xterm2
 
 " enable system clipboard usage
 set clipboard=unnamed
+
+" disable automatic indent
+filetype indent off
