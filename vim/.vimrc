@@ -81,6 +81,9 @@ set backspace=2
 " enable forward delete in normal mode
 nmap <C-d> x
 
+" enable forward word jump with alt-right
+nmap <Esc>f e
+
 " indent by 2 spaces when using tab
 set softtabstop=2
 
