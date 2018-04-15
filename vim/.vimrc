@@ -78,6 +78,9 @@ set smartcase
 " fix backspace in insert mode
 set backspace=2
 
+" enable forward delete in normal mode
+nmap <C-d> x
+
 " indent by 2 spaces when using tab
 set softtabstop=2
 
