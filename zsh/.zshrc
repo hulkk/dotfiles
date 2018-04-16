@@ -2,7 +2,7 @@
 export ZSH=~/.oh-my-zsh
 
 # use brew python by default
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/python2/bin/python:$PATH"
 
 # configure theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
