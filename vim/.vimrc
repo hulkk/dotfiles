@@ -100,7 +100,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set scrolloff=3
 
 " faster update frequency for git gutter
-set updatetime=250
+set updatetime=100
 
 " highlight tab characters
 highlight SpecialKey ctermfg=1
