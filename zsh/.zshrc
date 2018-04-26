@@ -7,9 +7,6 @@ export PATH="/usr/local/opt/python2/bin/python:$PATH"
 # set antigen path for powerlevel9k
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
-# configure theme
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
 # enable patched fonts
 POWERLEVEL9K_MODE='awesome-patched'
 
