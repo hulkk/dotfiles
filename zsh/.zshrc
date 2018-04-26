@@ -77,6 +77,7 @@ antigen use oh-my-zsh
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zlsun/solarized-man
 
 antigen apply
 

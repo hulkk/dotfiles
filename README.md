@@ -13,8 +13,6 @@ brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig http
 
 ```bash
 ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
-
-git clone https://github.com/zlsun/solarized-man.git ~/.oh-my-zsh/custom/plugins/solarized-man
 ```
 
 ## Tmux
