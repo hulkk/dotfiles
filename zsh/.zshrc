@@ -63,7 +63,7 @@ export EDITOR=/usr/bin/vim
 DEFAULT_USER=`whoami`
 
 # load zsh plugins
-plugins=(solarized-man fast-syntax-highlighting)
+plugins=(brews fast-syntax-highlighting solarized-man)
 
 # let macos control ls colours
 unset LSCOLORS
@@ -75,7 +75,10 @@ DISABLE_UPDATE_PROMPT=true
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 
+antigen bundle brew
+
 antigen theme bhilburn/powerlevel9k powerlevel9k
+
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zlsun/solarized-man
 
