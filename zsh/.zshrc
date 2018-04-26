@@ -4,6 +4,9 @@ export ZSH=~/.oh-my-zsh
 # use brew python by default
 export PATH="/usr/local/opt/python2/bin/python:$PATH"
 
+# set antigen path for powerlevel9k
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+
 # configure theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -59,17 +62,23 @@ export EDITOR=/usr/bin/vim
 # hide the "user@hostname" info when you’re logged in as yourself on your local machine
 DEFAULT_USER=`whoami`
 
-# load fast syntax highlighting plugin
-source $ZSH/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
 # load zsh plugins
-plugins=(solarized-man)
+plugins=(solarized-man fast-syntax-highlighting)
 
 # let macos control ls colours
 unset LSCOLORS
 
 # update oh-my-zsh automatically without prompt
 DISABLE_UPDATE_PROMPT=true
+
+# antigen plugin manager configs
+source /usr/local/share/antigen/antigen.zsh
+antigen use oh-my-zsh
+
+antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen bundle zdharma/fast-syntax-highlighting
+
+antigen apply
 
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh

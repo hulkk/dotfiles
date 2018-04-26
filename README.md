@@ -6,7 +6,7 @@
 
 ## Brew
 ```bash
-brew install nmap openssl testssl thefuck tldr vim wget zsh-syntax-highlighting ccat tree watch tig httpie reattach-to-user-namespace
+brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen
 ```
 
 ## Zsh
@@ -14,11 +14,7 @@ brew install nmap openssl testssl thefuck tldr vim wget zsh-syntax-highlighting 
 ```bash
 ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
 
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
 git clone https://github.com/zlsun/solarized-man.git ~/.oh-my-zsh/custom/plugins/solarized-man
-
-git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 ```
 
 ## Tmux
