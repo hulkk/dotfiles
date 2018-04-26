@@ -124,13 +124,16 @@ filetype indent off
 " custom icons
 let g:gitgutter_sign_added = '●'
 let g:gitgutter_sign_modified = '◖'
-let g:gitgutter_sign_removed = '○'
-let g:gitgutter_sign_removed_first_line = '○'
-let g:gitgutter_sign_modified_removed = '◖○'
+let g:gitgutter_sign_removed = '●'
+let g:gitgutter_sign_removed_first_line = '●'
+let g:gitgutter_sign_modified_removed = '◖●'
 
 " custom colours
-highlight GitGutterChange guifg=#fe8019
+highlight GitGutterChange guifg=#fabd2f
 highlight GitGutterChange guibg=#3c3836
 
 highlight GitGutterChangeDelete guifg=#fb4934
 highlight GitGutterChangeDelete guibg=#3c3836
+
+highlight GitGutterAdd guifg=#8ec07c
+highlight GitGutterAdd guibg=#3c3836
