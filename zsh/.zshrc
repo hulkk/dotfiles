@@ -60,7 +60,7 @@ export EDITOR=/usr/bin/vim
 DEFAULT_USER=`whoami`
 
 # load zsh plugins
-plugins=(brews fast-syntax-highlighting solarized-man)
+plugins=(brews fast-syntax-highlighting solarized-man vagrant)
 
 # let macos control ls colours
 unset LSCOLORS
