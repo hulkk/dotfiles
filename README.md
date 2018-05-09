@@ -7,6 +7,8 @@
 ## Brew
 ```bash
 brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen terraform
+brew cask install virtualbox
+brew cask install vagrant
 ```
 
 ## Zsh
