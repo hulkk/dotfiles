@@ -6,7 +6,7 @@ export PATH="/usr/local/opt/python2/bin/python:$PATH"
 
 # workaround for python fork() issue in High Sierra
 # https://github.com/ansible/ansible/issues/31869#issuecomment-337769174
-OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # set antigen path for powerlevel9k
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
