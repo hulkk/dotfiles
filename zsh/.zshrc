@@ -11,6 +11,9 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # configure UTF-8 to locale
 export LC_CTYPE="en_US.UTF-8"
 
+# terminal color settings
+export TERM="xterm-256color"
+
 # set antigen path for powerlevel9k
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
