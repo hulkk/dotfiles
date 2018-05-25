@@ -41,3 +41,10 @@ defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-pat
 
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 ```
+
+## Misc
+
+Test true color, should print TRUECOLOR in red
+```bash
+printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
+```
