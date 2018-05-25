@@ -5,6 +5,7 @@ set encoding=utf-8
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'    " lightline
+Plug 'itchyny/vim-gitbranch'    " git branch plugin
 Plug 'sheerun/vim-polyglot'     " syntax highlighting
 Plug 'Yggdroot/indentLine'      " indent guides
 Plug 'airblade/vim-gitgutter'   " git diff utility
@@ -24,8 +25,22 @@ autocmd BufRead,BufNewFile */environments/*/inventory* set filetype=ansible
 
 " lightline settings
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
+    \ 'colorscheme': 'gruvbox',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'gitbranch#name'
+    \ },
+\ }
+
+let g:lightline.separator = {
+    \   'left': '', 'right': ''
+\ }
+let g:lightline.subseparator = {
+    \   'left': '', 'right': '' 
+\ }
 
 " always show sign column
 set signcolumn=yes
