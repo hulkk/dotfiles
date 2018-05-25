@@ -8,6 +8,9 @@ export PATH="/usr/local/opt/python2/bin/python:$PATH"
 # https://github.com/ansible/ansible/issues/31869#issuecomment-337769174
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+# configure UTF-8 to locale
+export LC_CTYPE="en_US.UTF-8"
+
 # set antigen path for powerlevel9k
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
