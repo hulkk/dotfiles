@@ -123,7 +123,8 @@ set updatetime=100
 highlight SpecialKey ctermfg=1
 set list
 set listchars=tab:>-
-highlight SpecialKey guifg=#dc322f
+" gruvbox orange
+highlight SpecialKey guifg=#fe8019
 
 " enable mouse support
 set mouse=a
