@@ -11,7 +11,6 @@ Plug 'Yggdroot/indentLine'            " indent guides
 Plug 'airblade/vim-gitgutter'         " git diff utility
 Plug 'pearofducks/ansible-vim'        " ansible syntax plugin
 Plug 'morhetz/gruvbox'                " gruvbox vim theme
-Plug 'shinchu/lightline-gruvbox.vim'  " gruvbox lightline theme
 Plug 'edkolev/tmuxline.vim'           " tmux statusline plugin
 
 call plug#end()
