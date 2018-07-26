@@ -10,8 +10,8 @@ Plug 'sheerun/vim-polyglot'           " syntax highlighting
 Plug 'Yggdroot/indentLine'            " indent guides
 Plug 'airblade/vim-gitgutter'         " git diff utility
 Plug 'pearofducks/ansible-vim'        " ansible syntax plugin
-Plug 'morhetz/gruvbox'                " gruvbox vim theme
 Plug 'edkolev/tmuxline.vim'           " tmux statusline plugin
+Plug 'joshdick/onedark.vim'           " onedark theme
 
 call plug#end()
 " vim-plug section ends
@@ -25,7 +25,7 @@ autocmd BufRead,BufNewFile */environments/*/inventory* set filetype=ansible
 
 " lightline settings
 let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
+    \ 'colorscheme': 'onedark',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -63,9 +63,8 @@ set cursorline
 let g:indentLine_char = ':'
 
 " color configurations
-let g:gruvbox_contrast_dark='medium'
 set background=dark
-colorscheme gruvbox
+colorscheme onedark
 
 " disable duplicate mode info
 set noshowmode
