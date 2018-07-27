@@ -10,6 +10,7 @@ brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig http
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install the-unarchiver
+brew cask install iterm2
 
 ```
 ## Mac App Store
