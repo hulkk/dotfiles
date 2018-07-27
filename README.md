@@ -14,7 +14,16 @@ brew cask install the-unarchiver
 ```
 ## Mac App Store
 ```bash
-
+# Pocket
+mas install 568494494
+# Slack
+mas install 803453959
+# Bear
+mas install 1091189122
+# Telegram
+mas install 747648890
+# Amphetamine
+mas install 937984704
 ```
 
 ## Zsh
