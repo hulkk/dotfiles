@@ -6,10 +6,15 @@
 
 ## Brew
 ```bash
-brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen terraform
+brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen terraform mas
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install the-unarchiver
+
+```
+## Mac App Store
+```bash
+
 ```
 
 ## Zsh
