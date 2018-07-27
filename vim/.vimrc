@@ -121,8 +121,8 @@ set updatetime=100
 highlight SpecialKey ctermfg=1
 set list
 set listchars=tab:>-
-" custom colour settings for highlights
-highlight SpecialKey guifg=#56b6c2
+" gruvbox orange
+highlight SpecialKey guifg=#fe8019
 
 " enable mouse support
 set mouse=a
@@ -143,6 +143,16 @@ let g:gitgutter_sign_modified = '◖'
 let g:gitgutter_sign_removed = '●'
 let g:gitgutter_sign_removed_first_line = '●'
 let g:gitgutter_sign_modified_removed = '◖●'
+
+" custom colours for GitGutter
+" gruvbox yellow
+highlight GitGutterChange guifg=#fabd2f
+" gruvbox red
+highlight GitGutterChangeDelete guifg=#fb4934
+" gruvbox aqua
+highlight GitGutterAdd guifg=#8ec07c
+" gruvbox red
+highlight GitGutterDelete guifg=#fb4934
 
 " match sign column background
 highlight clear SignColumn
