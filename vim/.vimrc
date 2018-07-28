@@ -4,14 +4,15 @@ set encoding=utf-8
 " vim-plug section begins
 call plug#begin('~/.vim/plugged')
 
-Plug 'itchyny/lightline.vim'          " lightline
-Plug 'itchyny/vim-gitbranch'          " git branch plugin
-Plug 'sheerun/vim-polyglot'           " syntax highlighting
-Plug 'Yggdroot/indentLine'            " indent guides
-Plug 'airblade/vim-gitgutter'         " git diff utility
-Plug 'pearofducks/ansible-vim'        " ansible syntax plugin
-Plug 'morhetz/gruvbox'                " gruvbox vim theme
-Plug 'edkolev/tmuxline.vim'           " tmux statusline plugin
+Plug 'itchyny/lightline.vim'              " lightline
+Plug 'itchyny/vim-gitbranch'              " git branch plugin
+Plug 'sheerun/vim-polyglot'               " syntax highlighting
+Plug 'Yggdroot/indentLine'                " indent guides
+Plug 'airblade/vim-gitgutter'             " git diff utility
+Plug 'pearofducks/ansible-vim'            " ansible syntax plugin
+Plug 'morhetz/gruvbox'                    " gruvbox vim theme
+Plug 'edkolev/tmuxline.vim'               " tmux statusline plugin
+Plug 'tmux-plugins/vim-tmux-focus-events' " enable tmux focus events
 
 call plug#end()
 " vim-plug section ends
@@ -136,6 +137,9 @@ set clipboard=unnamed
 
 " disable automatic indent
 filetype indent off
+
+" enable automatic update for files modified elsewhere
+set autoread
 
 " gitgutter configs
 " custom icons
