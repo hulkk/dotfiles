@@ -26,14 +26,7 @@ autocmd BufRead,BufNewFile */environments/*/inventory* set filetype=ansible
 
 " lightline settings
 let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-    \ },
-    \ 'component_function': {
-    \   'gitbranch': 'gitbranch#name'
-    \ },
+    \ 'colorscheme': 'gruvbox'
 \ }
 
 let g:lightline.separator = {
