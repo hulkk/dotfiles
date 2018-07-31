@@ -39,11 +39,6 @@ let g:lightline.subseparator = {
 " always show sign column
 set signcolumn=yes
 
-" fix commented text
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
-highlight Comment cterm=italic
-
 " use spaces instead of tabs
 set expandtab
 
@@ -60,6 +55,11 @@ let g:indentLine_char = ':'
 let g:gruvbox_contrast_dark='medium'
 set background=dark
 colorscheme gruvbox
+
+" fix commented text
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
 
 " disable duplicate mode info
 set noshowmode
