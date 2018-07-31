@@ -56,6 +56,15 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O ~/.v
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-path/dotfiles/iterm2/com.googlecode.iterm2.plist"
 
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+# Override local entry to enable italics without breaking outgoing SSH connections
+infocmp xterm-256color > /tmp/xterm-256color.terminfo
+printf '\tsitm=\\E[3m, ritm=\\E[23m,\n' >> /tmp/xterm-256color.terminfo
+tic /tmp/xterm-256color.terminfo
+```
+Test italics
+```
+echo `tput sitm`italics`tput ritm`
 ```
 
 ## Misc
