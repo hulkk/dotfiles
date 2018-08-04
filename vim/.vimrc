@@ -2,16 +2,19 @@
 set encoding=utf-8
 
 " vim-plug section begins
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'              " lightline
-Plug 'itchyny/vim-gitbranch'              " git branch plugin
 Plug 'sheerun/vim-polyglot'               " syntax highlighting
 Plug 'Yggdroot/indentLine'                " indent guides
 Plug 'airblade/vim-gitgutter'             " git diff utility
 Plug 'pearofducks/ansible-vim'            " ansible syntax plugin
 Plug 'morhetz/gruvbox'                    " gruvbox vim theme
-Plug 'edkolev/tmuxline.vim'               " tmux statusline plugin
 Plug 'tmux-plugins/vim-tmux-focus-events' " enable tmux focus events
 
 call plug#end()
