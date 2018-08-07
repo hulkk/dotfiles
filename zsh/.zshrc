@@ -78,6 +78,9 @@ unset LSCOLORS
 # update oh-my-zsh automatically without prompt
 DISABLE_UPDATE_PROMPT=true
 
+# enable timestamps for history
+HIST_STAMPS="yyyy-mm-dd"
+
 # antigen plugin manager configs
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
