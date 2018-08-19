@@ -539,7 +539,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 138 599 459 0 0 2560 1578 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>749 342 796 473 0 0 2560 1578 </string>
+	<string>749 386 796 473 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>654 448 1440 691 0 0 2560 1578 </string>
 	<key>New Bookmarks</key>
@@ -1473,7 +1473,7 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
