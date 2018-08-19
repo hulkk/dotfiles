@@ -55,7 +55,7 @@ set cursorline
 let g:indentLine_char = ':'
 
 " color configurations
-let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_contrast_dark='hard'
 set background=dark
 colorscheme gruvbox
 
