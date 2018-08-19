@@ -81,6 +81,9 @@ DISABLE_UPDATE_PROMPT=true
 # enable timestamps for history
 HIST_STAMPS="yyyy-mm-dd"
 
+# disable automatic title update
+DISABLE_AUTO_TITLE="true"
+
 # antigen plugin manager configs
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
