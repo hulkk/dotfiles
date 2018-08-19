@@ -539,7 +539,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 138 599 459 0 0 2560 1578 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>749 386 796 473 0 0 2560 1578 </string>
+	<string>749 430 796 473 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>654 448 1440 691 0 0 2560 1578 </string>
 	<key>New Bookmarks</key>
@@ -1420,7 +1420,7 @@
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
-			<true/>
+			<false/>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
