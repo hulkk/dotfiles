@@ -364,6 +364,8 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
+	<key>EnableDivisionView</key>
+	<false/>
 	<key>EnableProxyIcon</key>
 	<false/>
 	<key>GlobalKeyMap</key>
@@ -533,13 +535,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 487 620 392 0 0 1680 1028 </string>
+	<string>970 903 620 392 0 0 2560 1578 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 138 599 459 0 0 2560 1578 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>78 438 918 512 0 0 2560 1578 </string>
+	<string>749 342 796 473 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>705 254 1440 692 0 0 2560 1578 </string>
+	<string>654 448 1440 691 0 0 2560 1578 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -762,13 +764,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.11759774386882782</real>
+				<real>0.12549019607843137</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.11759573966264725</real>
+				<real>0.12549019607843137</real>
 				<key>Red Component</key>
-				<real>0.11759927868843079</real>
+				<real>0.12549019607843137</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1382,6 +1384,19 @@
 			<false/>
 			<key>Sync Title</key>
 			<false/>
+			<key>Tab Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.56862745098039214</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.56862745098039214</real>
+				<key>Red Component</key>
+				<real>0.56862745098039214</real>
+			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -1400,6 +1415,8 @@
 			<true/>
 			<key>Use Non-ASCII Font</key>
 			<false/>
+			<key>Use Tab Color</key>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -1464,7 +1481,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-11T19:20:42Z</date>
+	<date>2018-08-19T13:59:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
