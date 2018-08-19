@@ -14,6 +14,9 @@ export LC_CTYPE="en_US.UTF-8"
 # terminal color settings
 export TERM="xterm-256color"
 
+# start tmux automatically
+ZSH_TMUX_AUTOSTART='true'
+
 # set antigen path for powerlevel9k
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
@@ -70,7 +73,7 @@ export EDITOR=/usr/bin/vim
 DEFAULT_USER=`whoami`
 
 # load zsh plugins
-plugins=(brews fast-syntax-highlighting solarized-man vagrant pip web-search)
+plugins=(brews fast-syntax-highlighting solarized-man vagrant pip web-search tmux)
 
 # let macos control ls colours
 unset LSCOLORS
@@ -99,3 +102,6 @@ antigen apply
 
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# rename automatically started tmux session
+tmux rename-session -t 0 mac
