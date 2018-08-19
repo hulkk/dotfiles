@@ -493,7 +493,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~/src/github.com/hulkk/dotfiles/iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -527,19 +527,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>726 384 445 77 0 0 1680 1028 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 489 620 392 0 0 1680 1028 </string>
+	<string>530 487 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>71 429 770 429 0 0 1680 1028 </string>
+	<string>656 603 1018 447 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>190 124 1450 692 0 0 1680 1028 </string>
+	<string>261 346 1450 692 0 0 2560 1578 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1413,11 +1406,11 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>45F0E465-182F-4797-B6DA-689A12A9DECA</string>
+	<string>08173A88-AD84-454C-890E-26B6D3C30FF6</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>534282183.25135601</real>
+	<real>555077197.71439099</real>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1456,15 +1449,15 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=99</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=3</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-05T04:59:22Z</date>
+	<date>2018-08-11T19:20:42Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1481,6 +1474,8 @@
 	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>1</integer>
+	<key>TerminalMargin</key>
+	<integer>0</integer>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
