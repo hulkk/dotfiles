@@ -87,6 +87,14 @@ HIST_STAMPS="yyyy-mm-dd"
 # disable automatic title update
 DISABLE_AUTO_TITLE="true"
 
+# function for shortened urls checking
+function urlxray() {
+    if [ "$1" != "" ]
+    then
+        curl $1 -Is | grep -i location | cut -f2- -d' '
+    fi
+}
+
 # antigen plugin manager configs
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
@@ -102,6 +110,3 @@ antigen apply
 
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
-# rename automatically started tmux session
-tmux rename-session -t 0 mac
