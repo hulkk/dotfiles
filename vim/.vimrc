@@ -122,6 +122,12 @@ set listchars=tab:>-
 " gruvbox orange
 highlight SpecialKey guifg=#fe8019
 
+" gruvbox red
+highlight SpecKey guibg=#cc241d
+
+" highlight misleading characters such as en dash, usually from copy & paste
+:match SpecKey /–/
+
 " enable mouse support
 set mouse=a
 
