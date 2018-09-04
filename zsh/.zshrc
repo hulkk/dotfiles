@@ -62,6 +62,8 @@ POWERLEVEL9K_BATTERY_LOW_THRESHOLD='20'
 alias 'password=openssl rand -base64 15'
 alias 'cat=ccat'
 alias 'headers=http --follow --all -h'
+alias 'mv=mv -i'
+alias 'cp=cp -i'
 
 # fuck plugin
 eval $(thefuck --alias)
