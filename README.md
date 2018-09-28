@@ -13,7 +13,7 @@
 
 ## install brew packages
 ```bash
-brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen terraform mas zsh tmux ag jq python@2
+brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen terraform mas zsh tmux ag jq python@2 diff-so-fancy
 brew cask install virtualbox vagrant the-unarchiver iterm2 sublime-text
 ```
 
@@ -51,6 +51,12 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 gem install tmuxinator
 pip install ansible pywinrm
+```
+
+## git config
+```bash
+# enable diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
 
 ## .zshrc symbolic link
