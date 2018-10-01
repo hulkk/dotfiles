@@ -539,9 +539,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 138 599 459 0 0 2560 1578 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>503 1083 796 486 0 0 2560 1578 </string>
+	<string>503 1175 928 394 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>322 238 1440 691 0 0 2560 1578 </string>
+	<string>216 499 1980 901 0 0 2560 1578 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1511,7 +1511,7 @@
 	<key>iTerm Version</key>
 	<string>3.2.0</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>0</integer>
+	<integer>7</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 </dict>
