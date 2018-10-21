@@ -50,7 +50,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 gem install tmuxinator
-pip install ansible pywinrm
+pip install ansible pywinrm pip-upgrade-outdated
 ```
 
 ## git config
