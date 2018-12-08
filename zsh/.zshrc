@@ -90,6 +90,14 @@ function urlxray() {
     fi
 }
 
+# function for enumerating subdomains
+function enumerate() {
+    if [ "$1" != "" ]
+    then
+        curl -s "https://crt.sh/?q=%.$1&output=json" | jq '.name_value' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u
+    fi
+}
+
 # antigen plugin manager configs
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
