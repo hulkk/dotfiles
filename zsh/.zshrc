@@ -98,6 +98,14 @@ function enumerate() {
     fi
 }
 
+# function for renaming tmux's default session
+function rename_tmux_session() {
+    if [ "$1" = "0" ]
+    then
+        tmux rename-session -t 0 "$2"
+    fi
+}
+
 # antigen plugin manager configs
 source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
@@ -113,3 +121,7 @@ antigen apply
 
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# rename tmux session
+tmux_sessions=$(tmux list-sessions)
+rename_tmux_session ${tmux_sessions:0:1} iTerm
