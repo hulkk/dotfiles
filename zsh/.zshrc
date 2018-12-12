@@ -57,6 +57,7 @@ alias 'headers=http --follow --all -h'
 alias 'mv=mv -i'
 alias 'cp=cp -i'
 alias 'pip_upgrade_outdated=pip_upgrade_outdated'
+alias 'rg=rg -S'
 
 # fuck plugin
 eval $(thefuck --alias)
