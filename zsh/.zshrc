@@ -99,6 +99,14 @@ function enumerate() {
     fi
 }
 
+# function for checking tldr tips for command
+function howto() {
+    if [ "$1" != "" ]
+    then
+        curl cheat.sh/$1
+    fi
+}
+
 # function for renaming tmux's default session
 function rename_tmux_session() {
     if [ "$1" = "0" ]
