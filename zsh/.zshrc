@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-# use brew python by default
-export PATH="/usr/local/opt/python2/bin/python:$PATH"
-
 # workaround for python fork() issue in High Sierra
 # https://github.com/ansible/ansible/issues/31869#issuecomment-337769174
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
@@ -58,6 +55,8 @@ alias 'mv=mv -i'
 alias 'cp=cp -i'
 alias 'pip_upgrade_outdated=pip_upgrade_outdated'
 alias 'rg=rg -S'
+alias 'python=python3'
+alias 'pip=pip3'
 
 # fuck plugin
 eval $(thefuck --alias)
@@ -69,7 +68,7 @@ export EDITOR=/usr/bin/vim
 DEFAULT_USER=`whoami`
 
 # load zsh plugins
-plugins=(brews git-auto-fetch gitignore fast-syntax-highlighting magic-enter solarized-man vagrant pip web-search terraform thefuck tmux)
+plugins=(brews git-auto-fetch gitignore fast-syntax-highlighting magic-enter solarized-man vagrant web-search terraform thefuck tmux)
 
 # let macos control ls colours
 unset LSCOLORS
