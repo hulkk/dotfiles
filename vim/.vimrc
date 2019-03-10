@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'             " git diff utility
 Plug 'pearofducks/ansible-vim'            " ansible syntax plugin
 Plug 'morhetz/gruvbox'                    " gruvbox vim theme
 Plug 'tmux-plugins/vim-tmux-focus-events' " enable tmux focus events
+Plug 'luochen1990/rainbow'                " colorize nested parentheses
 
 call plug#end()
 " vim-plug section ends
@@ -63,6 +64,9 @@ colorscheme gruvbox
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 highlight Comment cterm=italic
+
+" configure rainbow
+let g:rainbow_active = 1
 
 " disable duplicate mode info
 set noshowmode
