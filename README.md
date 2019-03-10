@@ -13,7 +13,7 @@
 
 ## install brew packages
 ```bash
-brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen terraform mas zsh tmux ag jq python diff-so-fancy fd ripgrep
+brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch tig httpie reattach-to-user-namespace antigen terraform mas zsh tmux ag jq python diff-so-fancy fd ripgrep step
 brew tap caskroom/versions
 brew cask install virtualbox vagrant the-unarchiver iterm2-nightly sublime-text
 ```
