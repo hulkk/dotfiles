@@ -24,7 +24,9 @@ git clone https://github.com/hulkk/dotfiles.git ~/your-path/dotfiles
 ```
 
 ## install the custom font from iTerm2-folder
-
+```bash
+cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
+```
 ## disable the last login info
 ```bash
 touch ~/.hushlogin
