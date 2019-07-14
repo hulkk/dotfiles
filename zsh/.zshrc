@@ -70,7 +70,7 @@ export EDITOR=/usr/bin/vim
 DEFAULT_USER=`whoami`
 
 # load zsh plugins
-plugins=(brews git-auto-fetch gitignore fast-syntax-highlighting magic-enter solarized-man vagrant web-search terraform thefuck tmux)
+plugins=(git-auto-fetch gitignore magic-enter vagrant web-search terraform thefuck tmux)
 
 # let macos control ls colours
 unset LSCOLORS
