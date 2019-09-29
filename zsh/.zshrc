@@ -62,6 +62,7 @@ alias 'pip_upgrade_outdated=pip_upgrade_outdated'
 alias 'rg=rg -S'
 alias 'python=python3'
 alias 'pip=pip3'
+alias 'vdiff=vim -d'
 
 # fuck plugin
 eval $(thefuck --alias)
