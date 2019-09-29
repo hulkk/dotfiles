@@ -49,6 +49,9 @@ POWERLEVEL9K_STATUS_OK=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 
+# remove extra space after right prompt
+ZLE_RPROMPT_INDENT=0
+
 # custom aliases
 alias 'password=openssl rand -base64 15'
 alias 'cat=ccat'
@@ -122,7 +125,7 @@ antigen use oh-my-zsh
 
 antigen bundle brew
 
-antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen theme romkatv/powerlevel10k
 
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zlsun/solarized-man
