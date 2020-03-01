@@ -34,9 +34,8 @@ touch ~/.hushlogin
 
 ## iTerm2 config 
 ```bash
-# debug these - won't work for some reason
-# defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-# defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-path/dotfiles/iterm2/"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-path/dotfiles/iterm2"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Override local entry to enable italics without breaking outgoing SSH connections
 infocmp xterm-256color > /tmp/xterm-256color.terminfo
