@@ -31,6 +31,11 @@ cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf
 ```bash
 touch ~/.hushlogin
 ```
+## configure default path for screenshots
+```bash
+mkdir ~/screenshots
+defaults write com.apple.screencapture location /Users/your-username/screenshots
+```
 
 ## iTerm2 config 
 ```bash
