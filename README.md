@@ -12,7 +12,7 @@
 ```
 ## install brew packages
 ```bash
-brew install nmap openssl testssl thefuck vim ccat tree watch httpie reattach-to-user-namespace antigen terraform mas zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch
+brew install nmap openssl testssl thefuck vim ccat tree watch httpie reattach-to-user-namespace antigen zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch
 brew tap homebrew/cask-versions
 brew cask install the-unarchiver iterm2-nightly sublime-text rectangle
 ```
