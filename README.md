@@ -12,16 +12,14 @@
 ```
 ## install brew packages
 ```bash
-brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch httpie reattach-to-user-namespace antigen terraform mas zsh tmux jq python diff-so-fancy fd ripgrep step
+brew install nmap openssl testssl thefuck tldr vim ccat tree watch httpie reattach-to-user-namespace antigen terraform mas zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch
 brew tap homebrew/cask-versions
-brew cask install virtualbox vagrant the-unarchiver iterm2-nightly sublime-text rectangle
+brew cask install the-unarchiver iterm2-nightly sublime-text rectangle
 ```
-
 ## clone this repo
 ```bash
 git clone https://github.com/hulkk/dotfiles.git ~/your-path/dotfiles
 ```
-
 ## install the custom font from iTerm2-folder
 ```bash
 cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
@@ -35,7 +33,6 @@ touch ~/.hushlogin
 mkdir ~/screenshots
 defaults write com.apple.screencapture location /Users/your-username/screenshots
 ```
-
 ## iTerm2 config 
 ```bash
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-path/dotfiles/iterm2"
