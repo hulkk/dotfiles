@@ -8,9 +8,8 @@
 
 ## install brew, script source https://brew.sh
 ```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
-
 ## install brew packages
 ```bash
 brew install nmap openssl testssl thefuck tldr vim wget ccat tree watch httpie reattach-to-user-namespace antigen terraform mas zsh tmux jq python diff-so-fancy fd ripgrep step
