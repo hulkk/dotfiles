@@ -17,6 +17,7 @@ Plug 'pearofducks/ansible-vim'            " ansible syntax plugin
 Plug 'morhetz/gruvbox'                    " gruvbox vim theme
 Plug 'tmux-plugins/vim-tmux-focus-events' " enable tmux focus events
 Plug 'luochen1990/rainbow'                " colorize nested parentheses
+Plug 'dense-analysis/ale'                 " asynchronous lint engine
 
 call plug#end()
 " vim-plug section ends
@@ -27,6 +28,11 @@ call plug#end()
 
 " set ansible inventory filetype
 autocmd BufRead,BufNewFile */environments/*/inventory* set filetype=ansible
+
+" ale lint settings
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
 
 " lightline settings
 let g:lightline = {

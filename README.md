@@ -12,7 +12,7 @@
 ```
 ## install brew packages
 ```bash
-brew install nmap openssl testssl thefuck vim ccat tree watch httpie reattach-to-user-namespace antigen zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch
+brew install nmap openssl testssl thefuck vim ccat tree watch httpie reattach-to-user-namespace antigen zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch yamllint
 brew tap homebrew/cask-versions
 brew cask install the-unarchiver iterm2-nightly sublime-text rectangle
 ```
@@ -75,6 +75,11 @@ ln -sf ~/your-path/dotfiles/vim/.vimrc ~/.vimrc
 ## .tmux.conf symbolic link
 ```bash
 ln -sf ~/your-path/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+```
+
+## yaml lint symbolic link
+```bash
+mkdir ~/.config/yamllint && ln -sf ~/your-path/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
 
 ## Test commands
