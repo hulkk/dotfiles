@@ -29,11 +29,6 @@ call plug#end()
 " set ansible inventory filetype
 autocmd BufRead,BufNewFile */environments/*/inventory* set filetype=ansible
 
-" ale lint settings
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-
 " lightline settings
 let g:lightline = {
     \ 'colorscheme': 'gruvbox'
@@ -173,6 +168,15 @@ highlight GitGutterDelete guifg=#fb4934
 
 " match sign column background
 highlight clear SignColumn
+
+" ale lint settings
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '✘'
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 0
+highlight ALEErrorSign guifg=#fb4934
+highlight ALEWarningSign guifg=#fabd2f
 
 " Change cursor shape between insert and normal mode in iTerm2.app
 if exists('$TMUX')
