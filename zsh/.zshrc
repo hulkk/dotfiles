@@ -88,6 +88,11 @@ HIST_STAMPS="yyyy-mm-dd"
 # disable automatic title update
 DISABLE_AUTO_TITLE="true"
 
+# function to force command to be run using rosetta 2 with Apple Silicon Macs
+rosetta() {
+  arch -x86_64 $@
+}
+
 # function for shortened urls checking
 function urlxray() {
     if [ "$1" != "" ]
