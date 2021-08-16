@@ -138,6 +138,10 @@ antigen bundle zlsun/solarized-man
 
 antigen apply
 
+# enable google cloud sdk
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
