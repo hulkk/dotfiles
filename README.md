@@ -53,7 +53,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 gem install tmuxinator
-pip install ansible pywinrm pip-upgrade-outdated
+pip install ansible ansible-lint pywinrm pip-upgrade-outdated
 ```
 
 ## git config
