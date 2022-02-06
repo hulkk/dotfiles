@@ -60,9 +60,6 @@ pip install ansible ansible-lint pywinrm pip-upgrade-outdated
 ```bash
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-# add commit template
-ln -sf ~/your-path/dotfiles/git/.commit.template ~/.commit.template
-git config --global commit.template $HOME/.commit.template
 ```
 
 ## .zshrc symbolic link
