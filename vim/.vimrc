@@ -178,6 +178,10 @@ let g:ale_set_highlights = 0
 highlight ALEErrorSign guifg=#fb4934
 highlight ALEWarningSign guifg=#fabd2f
 
+" disable markdown conceal
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+
 " Change cursor shape between insert and normal mode in iTerm2.app
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
