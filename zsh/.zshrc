@@ -60,8 +60,6 @@ alias 'mv=mv -i'
 alias 'cp=cp -i'
 alias 'pip_upgrade_outdated=pip_upgrade_outdated -3'
 alias 'rg=rg -S'
-alias 'python=python3'
-alias 'pip=pip3'
 alias 'vdiff=vim -d'
 
 # fuck plugin
