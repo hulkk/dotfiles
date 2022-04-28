@@ -1,4 +1,4 @@
-g Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
 # workaround for python fork() issue in High Sierra
@@ -136,10 +136,6 @@ antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zlsun/solarized-man
 
 antigen apply
-
-# enable google cloud sdk
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
