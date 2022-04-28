@@ -1285,7 +1285,7 @@
 			<key>Normal Font</key>
 			<string>SourceCodePro+Powerline+AwesomeRegular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
-			<false/>
+			<true/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1354,7 +1354,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.094074135638297959</real>
+			<real>0.099883643617021373</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
