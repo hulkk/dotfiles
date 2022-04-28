@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+g Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
 # workaround for python fork() issue in High Sierra
@@ -60,6 +60,7 @@ alias 'mv=mv -i'
 alias 'cp=cp -i'
 alias 'pip_upgrade_outdated=pip_upgrade_outdated -3'
 alias 'rg=rg -S'
+alias 'python=python3'
 alias 'vdiff=vim -d'
 
 # fuck plugin
