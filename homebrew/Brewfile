@@ -2,13 +2,12 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "moul/moul"
 tap "warrensbox/tap"
 
 # terminal environment related packages
 brew "antigen"
 brew "diff-so-fancy"
-brew "openssl@3"
+brew "openssl"
 brew "python@3.9"
 brew "reattach-to-user-namespace"
 brew "thefuck"
@@ -42,6 +41,7 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Bear", id: 1091189122
 mas "DaisyDisk", id: 411643860
 mas "EasyRes", id: 688211836
+mas "Parcel", id: 639968404
 mas "Pocket", id: 568494494
 mas "Telegram", id: 747648890
 mas "Things", id: 904280696

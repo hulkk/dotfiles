@@ -19,12 +19,6 @@ git clone https://github.com/hulkk/dotfiles.git ~/your-path/dotfiles
 brew bundle --file=~/<your-path>/dotfiles/homebrew/Brewfile
 ```
 
-```bash
-brew install nmap openssl testssl thefuck vim ccat tree watch httpie reattach-to-user-namespace antigen zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch yamllint
-brew tap homebrew/cask-versions
-brew cask install the-unarchiver iterm2-nightly sublime-text rectangle
-```
-
 ## install the custom font from iTerm2-folder
 ```bash
 cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
