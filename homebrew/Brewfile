@@ -24,6 +24,7 @@ brew "fd"
 brew "httpie"
 brew "jq"
 brew "nmap"
+brew "mas"
 brew "ripgrep"
 brew "testssl"
 brew "tree"
@@ -34,3 +35,7 @@ brew "watch"
 cask "rectangle"
 cask "the-unarchiver"
 cask "visual-studio-code"
+
+# Mac App Store apps
+mas "Bear", id: 1091189122
+mas "DaisyDisk", id: 411643860
