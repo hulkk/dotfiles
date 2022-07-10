@@ -10,7 +10,11 @@
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-## install brew packages
+## install brew packages using brewfile
+```bash
+brewfile stuff
+```
+
 ```bash
 brew install nmap openssl testssl thefuck vim ccat tree watch httpie reattach-to-user-namespace antigen zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch yamllint
 brew tap homebrew/cask-versions

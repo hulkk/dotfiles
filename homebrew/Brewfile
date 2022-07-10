@@ -1,0 +1,36 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "moul/moul"
+tap "warrensbox/tap"
+
+# terminal environment related packages
+brew "antigen"
+brew "diff-so-fancy"
+brew "openssl@3"
+brew "python@3.9"
+brew "reattach-to-user-namespace"
+brew "thefuck"
+brew "tmux"
+brew "yamllint"
+brew "zsh"
+brew "warrensbox/tap/tfswitch"
+cask "iterm2-nightly"
+
+# cli utilities
+brew "ccat"
+brew "fd"
+brew "httpie"
+brew "jq"
+brew "nmap"
+brew "ripgrep"
+brew "testssl"
+brew "tree"
+brew "vim"
+brew "watch"
+
+# applications
+cask "rectangle"
+cask "the-unarchiver"
+cask "visual-studio-code"
