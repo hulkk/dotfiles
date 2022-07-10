@@ -6,20 +6,19 @@
 
 ![vim screenshot](/screenshots/vim.png?raw=true)
 
-## install brew, script source https://brew.sh
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-## install brew packages
-```bash
-brew install nmap openssl testssl thefuck vim ccat tree watch httpie reattach-to-user-namespace antigen zsh tmux jq python diff-so-fancy fd ripgrep warrensbox/tap/tfswitch yamllint
-brew tap homebrew/cask-versions
-brew cask install the-unarchiver iterm2-nightly sublime-text rectangle
-```
 ## clone this repo
 ```bash
 git clone https://github.com/hulkk/dotfiles.git ~/your-path/dotfiles
 ```
+## install brew, script source https://brew.sh
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+## install brew packages using brewfile
+```bash
+brew bundle --file=~/<your-path>/dotfiles/homebrew/Brewfile
+```
+
 ## install the custom font from iTerm2-folder
 ```bash
 cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts

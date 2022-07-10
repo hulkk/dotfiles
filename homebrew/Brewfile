@@ -1,0 +1,47 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "warrensbox/tap"
+
+# terminal environment related packages
+brew "antigen"
+brew "diff-so-fancy"
+brew "openssl"
+brew "python@3.9"
+brew "reattach-to-user-namespace"
+brew "thefuck"
+brew "tmux"
+brew "yamllint"
+brew "zsh"
+brew "warrensbox/tap/tfswitch"
+cask "iterm2-nightly"
+
+# cli utilities
+brew "ccat"
+brew "fd"
+brew "httpie"
+brew "jq"
+brew "nmap"
+brew "mas"
+brew "ripgrep"
+brew "testssl"
+brew "tree"
+brew "vim"
+brew "watch"
+
+# applications
+cask "rectangle"
+cask "the-unarchiver"
+cask "visual-studio-code"
+
+# Mac App Store apps
+mas "1Password 7", id: 1333542190
+mas "AdGuard for Safari", id: 1440147259
+mas "Bear", id: 1091189122
+mas "DaisyDisk", id: 411643860
+mas "EasyRes", id: 688211836
+mas "Parcel", id: 639968404
+mas "Pocket", id: 568494494
+mas "Telegram", id: 747648890
+mas "Things", id: 904280696
