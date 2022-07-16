@@ -133,7 +133,7 @@ antigen bundle brew
 
 antigen theme romkatv/powerlevel10k
 
-antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zlsun/solarized-man
 
 antigen apply
