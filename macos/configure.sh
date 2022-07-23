@@ -23,3 +23,7 @@ defaults write "Apple Global Domain" "NSAutomaticQuoteSubstitutionEnabled" '0'
 echo "Disable - Correct spelling automatically"
 defaults write "Apple Global Domain" "WebAutomaticSpellingCorrectionEnabled" '0'
 defaults write "Apple Global Domain" "NSAutomaticSpellingCorrectionEnabled" '0'
+
+echo "Disable - Now Playing Show in Menu Bar"
+defaults write "com.apple.controlcenter" "NSStatusItem Visible NowPlaying" '0'
+
