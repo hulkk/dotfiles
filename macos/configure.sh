@@ -39,4 +39,11 @@ defaults write com.apple.finder ShowPathbar -bool true
 echo "Show Status Bar"
 defaults write com.apple.finder ShowStatusBar -bool true
 
+echo "Configure screenshots path"
+mkdir -p ~/screenshots
+defaults write com.apple.screencapture location '"~/screenshots"'
+
+echo "Disable - Screencapture Show Floating Thumbnail"
+defaults write com.apple.screencapture show-thumbnail -bool false
+
 echo "Done."
