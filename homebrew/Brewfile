@@ -19,8 +19,10 @@ cask "iterm2-nightly"
 
 # cli utilities
 brew "ccat"
+brew "git"
 brew "fd"
 brew "httpie"
+brew "ipinfo-cli"
 brew "jq"
 brew "nmap"
 brew "mas"
@@ -31,7 +33,10 @@ brew "vim"
 brew "watch"
 
 # applications
+cask "firefox"
+cask "google-cloud-sdk"
 cask "rectangle"
+cask "spotify"
 cask "the-unarchiver"
 cask "visual-studio-code"
 
@@ -41,7 +46,9 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Bear", id: 1091189122
 mas "DaisyDisk", id: 411643860
 mas "EasyRes", id: 688211836
+mas "Moom", id: 419330170
 mas "Parcel", id: 639968404
 mas "Pocket", id: 568494494
+mas "Silicio Controller Mini Player", id: 933627574
 mas "Telegram", id: 747648890
 mas "Things", id: 904280696
