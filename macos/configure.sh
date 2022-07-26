@@ -46,4 +46,7 @@ defaults write com.apple.screencapture location '"~/screenshots"'
 echo "Disable - Screencapture Show Floating Thumbnail"
 defaults write com.apple.screencapture show-thumbnail -bool false
 
+echo "Adjust Dock autohide delay from 500ms to 100ms"
+defaults write com.apple.dock "autohide-delay" -float "0.1"
+
 echo "Done."
