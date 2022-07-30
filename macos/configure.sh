@@ -30,7 +30,7 @@ defaults write "com.apple.controlcenter" "NSStatusItem Visible NowPlaying" '0'
 echo "Show all filename extensions"
 defaults write "Apple Global Domain" "AppleShowAllExtensions" -bool true
 
-echo "Disable - Show warningn before emptying the Bin"
+echo "Disable - Show warning before emptying the Bin"
 defaults write "com.apple.finder" "WarnOnEmptyTrash" -bool false
 
 echo "Show Path Bar"
@@ -46,7 +46,29 @@ defaults write com.apple.screencapture location '"~/screenshots"'
 echo "Disable - Screencapture Show Floating Thumbnail"
 defaults write com.apple.screencapture show-thumbnail -bool false
 
-echo "Adjust Dock autohide delay from 500ms to 100ms"
-defaults write com.apple.dock "autohide-delay" -float "0.1"
+echo "Adjust Dock autohide reaction delay from 500ms to 0ms"
+defaults write com.apple.dock "autohide-delay" -float "0.0"
 
-echo "Done."
+echo "Adjust Dock autohide animation time from <default> to 200ms" 
+defaults write com.apple.dock autohide-time-modifier -float "0.2"
+
+echo "Enable dock autohide"
+defaults write com.apple.dock autohide -bool true
+
+echo "Disable Ask Siri"
+defaults write com.apple.assistant.support "Assistant Enabled" -bool false
+
+echo "Remove Siri icon from status menu"
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+echo "Require password from screensaver/sleep after 2 seconds"
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 2000
+
+echo "Disable the warning when changing a file extension"
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+echo "Set dock icon size"
+defaults write com.apple.dock tilesize -int 30
+
+echo "Done. Restart computer or kill Dock / Finder."
