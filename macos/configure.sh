@@ -69,6 +69,6 @@ echo "Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 echo "Set dock icon size"
-defaults write com.apple.dock tilesize -int 30
+defaults write com.apple.dock tilesize -int 36
 
 echo "Done. Restart computer or kill Dock / Finder."
