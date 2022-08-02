@@ -3,21 +3,21 @@
 # 1.1 Ensure All Apple-provided Software Is Current
 # N/A
 
-# 1.2 Ensure Auto Update Is Enabled
-/Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled
+echo "1.2 Ensure Auto Update Is Enabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
-# 1.3 Ensure Download New Updates When Available is Enabled
-/Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload
+echo "1.3 Ensure Download New Updates When Available is Enabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool true
 
-# 1.4 Ensure Installation of App Update Is Enabled
-/Library/Preferences/com.apple.commerce AutoUpdate
+echo "1.4 Ensure Installation of App Update Is Enabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
 
-# 1.5 Ensure System Data Files and Security Updates Are Downloaded Automatically Is Enabled
-/Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall
-/Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall
+echo "1.5 Ensure System Data Files and Security Updates Are Downloaded Automatically Is Enabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall -bool true
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
 
-# 1.6 Ensure Install of macOS Updates Is Enabled
-/Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates
+echo "1.6 Ensure Install of macOS Updates Is Enabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
 
 # 1.7 Audit Computer Name
 # N/A, Level 2
