@@ -25,15 +25,17 @@ sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate Autom
 ### 2 System Preferences
 
 # 2.1.1 Ensure Bluetooth Is Disabled If No Devices Are Paired
-# N/A
+# N/A, Bluetooth devices are paired
 
-# 2.1.2 Ensure Show Bluetooth Status in Menu Bar Is Enabled
+echo "2.1.2 Ensure Show Bluetooth Status in Menu Bar Is Enabled"
+defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
 
 # 2.2.1 Ensure "Set time and date automatically" Is Enabled
 
 # 2.2.2 Ensure time set is within appropriate limits
 
-# 2.3.1 Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled
+# echo "2.3.1 Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled"
+# defaults -currentHost write com.apple.screensaver idleTime -int 1200
 
 # 2.3.2 Ensure Screen Saver Corners Are Secure
 # N/A, Level 2
@@ -75,11 +77,14 @@ sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate Autom
 
 # 2.5.1.3 Ensure all user storage CoreStorage volumes are encrypted
 
-# 2.5.2.1 Ensure Gatekeeper is Enabled
+echo "2.5.2.1 Ensure Gatekeeper is Enabled"
+sudo /usr/sbin/spctl --master-enable
 
-# 2.5.2.2 Ensure Firewall Is Enabled
+echo "2.5.2.2 Ensure Firewall Is Enabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
-# 2.5.2.3 Ensure Firewall Stealth Mode Is Enabled
+echo "2.5.2.3 Ensure Firewall Stealth Mode Is Enabled"
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
 # 2.5.3 Ensure Location Services Is Enabled
 # N/A, Level 2
