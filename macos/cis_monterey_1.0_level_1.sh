@@ -1,7 +1,7 @@
 ### 1 Install Updates, Patches and Additional Security Software
 
 # 1.1 Ensure All Apple-provided Software Is Current
-# N/A
+# N/A, point in time check
 
 echo "1.2 Ensure Auto Update Is Enabled"
 sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
@@ -69,7 +69,9 @@ defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
 # 2.4.12 Ensure Media Sharing Is Disabled
 # N/A, Level 2
 
-# 2.4.13 Ensure AirPlay Receiver Is Disabled
+echo "2.4.13 Ensure AirPlay Receiver Is Disabled"
+defaults -currentHost write com.apple.controlcenter.plist AirplayRecieverEnabled -bool false
+# yes, the parameter has a typo in it
 
 # 2.5.1.1 Ensure FileVault Is Enabled
 
@@ -95,7 +97,8 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 # 2.5.5 Ensure Sending Diagnostic and Usage Data to Apple Is Disabled
 # N/A, Level 2
 
-# 2.5.6 Ensure Limit Ad Tracking Is Enabled
+echo "2.5.6 Ensure Limit Ad Tracking Is Enabled"
+defaults -currentHost write /Users/$USER/Library/Preferences/com.apple.Adlib.plist allowApplePersonalizedAdvertising -bool false
 
 # 2.5.7 Audit Camera Privacy and Confidentiality
 # N/A, Level 2
@@ -147,14 +150,17 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 # 4.1 Ensure Bonjour Advertising Services Is Disabled
 # N/A, Level 2
 
-# 4.2 Ensure Show Wi-Fi status in Menu Bar Is Enabled
+echo "4.2 Ensure Show Wi-Fi status in Menu Bar Is Enabled"
+defaults -currentHost write com.apple.controlcenter.plist WiFi -int 18
 
 # 4.3 Audit Network Specific Locations
 # N/A, Level 2
 
-# 4.4 Ensure HTTP Server Is Disabled
+echo "4.4 Ensure HTTP Server Is Disabled"
+sudo launchctl disable system/org.apache.httpd
 
-# 4.5 Ensure NFS Server Is Disabled
+echo "4.5 Ensure NFS Server Is Disabled"
+sudo launchctl disable system/com.apple.nfsd
 
 # 4.6 Audit Wi-Fi Settings
 # N/A, Level 2
