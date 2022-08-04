@@ -256,16 +256,21 @@ sudo security authorizationdb write system.login.screensaver use-login-window-ui
 ### 6 User Accounts and Environment
 
 # 6.1.1 Ensure Login Window Displays as Name and Password Is Enabled
+# N/A, acceptable risk
 
-# 6.1.2 Ensure Show Password Hints Is Disabled
+echo "6.1.2 Ensure Show Password Hints Is Disabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow RetriesUntilHint -int 0
 
-# 6.1.3 Ensure Guest Account Is Disabled
+echo "6.1.3 Ensure Guest Account Is Disabled"
+sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 
-# 6.1.4 Ensure Guest Access to Shared Folders Is Disabled
+echo "6.1.4 Ensure Guest Access to Shared Folders Is Disabled"
+sudo /usr/sbin/sysadminctl -afpGuestAccess off
+sudo /usr/sbin/sysadminctl -smbGuestAccess off
 
 # 6.1.5 Ensure the Guest Home Folder Does Not Exist
+# N/A, point in time check
 
 # 6.2 Ensure Show All Filename Extensions Setting is Enabled
 
 # 6.3 Ensure Automatic Opening of Safe Files in Safari Is Disabled
-
