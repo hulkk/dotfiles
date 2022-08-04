@@ -45,8 +45,8 @@ sudo /usr/sbin/systemsetup -setusingnetworktime on
 # 2.3.2 Ensure Screen Saver Corners Are Secure
 # N/A, Level 2
 
-echo "2.4.1 Ensure Remote Apple Events Is Disabled"
-sudo /usr/sbin/systemsetup -setremoteappleevents off
+# echo "2.4.1 Ensure Remote Apple Events Is Disabled"
+# sudo /usr/sbin/systemsetup -setremoteappleevents off
 
 echo "2.4.2 Ensure Internet Sharing Is Disabled"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict Enabled -int 0
@@ -232,8 +232,8 @@ sudo /usr/bin/pwpolicy -n /Local/Default -setglobalpolicy "usingHistory=15"
 # 5.4 Ensure a Separate Timestamp Is Enabled for Each User/tty Combo
 # N/A, acceptable risk
 
-echo "5.5 Ensure the \"root\" Account Is Disabled"
-sudo /usr/sbin/dsenableroot -d
+# echo "5.5 Ensure the \"root\" Account Is Disabled"
+# sudo /usr/sbin/dsenableroot -d
 
 echo "5.6 Ensure Automatic Login Is Disabled"
 sudo /usr/bin/defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
