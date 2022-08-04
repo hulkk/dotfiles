@@ -19,16 +19,19 @@ sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate Criti
 echo "1.6 Ensure Install of macOS Updates Is Enabled"
 sudo /usr/bin/defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
 
-# 1.7 Audit Computer Name
+# 1.7 Ensure Software Update Deferment Is Less Than or Equal to 30 Days
+# N/A, Requires MDM profile
+
+# 1.8 Ensure Computer Name Does Not Contain PII or Protected Organizational Information
 # N/A, Level 2
 
 ### 2 System Preferences
 
-# 2.1.1 Ensure Bluetooth Is Disabled If No Devices Are Paired
-# N/A, Bluetooth devices are paired
-
-echo "2.1.2 Ensure Show Bluetooth Status in Menu Bar Is Enabled"
+echo "2.1.1 Ensure Show Bluetooth Status in Menu Bar Is Enabled"
 defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
+
+echo "2.1.2 Ensure Show Wi-Fi status in Menu Bar Is Enabled"
+defaults -currentHost write com.apple.controlcenter.plist WiFi -int 18
 
 # 2.2.1 Ensure "Set time and date automatically" Is Enabled
 
@@ -39,8 +42,6 @@ defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
 
 # 2.3.2 Ensure Screen Saver Corners Are Secure
 # N/A, Level 2
-
-# 2.3.3 Audit Lock Screen and Start Screen Saver Tools
 
 # 2.4.1 Ensure Remote Apple Events Is Disabled
 
@@ -79,13 +80,10 @@ defaults -currentHost write com.apple.controlcenter.plist AirplayRecieverEnabled
 
 # 2.5.1.3 Ensure all user storage CoreStorage volumes are encrypted
 
-echo "2.5.2.1 Ensure Gatekeeper is Enabled"
-sudo /usr/sbin/spctl --master-enable
-
-echo "2.5.2.2 Ensure Firewall Is Enabled"
+echo "2.5.2.1 Ensure Firewall Is Enabled"
 sudo /usr/bin/defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
-echo "2.5.2.3 Ensure Firewall Stealth Mode Is Enabled"
+echo "2.5.2.2 Ensure Firewall Stealth Mode Is Enabled"
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
 # 2.5.3 Ensure Location Services Is Enabled
@@ -100,48 +98,52 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 echo "2.5.6 Ensure Limit Ad Tracking Is Enabled"
 defaults -currentHost write /Users/$USER/Library/Preferences/com.apple.Adlib.plist allowApplePersonalizedAdvertising -bool false
 
-# 2.5.7 Audit Camera Privacy and Confidentiality
+echo "2.5.7 Ensure Gatekeeper is Enabled"
+sudo /usr/sbin/spctl --master-enable
+
+# 2.5.8 Ensure a Custom Message for the Login Screen Is Enabled
+
+# 2.5.9 Ensure an Administrator Password Is Required to Access System-Wide Preferences
+
+# 2.5.10 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled
+
+# 2.6.1.1 Audit iCloud Keychain
 # N/A, Level 2
 
-# 2.6.1.1 Audit iCloud Configuration
+# 2.6.1.2 Audit iCloud Drive
 # N/A, Level 2
 
-# 2.6.1.2 Audit iCloud Keychain
-# N/A, Level 2
-
-# 2.6.1.3 Audit iCloud Drive
-# N/A, Level 2
-
-# 2.6.1.4 Ensure iCloud Drive Document and Desktop Sync is Disabled
+# 2.6.1.3 Ensure iCloud Drive Document and Desktop Sync is Disabled
 # N/A, Level 2
 
 # 2.6.2 Audit App Store Password Settings
 # N/A, Level 2
 
-# 2.7.1 Ensure Backup Up Automatically is Enabled
+# 2.7.1 Ensure Backup Automatically is Enabled
 # N/A, Level 2
 
 # 2.7.2 Ensure Time Machine Volumes Are Encrypted
 
-# 2.8 Ensure Wake for Network Access Is Disabled
+# 2.8.1 Ensure Wake for Network Access Is Disabled
 
-# 2.9 Ensure Power Nap Is Disabled
+# 2.8.2 Ensure Power Nap Is Disabled for Intel Macs
+# N/A, Apple Silicon
 
-# 2.10 Ensure Secure Keyboard Entry terminal.app is Enabled
+# 2.8.3 Ensure the OS is not Activate When Resuming from Sleep
+# N/A, Level 2
 
-# 2.11 Ensure EFI Version Is Valid and Checked Regularly
+# 2.9 Ensure Legacy EFI Is Valid and Updating
+# N/A, Apple Silicon
 
-# 2.12 Audit Automatic Actions for Optical Media
+# 2.10 Audit Siri Settings
 
-# 2.13 Audit Siri Settings
+# 2.11 Audit Universal Control Settings
 
-# 2.14 Audit Sidecar Settings
+# 2.12 Audit Touch ID and Wallet & Apple Pay Settings
 
-# 2.15 Audit Touch ID and Wallet & Apple Pay Settings
+# 2.13 Audit Notification & Focus Settings
 
-# 2.16 Audit Notification System Preference Settings
-
-# 2.17 Audit Passwords System Preference Setting
+# 2.14 Audit Passwords System Preference Setting
 
 ### 3 Logging and Auditing
 
@@ -150,20 +152,11 @@ defaults -currentHost write /Users/$USER/Library/Preferences/com.apple.Adlib.pli
 # 4.1 Ensure Bonjour Advertising Services Is Disabled
 # N/A, Level 2
 
-echo "4.2 Ensure Show Wi-Fi status in Menu Bar Is Enabled"
-defaults -currentHost write com.apple.controlcenter.plist WiFi -int 18
-
-# 4.3 Audit Network Specific Locations
-# N/A, Level 2
-
-echo "4.4 Ensure HTTP Server Is Disabled"
+echo "4.2 Ensure HTTP Server Is Disabled"
 sudo launchctl disable system/org.apache.httpd
 
-echo "4.5 Ensure NFS Server Is Disabled"
+echo "4.3 Ensure NFS Server Is Disabled"
 sudo launchctl disable system/com.apple.nfsd
-
-# 4.6 Audit Wi-Fi Settings
-# N/A, Level 2
 
 ### 5 System Access, Authentication and Authorization
 
@@ -171,17 +164,15 @@ sudo launchctl disable system/com.apple.nfsd
 
 # 5.1.2 Ensure System Integrity Protection Status (SIPS) Is Enabled
 
-# 5.1.3 Ensure Apple Mobile File Integrity Is Enabled
+# 5.1.3 Ensure Apple Mobile File Integrity (AMFI) Is Enabled
 
-# 5.1.4 Ensure Library Validation Is Enabled
+# 5.1.4 Ensure Sealed System Volume (SSV) Is Enabled
 
-# 5.1.5 Ensure Sealed System Volume (SSV) Is Enabled
+# 5.1.5 Ensure Appropriate Permissions Are Enabled for System Wide Applications
 
-# 5.1.6 Ensure Appropriate Permissions Are Enabled for System Wide Applications
+# 5.1.6 Ensure No World Writable Files Exist in the System Folder
 
-# 5.1.7 Ensure No World Writable Files Exist in the System Folder
-
-# 5.1.8 Ensure No World Writable Files Exist in the Library Folder
+# 5.1.7 Ensure No World Writable Files Exist in the Library Folder
 # N/A, Level 2
 
 # 5.2.1 Ensure Password Account Lockout Threshold Is Configured
@@ -209,31 +200,31 @@ sudo launchctl disable system/com.apple.nfsd
 
 # 5.4 Ensure a Separate Timestamp Is Enabled for Each User/tty Combo
 
+# 5.5 Ensure the "root" Account Is Disabled
+
+# 5.6 Ensure Automatic Login Is Disabled
+
+# 5.7 Ensure an administrator account cannot login to another user's active and locked session
+
+# 5.8 Ensure a Login Window Banner Exists
+# N/A, Level 2
+
 # 5.5 Ensure login keychain is locked when the computer sleeps
 # N/A, Level 2
 
-# 5.6 Ensure the "root" Account Is Disabled
-
-# 5.7 Ensure Automatic Login Is Disabled
-
 # 5.8 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled
+
+# 5.9 Ensure Users' Accounts Do Not Have a Password Hint
 
 # 5.9 Ensure system is set to hibernate
 # N/A, Level 2
 
+# 5.10 Ensure Fast User Switching Is Disabled
+# N/A, Level 2
+
 # 5.10 Require an administrator password to access system-wide preferences
 
-# 5.11 Ensure an administrator account cannot login to another user's active and locked session
-
-# 5.12 Ensure a Custom Message for the Login Screen Is Enabled
-
-# 5.13 Ensure a Login Window Banner Exists
-# N/A, Level 2
-
-# 5.14 Ensure Users' Accounts Do Not Have a Password Hint
-
-# 5.15 Ensure Fast User Switching Is Disabled
-# N/A, Level 2
+# 5.11 Ensure Secure Keyboard Entry Terminal.app Is Enabled
 
 ### 6 User Accounts and Environment
 
