@@ -154,14 +154,19 @@ sudo pmset -a womp 0
 # N/A, Apple Silicon
 
 # 2.10 Audit Siri Settings
+# N/A, Audit task
 
 # 2.11 Audit Universal Control Settings
+# N/A, Audit task
 
 # 2.12 Audit Touch ID and Wallet & Apple Pay Settings
+# N/A, Audit task
 
 # 2.13 Audit Notification & Focus Settings
+# N/A, Audit task
 
 # 2.14 Audit Passwords System Preference Setting
+# N/A, Audit task
 
 ### 3 Logging and Auditing
 
@@ -180,22 +185,28 @@ sudo launchctl disable system/com.apple.nfsd
 
 # 5.1.1 Ensure Home Folders Are Secure
 
-# 5.1.2 Ensure System Integrity Protection Status (SIPS) Is Enabled
+echo "5.1.2 Ensure System Integrity Protection Status (SIPS) Is Enabled"
+sudo /usr/bin/csrutil status
 
 # 5.1.3 Ensure Apple Mobile File Integrity (AMFI) Is Enabled
 
-# 5.1.4 Ensure Sealed System Volume (SSV) Is Enabled
+echo "5.1.4 Ensure Sealed System Volume (SSV) Is Enabled"
+sudo /usr/bin/csrutil authenticated-root status
 
 # 5.1.5 Ensure Appropriate Permissions Are Enabled for System Wide Applications
+# N/A, point in time check
 
 # 5.1.6 Ensure No World Writable Files Exist in the System Folder
+# N/A, point in time check
 
 # 5.1.7 Ensure No World Writable Files Exist in the Library Folder
 # N/A, Level 2
 
-# 5.2.1 Ensure Password Account Lockout Threshold Is Configured
+echo "5.2.1 Ensure Password Account Lockout Threshold Is Configured"
+sudo /usr/bin/pwpolicy -n /Local/Default -setglobalpolicy "maxFailedLoginAttempts=5"
 
-# 5.2.2 Ensure Password Minimum Length Is Configured
+echo "5.2.2 Ensure Password Minimum Length Is Configured"
+sudo /usr/bin/pwpolicy -n /Local/Default -setglobalpolicy "minChars=15"
 
 # 5.2.3 Ensure Complex Password Must Contain Alphabetic Characters Is Configured
 # N/A, Level 2
@@ -212,37 +223,35 @@ sudo launchctl disable system/com.apple.nfsd
 # 5.2.7 Ensure Password Age Is Configured
 # N/A, acceptable risk
 
-# 5.2.8 Ensure Password History Is Configured
+echo "5.2.8 Ensure Password History Is Configured"
+sudo /usr/bin/pwpolicy -n /Local/Default -setglobalpolicy "usingHistory=15"
 
 # 5.3 Ensure the Sudo Timeout Period Is Set to Zero
+# N/A, acceptable risk
 
 # 5.4 Ensure a Separate Timestamp Is Enabled for Each User/tty Combo
+# N/A, acceptable risk
 
-# 5.5 Ensure the "root" Account Is Disabled
+echo "5.5 Ensure the \"root\" Account Is Disabled"
+sudo /usr/sbin/dsenableroot -d
 
-# 5.6 Ensure Automatic Login Is Disabled
+echo "5.6 Ensure Automatic Login Is Disabled"
+sudo /usr/bin/defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
 
-# 5.7 Ensure an administrator account cannot login to another user's active and locked session
+echo "5.7 Ensure an administrator account cannot login to another user's active and locked session"
+sudo security authorizationdb write system.login.screensaver use-login-window-ui
 
 # 5.8 Ensure a Login Window Banner Exists
 # N/A, Level 2
 
-# 5.5 Ensure login keychain is locked when the computer sleeps
-# N/A, Level 2
-
-# 5.8 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled
-
 # 5.9 Ensure Users' Accounts Do Not Have a Password Hint
-
-# 5.9 Ensure system is set to hibernate
-# N/A, Level 2
+# N/A, acceptable risk
 
 # 5.10 Ensure Fast User Switching Is Disabled
 # N/A, Level 2
 
-# 5.10 Require an administrator password to access system-wide preferences
-
 # 5.11 Ensure Secure Keyboard Entry Terminal.app Is Enabled
+# N/A, acceptable risk
 
 ### 6 User Accounts and Environment
 
