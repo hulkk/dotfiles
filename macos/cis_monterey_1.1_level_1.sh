@@ -33,9 +33,11 @@ defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
 echo "2.1.2 Ensure Show Wi-Fi status in Menu Bar Is Enabled"
 defaults -currentHost write com.apple.controlcenter.plist WiFi -int 18
 
-# 2.2.1 Ensure "Set time and date automatically" Is Enabled
+echo "2.2.1 Ensure \"Set time and date automatically\" Is Enabled"
+sudo /usr/sbin/systemsetup -setusingnetworktime on
 
 # 2.2.2 Ensure time set is within appropriate limits
+# N/A, point in time check
 
 # echo "2.3.1 Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled"
 # defaults -currentHost write com.apple.screensaver idleTime -int 1200
@@ -43,23 +45,31 @@ defaults -currentHost write com.apple.controlcenter.plist WiFi -int 18
 # 2.3.2 Ensure Screen Saver Corners Are Secure
 # N/A, Level 2
 
-# 2.4.1 Ensure Remote Apple Events Is Disabled
+echo "2.4.1 Ensure Remote Apple Events Is Disabled"
+sudo /usr/sbin/systemsetup -setremoteappleevents off
 
-# 2.4.2 Ensure Internet Sharing Is Disabled
+echo "2.4.2 Ensure Internet Sharing Is Disabled"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict Enabled -int 0
 
-# 2.4.3 Ensure Screen Sharing Is Disabled
+echo "2.4.3 Ensure Screen Sharing Is Disabled"
+sudo launchctl disable system/com.apple.screensharing
 
-# 2.4.4 Ensure Printer Sharing Is Disabled
+echo "2.4.4 Ensure Printer Sharing Is Disabled"
+sudo cupsctl --no-share-printers
 
-# 2.4.5 Ensure Remote Login Is Disabled
+echo "2.4.5 Ensure Remote Login Is Disabled"
+sudo systemsetup -setremotelogin off
 
-# 2.4.6 Ensure DVD or CD Sharing Is Disabled
+echo "2.4.6 Ensure DVD or CD Sharing Is Disabled"
+sudo launchctl disable system/com.apple.ODSAgent
 
 # 2.4.7 Ensure Bluetooth Sharing Is Disabled
 
-# 2.4.8 Ensure File Sharing Is Disabled
+echo "2.4.8 Ensure File Sharing Is Disabled"
+sudo launchctl disable system/com.apple.smbd
 
-# 2.4.9 Ensure Remote Management Is Disabled
+echo "2.4.9 Ensure Remote Management Is Disabled"
+sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -deactivate -stop
 
 # 2.4.10 Ensure Content Caching Is Disabled
 # N/A, Level 2
@@ -75,10 +85,13 @@ defaults -currentHost write com.apple.controlcenter.plist AirplayRecieverEnabled
 # yes, the parameter has a typo in it
 
 # 2.5.1.1 Ensure FileVault Is Enabled
+# N/A, Requires MDM profile
 
 # 2.5.1.2 Ensure all user storage APFS volumes are encrypted
+# N/A, point in time check
 
 # 2.5.1.3 Ensure all user storage CoreStorage volumes are encrypted
+# N/A, point in time check
 
 echo "2.5.2.1 Ensure Firewall Is Enabled"
 sudo /usr/bin/defaults write /Library/Preferences/com.apple.alf globalstate -int 1
