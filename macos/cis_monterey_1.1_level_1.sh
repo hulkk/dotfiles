@@ -114,11 +114,14 @@ defaults -currentHost write /Users/$USER/Library/Preferences/com.apple.Adlib.pli
 echo "2.5.7 Ensure Gatekeeper is Enabled"
 sudo /usr/sbin/spctl --master-enable
 
-# 2.5.8 Ensure a Custom Message for the Login Screen Is Enabled
+echo "2.5.8 Ensure a Custom Message for the Login Screen Is Enabled"
+echo "sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"My Login Screen message\""
 
-# 2.5.9 Ensure an Administrator Password Is Required to Access System-Wide Preferences
+echo "2.5.9 Ensure an Administrator Password Is Required to Access System-Wide Preferences"
+echo "Due to change required in authorizationdb, preferred way to change via UI"
 
-# 2.5.10 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled
+echo "2.5.10 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled"
+echo "No terminal method available, configure via UI"
 
 # 2.6.1.1 Audit iCloud Keychain
 # N/A, Level 2
@@ -136,8 +139,10 @@ sudo /usr/sbin/spctl --master-enable
 # N/A, Level 2
 
 # 2.7.2 Ensure Time Machine Volumes Are Encrypted
+# N/A, if Time Machine is not enabled
 
-# 2.8.1 Ensure Wake for Network Access Is Disabled
+echo "2.8.1 Ensure Wake for Network Access Is Disabled"
+sudo pmset -a womp 0
 
 # 2.8.2 Ensure Power Nap Is Disabled for Intel Macs
 # N/A, Apple Silicon
