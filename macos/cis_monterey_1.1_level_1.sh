@@ -46,9 +46,10 @@ sudo pmset -a displaysleep 20
 # 2.3.2 Ensure Screen Saver Corners Are Secure
 # N/A, Level 2
 
-# echo "2.4.1 Ensure Remote Apple Events Is Disabled"
+echo "2.4.1 Ensure Remote Apple Events Is Disabled"
 # sudo /usr/sbin/systemsetup -setremoteappleevents off
 # Turning Remote AppleEvents on or off requires Full Disk Access privileges.
+sudo /usr/sbin/systemsetup -getremoteappleevents
 
 echo "2.4.2 Ensure Internet Sharing Is Disabled"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict Enabled -int 0
@@ -65,8 +66,8 @@ sudo systemsetup -setremotelogin off
 echo "2.4.6 Ensure DVD or CD Sharing Is Disabled"
 sudo launchctl disable system/com.apple.ODSAgent
 
-# 2.4.7 Ensure Bluetooth Sharing Is Disabled
-# TODO
+echo "2.4.7 Ensure Bluetooth Sharing Is Disabled"
+defaults -currentHost write com.apple.Bluetooth PrefKeyServicesEnabled -bool false
 
 echo "2.4.8 Ensure File Sharing Is Disabled"
 sudo launchctl disable system/com.apple.smbd
