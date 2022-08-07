@@ -240,9 +240,8 @@ sudo /usr/bin/pwpolicy -n /Local/Default -setglobalpolicy "usingHistory=15"
 # 5.4 Ensure a Separate Timestamp Is Enabled for Each User/tty Combo
 # N/A, acceptable risk
 
-# echo "5.5 Ensure the \"root\" Account Is Disabled"
-# sudo /usr/sbin/dsenableroot -d
-# TODO
+echo "5.5 Ensure the \"root\" Account Is Disabled"
+sudo /usr/bin/dscl . -read /Users/root AuthenticationAuthority
 
 echo "5.6 Ensure Automatic Login Is Disabled"
 sudo /usr/bin/defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
@@ -283,5 +282,7 @@ sudo /usr/sbin/sysadminctl -smbGuestAccess off
 echo "6.2 Ensure Show All Filename Extensions Setting is Enabled"
 defaults write "Apple Global Domain" "AppleShowAllExtensions" -bool true
 
-# 6.3 Ensure Automatic Opening of Safe Files in Safari Is Disabled
-# TODO
+echo "6.3 Ensure Automatic Opening of Safe Files in Safari Is Disabled"
+# CLI configuration requires Full Disk Access privileges.
+echo "### manual task ###"
+echo "Safari - Preferences - General - Uncheck Open \"safe\" files after downloading\n"
