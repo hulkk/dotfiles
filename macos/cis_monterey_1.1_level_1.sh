@@ -39,14 +39,17 @@ sudo /usr/sbin/systemsetup -setusingnetworktime on
 # 2.2.2 Ensure time set is within appropriate limits
 # N/A, point in time check
 
-# echo "2.3.1 Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled"
-# defaults -currentHost write com.apple.screensaver idleTime -int 1200
+echo "2.3.1 Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled"
+# Use display sleep instead of screen saver
+sudo pmset -a displaysleep 20
 
 # 2.3.2 Ensure Screen Saver Corners Are Secure
 # N/A, Level 2
 
-# echo "2.4.1 Ensure Remote Apple Events Is Disabled"
+echo "2.4.1 Ensure Remote Apple Events Is Disabled"
 # sudo /usr/sbin/systemsetup -setremoteappleevents off
+# Turning Remote AppleEvents on or off requires Full Disk Access privileges.
+sudo /usr/sbin/systemsetup -getremoteappleevents
 
 echo "2.4.2 Ensure Internet Sharing Is Disabled"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict Enabled -int 0
@@ -63,7 +66,8 @@ sudo systemsetup -setremotelogin off
 echo "2.4.6 Ensure DVD or CD Sharing Is Disabled"
 sudo launchctl disable system/com.apple.ODSAgent
 
-# 2.4.7 Ensure Bluetooth Sharing Is Disabled
+echo "2.4.7 Ensure Bluetooth Sharing Is Disabled"
+defaults -currentHost write com.apple.Bluetooth PrefKeyServicesEnabled -bool false
 
 echo "2.4.8 Ensure File Sharing Is Disabled"
 sudo launchctl disable system/com.apple.smbd
@@ -115,13 +119,16 @@ echo "2.5.7 Ensure Gatekeeper is Enabled"
 sudo /usr/sbin/spctl --master-enable
 
 echo "2.5.8 Ensure a Custom Message for the Login Screen Is Enabled"
-echo "sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"My Login Screen message\""
+echo "### manual task ###"
+echo "sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"My Login Screen message\"\n"
 
 echo "2.5.9 Ensure an Administrator Password Is Required to Access System-Wide Preferences"
-echo "Due to change required in authorizationdb, preferred way to change via UI"
+echo "### manual task ###"
+echo "System Preferences - Security & Privacy - General - Advanced - Set Require an administrator password to access system-wide preferences\n"
 
 echo "2.5.10 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled"
-echo "No terminal method available, configure via UI"
+echo "### manual task ###"
+echo "System Preferences - Security & Privacy - General - Require password immediately after sleep or screensaver begins\n"
 
 # 2.6.1.1 Audit iCloud Keychain
 # N/A, Level 2
@@ -169,6 +176,7 @@ sudo pmset -a womp 0
 # N/A, Audit task
 
 ### 3 Logging and Auditing
+# TODO
 
 ### 4 Network Configurations
 
@@ -189,6 +197,7 @@ echo "5.1.2 Ensure System Integrity Protection Status (SIPS) Is Enabled"
 sudo /usr/bin/csrutil status
 
 # 5.1.3 Ensure Apple Mobile File Integrity (AMFI) Is Enabled
+# TODO
 
 echo "5.1.4 Ensure Sealed System Volume (SSV) Is Enabled"
 sudo /usr/bin/csrutil authenticated-root status
@@ -232,8 +241,8 @@ sudo /usr/bin/pwpolicy -n /Local/Default -setglobalpolicy "usingHistory=15"
 # 5.4 Ensure a Separate Timestamp Is Enabled for Each User/tty Combo
 # N/A, acceptable risk
 
-# echo "5.5 Ensure the \"root\" Account Is Disabled"
-# sudo /usr/sbin/dsenableroot -d
+echo "5.5 Ensure the \"root\" Account Is Disabled"
+sudo /usr/bin/dscl . -read /Users/root AuthenticationAuthority
 
 echo "5.6 Ensure Automatic Login Is Disabled"
 sudo /usr/bin/defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
@@ -271,6 +280,10 @@ sudo /usr/sbin/sysadminctl -smbGuestAccess off
 # 6.1.5 Ensure the Guest Home Folder Does Not Exist
 # N/A, point in time check
 
-# 6.2 Ensure Show All Filename Extensions Setting is Enabled
+echo "6.2 Ensure Show All Filename Extensions Setting is Enabled"
+defaults write "Apple Global Domain" "AppleShowAllExtensions" -bool true
 
-# 6.3 Ensure Automatic Opening of Safe Files in Safari Is Disabled
+echo "6.3 Ensure Automatic Opening of Safe Files in Safari Is Disabled"
+# CLI configuration requires Full Disk Access privileges.
+echo "### manual task ###"
+echo "Safari - Preferences - General - Uncheck Open \"safe\" files after downloading\n"
