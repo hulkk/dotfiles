@@ -118,14 +118,16 @@ echo "2.5.7 Ensure Gatekeeper is Enabled"
 sudo /usr/sbin/spctl --master-enable
 
 echo "2.5.8 Ensure a Custom Message for the Login Screen Is Enabled"
-echo "sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"My Login Screen message\""
+echo "### manual task ###"
+echo "sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"My Login Screen message\"\n"
 
 echo "2.5.9 Ensure an Administrator Password Is Required to Access System-Wide Preferences"
-echo "Due to change required in authorizationdb, preferred way to change via UI"
+echo "### manual task ###"
+echo "Due to change required in authorizationdb, preferred way to change via UI\n"
 
 echo "2.5.10 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled"
-echo "No terminal method available, configure via UI"
-echo "TODO"
+echo "### manual task ###"
+echo "No terminal method available, configure via UI\n"
 
 # 2.6.1.1 Audit iCloud Keychain
 # N/A, Level 2
@@ -173,6 +175,7 @@ sudo pmset -a womp 0
 # N/A, Audit task
 
 ### 3 Logging and Auditing
+# TODO
 
 ### 4 Network Configurations
 
@@ -193,6 +196,7 @@ echo "5.1.2 Ensure System Integrity Protection Status (SIPS) Is Enabled"
 sudo /usr/bin/csrutil status
 
 # 5.1.3 Ensure Apple Mobile File Integrity (AMFI) Is Enabled
+# TODO
 
 echo "5.1.4 Ensure Sealed System Volume (SSV) Is Enabled"
 sudo /usr/bin/csrutil authenticated-root status
@@ -238,6 +242,7 @@ sudo /usr/bin/pwpolicy -n /Local/Default -setglobalpolicy "usingHistory=15"
 
 # echo "5.5 Ensure the \"root\" Account Is Disabled"
 # sudo /usr/sbin/dsenableroot -d
+# TODO
 
 echo "5.6 Ensure Automatic Login Is Disabled"
 sudo /usr/bin/defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
@@ -279,3 +284,4 @@ echo "6.2 Ensure Show All Filename Extensions Setting is Enabled"
 defaults write "Apple Global Domain" "AppleShowAllExtensions" -bool true
 
 # 6.3 Ensure Automatic Opening of Safe Files in Safari Is Disabled
+# TODO
