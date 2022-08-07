@@ -123,11 +123,11 @@ echo "sudo /usr/bin/defaults write /Library/Preferences/com.apple.loginwindow Lo
 
 echo "2.5.9 Ensure an Administrator Password Is Required to Access System-Wide Preferences"
 echo "### manual task ###"
-echo "Due to change required in authorizationdb, preferred way to change via UI\n"
+echo "System Preferences - Security & Privacy - General - Advanced - Set Require an administrator password to access system-wide preferences\n"
 
 echo "2.5.10 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled"
 echo "### manual task ###"
-echo "No terminal method available, configure via UI\n"
+echo "System Preferences - Security & Privacy - General - Require password immediately after sleep or screensaver begins\n"
 
 # 2.6.1.1 Audit iCloud Keychain
 # N/A, Level 2
