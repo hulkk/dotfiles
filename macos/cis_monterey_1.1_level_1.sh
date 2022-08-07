@@ -39,14 +39,16 @@ sudo /usr/sbin/systemsetup -setusingnetworktime on
 # 2.2.2 Ensure time set is within appropriate limits
 # N/A, point in time check
 
-# echo "2.3.1 Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled"
-# defaults -currentHost write com.apple.screensaver idleTime -int 1200
+echo "2.3.1 Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled"
+# Use display sleep instead of screen saver
+sudo pmset -a displaysleep 20
 
 # 2.3.2 Ensure Screen Saver Corners Are Secure
 # N/A, Level 2
 
 # echo "2.4.1 Ensure Remote Apple Events Is Disabled"
 # sudo /usr/sbin/systemsetup -setremoteappleevents off
+# Turning Remote AppleEvents on or off requires Full Disk Access privileges.
 
 echo "2.4.2 Ensure Internet Sharing Is Disabled"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.nat NAT -dict Enabled -int 0
@@ -64,6 +66,7 @@ echo "2.4.6 Ensure DVD or CD Sharing Is Disabled"
 sudo launchctl disable system/com.apple.ODSAgent
 
 # 2.4.7 Ensure Bluetooth Sharing Is Disabled
+# TODO
 
 echo "2.4.8 Ensure File Sharing Is Disabled"
 sudo launchctl disable system/com.apple.smbd
@@ -122,6 +125,7 @@ echo "Due to change required in authorizationdb, preferred way to change via UI"
 
 echo "2.5.10 Ensure a Password is Required to Wake the Computer From Sleep or Screen Saver Is Enabled"
 echo "No terminal method available, configure via UI"
+echo "TODO"
 
 # 2.6.1.1 Audit iCloud Keychain
 # N/A, Level 2
@@ -271,6 +275,7 @@ sudo /usr/sbin/sysadminctl -smbGuestAccess off
 # 6.1.5 Ensure the Guest Home Folder Does Not Exist
 # N/A, point in time check
 
-# 6.2 Ensure Show All Filename Extensions Setting is Enabled
+echo "6.2 Ensure Show All Filename Extensions Setting is Enabled"
+defaults write "Apple Global Domain" "AppleShowAllExtensions" -bool true
 
 # 6.3 Ensure Automatic Opening of Safe Files in Safari Is Disabled
