@@ -18,8 +18,9 @@ echo "Disable Safari Suggestions"
 echo "### manual task ###"
 echo "Safari >> Preferences >> Search >> uncheck Include Safari Suggestions\n"
 
-echo "Disable dictionary lookup: Trackpad -> Point & Click -> Look up & data detectors off"
-# TODO
+echo "Disable dictionary lookup"
+echo "### manual task ###"
+echo "System Preferences >> Trackpad >> Point & Click >> ucheck Look up & Data detectors\n"
 
 echo "disable crash reporter"
 # defaults write com.apple.CrashReporter DialogType none
