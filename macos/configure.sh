@@ -27,9 +27,6 @@ defaults write "Apple Global Domain" "NSAutomaticSpellingCorrectionEnabled" -boo
 echo "Disable - Now Playing Show in Menu Bar"
 defaults write "com.apple.controlcenter" "NSStatusItem Visible NowPlaying" '0'
 
-echo "Show all filename extensions"
-defaults write "Apple Global Domain" "AppleShowAllExtensions" -bool true
-
 echo "Disable - Show warning before emptying the Bin"
 defaults write "com.apple.finder" "WarnOnEmptyTrash" -bool false
 
@@ -60,10 +57,6 @@ defaults write com.apple.assistant.support "Assistant Enabled" -bool false
 
 echo "Remove Siri icon from status menu"
 defaults write com.apple.Siri StatusMenuVisible -bool false
-
-echo "Require password from screensaver/sleep after 2 seconds"
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 2000
 
 echo "Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
