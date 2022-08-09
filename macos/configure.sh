@@ -64,4 +64,25 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 echo "Set dock icon size"
 defaults write com.apple.dock tilesize -int 36
 
+# Disable automatic capitalization as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable automatic period substitution as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# enable night shift
+# TODO
+
+# optimized battery charging
+# TODO
+
+# show battery percentage menu bar
+# TODO
+
+# disable force click
+# TODO
+
+# safari, show status bar
+# TODO
+
 echo "Done. Restart computer or kill Dock / Finder."
