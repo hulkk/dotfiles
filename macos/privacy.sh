@@ -22,5 +22,5 @@ echo "Disable dictionary lookup"
 echo "### manual task ###"
 echo "System Preferences >> Trackpad >> Point & Click >> ucheck Look up & Data detectors\n"
 
-echo "disable crash reporter"
-# defaults write com.apple.CrashReporter DialogType none
+echo "Disable crash reporter"
+defaults write com.apple.CrashReporter DialogType none
