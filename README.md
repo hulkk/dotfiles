@@ -82,11 +82,11 @@ mkdir ~/.config/yamllint && ln -sf ~/your-path/dotfiles/yamllint/config ~/.confi
 ```
 
 #### Test terminal features
-### italics
+##### italics
 ```
 echo `tput sitm`italics`tput ritm`
 ```
-### true color
+##### true color
 ```bash
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
