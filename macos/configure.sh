@@ -70,7 +70,21 @@ defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 # Disable automatic period substitution as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
-# enable night shift
+# set display resolution to scaled, more space
+# TODO
+
+# disable automatically adjust brightness
+# TODO
+
+# change hostname
+# TODO
+# sudo scutil --set ComputerName mycomp
+# sudo scutil --set LocalHostName mycomp
+
+# configure night shift, custom from 21:30 to 7:30, 75% warm
+# TODO
+
+# set timezone to helsinki
 # TODO
 
 # optimized battery charging
@@ -83,6 +97,9 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # TODO
 
 # safari, show status bar
+# TODO
+
+# touch hushlogin
 # TODO
 
 echo "Done. Restart computer or kill Dock / Finder."
