@@ -34,16 +34,17 @@
 mkdir -p ~/src && mkdir -p ~/src/github.com
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
+cd ~/src/github.com/dotfiles
 ```
 
 ### enable hardening configurations based on CIS Level 1 benchmark
 ```bash
-./cis_monterey.sh
+./macos/cis_monterey_1.1_level_1.sh
 ```
 
 ### enable privacy related recommended settings
 ```bash
-./privacy.sh
+./macos/privacy.sh
 ```
 
 ### configure macOS settings based on personal preferences
