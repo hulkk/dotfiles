@@ -9,6 +9,7 @@
 ## new laptop
 <details>
     <summary>macOS Monterey, initial setup</summary>
+
     * language, country, regional settings, accessibility, network, skip migration assistant, apple id
     * computer account (uncheck "Allow my Apple ID to reset this password")
     * skip icloud keychain activation
