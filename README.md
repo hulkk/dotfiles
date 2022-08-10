@@ -49,7 +49,7 @@ cd ~/src/github.com/dotfiles
 
 ### configure macOS settings based on personal preferences
 ```bash
-./configure.sh
+./macos/configure.sh
 ```
 
 ### install brew, script source https://brew.sh
