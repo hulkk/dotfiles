@@ -11,7 +11,7 @@
   <summary>macOS Monterey, initial setup</summary>
 
   * language, country, regional settings, accessibility, network, skip migration assistant, apple id
-  * computer account (uncheck "Allow my Apple ID to reset this password")
+  * computer account (uncheck "*Allow my Apple ID to reset this password*")
   * skip icloud keychain activation
   * find my
   * make this your new mac (customize)
@@ -25,12 +25,15 @@
     * dark mode
   * software update
     * reboot
-  * uncheck "Store files from Documents and Desktop in iCloud Drive"
+  * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## after initial setup, clone this repo
+## open terminal
+### clone this repo
 ```bash
-git clone https://github.com/hulkk/dotfiles.git ~/your-path/dotfiles
+mkdir -p ~/src && mkdir -p ~/src/github.com
+xcode-select --install
+git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 ```
 
 ### enable hardening configurations based on CIS Level 1 benchmark
