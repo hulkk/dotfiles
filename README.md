@@ -67,17 +67,23 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
 ### install mac appstore packages using brewfile
+note, due to mas api limitations apps can't be purchased using this method
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
-### configure terminal
-#### install the custom font from iTerm2-folder
+### install oh-my-zsh, script source https://ohmyz.sh
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## configure terminal
+### install the custom font from iTerm2-folder
 ```bash
 cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
 ```
 
-#### iTerm2 config 
+### iTerm2 config 
 ```bash
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-path/dotfiles/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
@@ -88,37 +94,32 @@ printf '\tsitm=\\E[3m, ritm=\\E[23m,\n' >> /tmp/xterm-256color.terminfo
 tic /tmp/xterm-256color.terminfo
 ```
 
-#### install oh-my-zsh, script source https://ohmyz.sh
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-#### .zshrc symbolic link
+### .zshrc symbolic link
 ```bash
 ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
-#### .vimrc symbolic link
+### .vimrc symbolic link
 ```bash
 ln -sf ~/your-path/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
-#### .tmux.conf symbolic link
+### .tmux.conf symbolic link
 ```bash
 ln -sf ~/your-path/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
-#### yaml lint symbolic link
+### yaml lint symbolic link
 ```bash
 mkdir ~/.config/yamllint && ln -sf ~/your-path/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
 
-#### Test terminal features
-##### italics
+## open iTerm, test advanced formatting
+### italics
 ```
 echo `tput sitm`italics`tput ritm`
 ```
-##### true color
+### true color
 ```bash
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
