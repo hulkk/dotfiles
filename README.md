@@ -28,8 +28,8 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## open terminal
-### clone this repo
+## configure laptop
+### open terminal
 ```bash
 mkdir -p ~/src && mkdir -p ~/src/github.com
 xcode-select --install
@@ -52,13 +52,23 @@ cd ~/src/github.com/dotfiles
 ./macos/configure.sh
 ```
 
+## install homebrew and applications
 ### install brew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+add homebrew to your path as per instructions (.zprofile)
+# TODO
+export HOMEBREW_NO_ANALYTICS=1
+
 ### install brew packages using brewfile
 ```bash
-brew bundle --file=~/<your-path>/dotfiles/homebrew/Brewfile
+brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
+```
+
+### install mac appstore packages using brewfile
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
 ### configure terminal
