@@ -6,9 +6,26 @@
 
 ![vim screenshot](/screenshots/vim.png?raw=true)
 
-## new laptop, initial setup
-
-### macOS Monterey
+## new laptop
+<details>
+  <summary>macOS Monterey, initial setup</summary>
+    * language, country, regional settings, accessibility, network, skip migration assistant, apple id
+    * computer account (uncheck "Allow my Apple ID to reset this password")
+    * skip icloud keychain activation
+    * find my
+    * make this your new mac (customize)
+      * enable location services
+      * uncheck analytics
+      * skip screen time setup
+      * uncheck enable ask siri
+      * uncheck filevault encryption (will be enabled later)
+      * touch id
+      * skip apple pay setup
+      * dark mode
+    * software update
+      * reboot
+    * uncheck "Store files from Documents and Desktop in iCloud Drive"
+</details>
 
 ## after initial setup, clone this repo
 ```bash
