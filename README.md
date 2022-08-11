@@ -57,7 +57,8 @@ cd ~/src/github.com/dotfiles
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-add homebrew to your PATH as per instructions (.zprofile)
+> **Note**
+> Add homebrew to your PATH as per instructions (.zprofile)
 
 ### install brew packages using brewfile
 ```bash
@@ -65,7 +66,10 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
 ### install mac appstore packages using brewfile
-note, due to mas api limitations apps can't be purchased using this method
+
+> **Note**
+> Due to mas api limitations apps can't be purchased using this method
+
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
