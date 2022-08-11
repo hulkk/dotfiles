@@ -28,8 +28,8 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## open terminal
-### clone this repo
+## configure laptop
+### open terminal
 ```bash
 mkdir -p ~/src && mkdir -p ~/src/github.com
 xcode-select --install
@@ -52,24 +52,48 @@ cd ~/src/github.com/dotfiles
 ./macos/configure.sh
 ```
 
+## install homebrew and applications
 ### install brew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+> **Note**
+> Add homebrew to your PATH as per instructions (.zprofile)
+
 ### install brew packages using brewfile
 ```bash
-brew bundle --file=~/<your-path>/dotfiles/homebrew/Brewfile
+brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
-### configure terminal
-#### install the custom font from iTerm2-folder
+### install mac appstore packages using brewfile
+
+> **Note**
+> Due to mas api limitations apps can't be purchased using this method
+
 ```bash
-cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
+brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
-#### iTerm2 config 
+### install oh-my-zsh, script source https://ohmyz.sh
 ```bash
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-path/dotfiles/iterm2"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## configure terminal
+
+### open iTerm
+
+> **Note**
+> For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
+
+### install the custom font from iTerm2-folder
+```bash
+cp ~/src/github.com/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
+```
+
+### iTerm2 config 
+```bash
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/src/github.com/dotfiles/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Override local entry to enable italics without breaking outgoing SSH connections
@@ -78,54 +102,42 @@ printf '\tsitm=\\E[3m, ritm=\\E[23m,\n' >> /tmp/xterm-256color.terminfo
 tic /tmp/xterm-256color.terminfo
 ```
 
-#### install oh-my-zsh, script source https://ohmyz.sh
+### .zshrc symbolic link
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
-#### .zshrc symbolic link
+### .vimrc symbolic link
 ```bash
-ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
-#### .vimrc symbolic link
+### .tmux.conf symbolic link
 ```bash
-ln -sf ~/your-path/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
-#### .tmux.conf symbolic link
+### yaml lint symbolic link
 ```bash
-ln -sf ~/your-path/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
 
-#### yaml lint symbolic link
+### restart terminal environment
 ```bash
-mkdir ~/.config/yamllint && ln -sf ~/your-path/dotfiles/yamllint/config ~/.config/yamllint/config
+tmux kill-server
 ```
 
-#### Test terminal features
-##### italics
+## open iTerm, test advanced formatting
+### italics
 ```
 echo `tput sitm`italics`tput ritm`
 ```
-##### true color
+### true color
 ```bash
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
-#### disable the last login info
-```bash
-touch ~/.hushlogin
-```
-
-## install other packages
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-gem install tmuxinator
-pip install ansible ansible-lint pywinrm pip-upgrade-outdated
-```
-
-## git config
+## configure git
 ```bash
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
