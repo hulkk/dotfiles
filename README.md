@@ -82,8 +82,9 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ## configure terminal
 
 ### open iTerm
-note!
-For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
+
+> **Note**
+> For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
 
 ### install the custom font from iTerm2-folder
 ```bash
@@ -121,6 +122,11 @@ ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
 
+### restart terminal environment
+```bash
+tmux kill-server
+```
+
 ## open iTerm, test advanced formatting
 ### italics
 ```
@@ -131,19 +137,7 @@ echo `tput sitm`italics`tput ritm`
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
-#### disable the last login info
-```bash
-touch ~/.hushlogin
-```
-
-## install other packages
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-gem install tmuxinator
-pip install ansible ansible-lint pywinrm pip-upgrade-outdated
-```
-
-## git config
+## configure git
 ```bash
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
