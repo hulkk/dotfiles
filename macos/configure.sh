@@ -102,4 +102,13 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # touch hushlogin
 # TODO
 
+# disable startup sound
+# TODO
+
+# disable screensaver
+# TODO
+
+echo "Remove GarageBand"
+#sudo rm -rf /Applications/GarageBand.app
+
 echo "Done. Restart computer or kill Dock / Finder."
