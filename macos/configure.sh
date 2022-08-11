@@ -11,7 +11,7 @@ echo "Disable - Facetime Calls From iPhone"
 defaults write "com.apple.TelephonyUtilities" "relayCallingDisabled" -bool true
 
 echo "Disable - Spotlight Show in Menu Bar"
-defaults delete "com.apple.Spotlight" "NSStatusItem Visible Item-0"
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 
 echo "Press globe/fn to: Do Nothing"
 defaults write "com.apple.HIToolbox" "AppleFnUsageType" '0'
@@ -25,7 +25,7 @@ defaults write "Apple Global Domain" "WebAutomaticSpellingCorrectionEnabled" -bo
 defaults write "Apple Global Domain" "NSAutomaticSpellingCorrectionEnabled" -bool false
 
 echo "Disable - Now Playing Show in Menu Bar"
-defaults write "com.apple.controlcenter" "NSStatusItem Visible NowPlaying" '0'
+# TODO
 
 echo "Disable - Show warning before emptying the Bin"
 defaults write "com.apple.finder" "WarnOnEmptyTrash" -bool false
@@ -110,6 +110,18 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
 # uncheck Allow Handoff
 # TODO
+
+# Show volume on menu bar always
+# TODO
+
+# set accent color to red
+# TODO
+
+# show scroll bars always
+# TODO
+
+echo "Disable last login info in terminal"
+touch ~/.hushlogin
 
 echo "Remove GarageBand"
 #sudo rm -rf /Applications/GarageBand.app
