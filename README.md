@@ -57,9 +57,7 @@ cd ~/src/github.com/dotfiles
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-add homebrew to your path as per instructions (.zprofile)
-# TODO
-export HOMEBREW_NO_ANALYTICS=1
+add homebrew to your PATH as per instructions (.zprofile)
 
 ### install brew packages using brewfile
 ```bash
@@ -78,14 +76,19 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 ## configure terminal
+
+### open iTerm
+note!
+For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
+
 ### install the custom font from iTerm2-folder
 ```bash
-cp ~/your-path/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
+cp ~/src/github.com/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
 ```
 
 ### iTerm2 config 
 ```bash
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/your-path/dotfiles/iterm2"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/src/github.com/dotfiles/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Override local entry to enable italics without breaking outgoing SSH connections
@@ -96,22 +99,22 @@ tic /tmp/xterm-256color.terminfo
 
 ### .zshrc symbolic link
 ```bash
-ln -sf ~/your-path/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
 ### .vimrc symbolic link
 ```bash
-ln -sf ~/your-path/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
 ### .tmux.conf symbolic link
 ```bash
-ln -sf ~/your-path/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
 ### yaml lint symbolic link
 ```bash
-mkdir ~/.config/yamllint && ln -sf ~/your-path/dotfiles/yamllint/config ~/.config/yamllint/config
+mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
 
 ## open iTerm, test advanced formatting
