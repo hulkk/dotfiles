@@ -108,6 +108,9 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # disable screensaver
 # TODO
 
+# uncheck Allow Handoff
+# TODO
+
 echo "Remove GarageBand"
 #sudo rm -rf /Applications/GarageBand.app
 
