@@ -61,7 +61,6 @@ alias 'cp=cp -i'
 alias 'pip_upgrade_outdated=pip_upgrade_outdated -3'
 alias 'rg=rg -S'
 alias 'python=python3'
-alias 'pip=pip3'
 alias 'vdiff=vim -d'
 
 # fuck plugin
@@ -137,10 +136,6 @@ antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zlsun/solarized-man
 
 antigen apply
-
-# enable google cloud sdk
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
