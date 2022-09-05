@@ -61,6 +61,9 @@ let g:gruvbox_contrast_dark='hard'
 set background=dark
 colorscheme gruvbox
 
+" enable background transparency
+hi Normal guibg=NONE ctermbg=NONE
+
 " fix commented text
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
