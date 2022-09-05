@@ -740,7 +740,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>8</real>
+			<real>15.0</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -834,6 +834,8 @@
 			<string>019EF825-024A-4E2C-A5CE-5EC816AD4EF9</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -1282,6 +1284,8 @@
 			<true/>
 			<key>Normal Font</key>
 			<string>SourceCodePro+Powerline+AwesomeRegular 14</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<true/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1350,7 +1354,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.1</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
