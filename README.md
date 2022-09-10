@@ -122,12 +122,12 @@ ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
 
-### restart terminal environment
+### install tmux plugin manager
 ```bash
-tmux kill-server
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-## open iTerm, test advanced formatting
+## test advanced formatting
 ### italics
 ```
 echo `tput sitm`italics`tput ritm`
