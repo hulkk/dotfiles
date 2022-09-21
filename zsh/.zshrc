@@ -70,6 +70,9 @@ eval $(thefuck --alias)
 # set vim as default editor
 export EDITOR=/usr/bin/vim
 
+# add paths for utility binaries
+export PATH=$PATH:$HOME/bin:$HOME/Library/Python/3.10/bin
+
 # hide the "user@hostname" info when you’re logged in as yourself on your local machine
 DEFAULT_USER=`whoami`
 
