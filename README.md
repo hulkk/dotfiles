@@ -31,7 +31,7 @@
 ## install homebrew and applications
 ### open terminal
 ```bash
-mkdir -p ~/src && mkdir -p ~/src/github.com
+mkdir -p ~/src && mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
