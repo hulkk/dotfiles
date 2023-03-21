@@ -28,7 +28,7 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## configure laptop
+## install homebrew and applications
 ### open terminal
 ```bash
 mkdir -p ~/src && mkdir -p ~/src/github.com
@@ -36,6 +36,26 @@ xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
 ```
+
+### install brew, script source https://brew.sh
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### install brew packages using brewfile
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
+```
+
+### install oh-my-zsh, script source https://ohmyz.sh
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+```
+> **Note**
+> Reboot computer
+
+## configure laptop
 
 ### enable hardening configurations based on CIS Level 1 benchmark
 ```bash
@@ -52,19 +72,6 @@ cd ~/src/github.com/dotfiles
 ./macos/configure.sh
 ```
 
-## install homebrew and applications
-### install brew, script source https://brew.sh
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-> **Note**
-> Add homebrew to your PATH as per instructions (.zprofile)
-
-### install brew packages using brewfile
-```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
-```
-
 ### install mac appstore packages using brewfile
 
 > **Note**
@@ -72,11 +79,6 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
-```
-
-### install oh-my-zsh, script source https://ohmyz.sh
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## configure terminal
