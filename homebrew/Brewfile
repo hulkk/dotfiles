@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/cask-fonts"
 tap "warrensbox/tap"
 
 # terminal environment related packages
@@ -15,6 +16,7 @@ brew "yamllint"
 brew "zsh"
 brew "warrensbox/tap/tfswitch"
 cask "iterm2-nightly"
+cask "font-fira-code-nerd-font"
 
 # cli utilities
 brew "bat"
