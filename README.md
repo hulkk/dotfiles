@@ -109,6 +109,11 @@ tic /tmp/xterm-256color.terminfo
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
+### .zprofile symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+```
+
 ### .vimrc symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
