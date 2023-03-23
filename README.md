@@ -141,6 +141,10 @@ printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 
 ## configure git
 ```bash
+# configure git identity
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
