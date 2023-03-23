@@ -6,7 +6,6 @@ tap "homebrew/cask-fonts"
 tap "warrensbox/tap"
 
 # terminal environment related packages
-brew "antigen"
 brew "diff-so-fancy"
 brew "openssl"
 brew "python"
