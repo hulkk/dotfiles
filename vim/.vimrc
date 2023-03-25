@@ -9,15 +9,15 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'itchyny/lightline.vim'              " lightline
-Plug 'sheerun/vim-polyglot'               " syntax highlighting
-Plug 'Yggdroot/indentLine'                " indent guides
-Plug 'airblade/vim-gitgutter'             " git diff utility
-Plug 'pearofducks/ansible-vim'            " ansible syntax plugin
-Plug 'morhetz/gruvbox'                    " gruvbox vim theme
-Plug 'tmux-plugins/vim-tmux-focus-events' " enable tmux focus events
-Plug 'luochen1990/rainbow'                " colorize nested parentheses
-Plug 'dense-analysis/ale'                 " asynchronous lint engine
+Plug 'vim-airline/vim-airline'             " vim-airline
+Plug 'sheerun/vim-polyglot'                " syntax highlighting
+Plug 'lukas-reineke/indent-blankline.nvim' " indent-blankline 
+Plug 'itchyny/lightline.vim'               " lightline
+Plug 'airblade/vim-gitgutter'              " git diff utility
+Plug 'pearofducks/ansible-vim'             " ansible syntax plugin
+Plug 'morhetz/gruvbox'                     " gruvbox vim theme
+Plug 'luochen1990/rainbow'                 " colorize nested parentheses
+Plug 'dense-analysis/ale'                  " asynchronous lint engine
 
 call plug#end()
 " vim-plug section ends
@@ -34,12 +34,12 @@ let g:lightline = {
     \ 'colorscheme': 'gruvbox'
 \ }
 
-let g:lightline.separator = {
-    \   'left': '', 'right': ''
-\ }
-let g:lightline.subseparator = {
-    \   'left': '', 'right': '' 
-\ }
+#let g:lightline.separator = {
+#    \   'left': '', 'right': ''
+#\ }
+#let g:lightline.subseparator = {
+#    \   'left': '', 'right': '' 
+#\ }
 
 " always show sign column
 set signcolumn=yes
@@ -127,6 +127,7 @@ set updatetime=100
 highlight SpecialKey ctermfg=1
 set list
 set listchars=tab:>-
+
 " gruvbox orange
 highlight SpecialKey guifg=#fe8019
 
