@@ -495,6 +495,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<true/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -1281,7 +1283,7 @@
 			<key>Name</key>
 			<string></string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>SourceCodePro+Powerline+AwesomeRegular 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
