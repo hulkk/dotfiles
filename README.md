@@ -52,9 +52,9 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### download gruvbox zsh theme
+### download powerlevel10k theme
 ```bash
-curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-theme > ~/.oh-my-zsh/custom/themes/gruvbox.zsh-theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
 > **Note**
@@ -117,6 +117,11 @@ ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ### .zprofile symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+```
+
+### .p10k.zsh symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 ```
 
 ### .vimrc symbolic link
