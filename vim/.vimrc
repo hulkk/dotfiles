@@ -9,7 +9,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'             " vim-airline
+" Plug 'vim-airline/vim-airline'             " vim-airline
 Plug 'sheerun/vim-polyglot'                " syntax highlighting
 Plug 'lukas-reineke/indent-blankline.nvim' " indent-blankline 
 Plug 'itchyny/lightline.vim'               " lightline
@@ -34,12 +34,12 @@ let g:lightline = {
     \ 'colorscheme': 'gruvbox'
 \ }
 
-#let g:lightline.separator = {
-#    \   'left': '', 'right': ''
-#\ }
-#let g:lightline.subseparator = {
-#    \   'left': '', 'right': '' 
-#\ }
+let g:lightline.separator = {
+    \   'left': '', 'right': ''
+\ }
+let g:lightline.subseparator = {
+    \   'left': '', 'right': '' 
+\ }
 
 " always show sign column
 set signcolumn=yes
