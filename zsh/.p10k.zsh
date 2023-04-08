@@ -518,6 +518,11 @@
   typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=3
   typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=1
 
+  # show status only with icon
+  typeset -g POWERLEVEL9K_STATUS_VERBOSE=true
+  typeset -g POWERLEVEL9K_STATUS_CROSS=true
+  typeset -g POWERLEVEL9K_STATUS_OK=true
+
   # Status when the last command was terminated by a signal.
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=false
   # Use terse signal names: "INT" instead of "SIGINT(2)".
