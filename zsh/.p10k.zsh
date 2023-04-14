@@ -305,10 +305,12 @@
   #
   # For example, given these settings:
   #
-  #   typeset -g POWERLEVEL9K_DIR_CLASSES=(
+  typeset -g POWERLEVEL9K_DIR_CLASSES=(
   #     '~/work(|/*)'  WORK     ''
   #     '~(|/*)'       HOME     ''
-  #     '*'            DEFAULT  '')
+        '~'            HOME     ''
+  #     '*'            DEFAULT  ''
+  )
   #
   # Whenever the current directory is ~/work or a subdirectory of ~/work, it gets styled with one
   # of the following classes depending on its writability and existence: WORK, WORK_NOT_WRITABLE or
