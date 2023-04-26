@@ -50,6 +50,7 @@ ZLE_RPROMPT_INDENT=0
 # Functions
 
 # Example aliases
+alias 'password=openssl rand -hex 15'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
