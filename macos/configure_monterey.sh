@@ -16,6 +16,15 @@ echo "Set resolution to More Space"
 echo "Disable Automatic brightness adjustment"
 # todo
 
+echo "Show bluetooth in menu bar"
+# todo
+
+echo "Show Sound in menu bar"
+# todo
+
+echo "Show battery percentage in menu bar"
+# todo
+
 echo "Disable - Facetime Calls From iPhone"
 defaults write "com.apple.TelephonyUtilities" "relayCallingDisabled" -bool true
 
