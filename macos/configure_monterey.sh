@@ -7,6 +7,15 @@ defaults write "com.apple.dock" "launchanim" -bool false
 echo "Minimise windows using: Scale effect"
 defaults write "com.apple.dock" "mineffect" 'scale'
 
+echo "Set Accent colour to Red"
+# todo
+
+echo "Set resolution to More Space"
+# todo
+
+echo "Disable Automatic brightness adjustment"
+# todo
+
 echo "Disable - Facetime Calls From iPhone"
 defaults write "com.apple.TelephonyUtilities" "relayCallingDisabled" -bool true
 
