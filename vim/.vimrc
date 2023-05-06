@@ -140,8 +140,8 @@ highlight SpecKey guibg=#cc241d
 " enable mouse support
 set mouse=a
 
-" fix mouse behaviour in tmux
-set ttymouse=xterm2
+" enable mouse scroll
+set ttymouse=sgr
 
 " enable system clipboard usage
 set clipboard=unnamed
