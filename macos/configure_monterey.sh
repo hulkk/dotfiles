@@ -25,6 +25,9 @@ echo "Show Sound in menu bar"
 echo "Show battery percentage in menu bar"
 # todo
 
+echo "Disable Universal Control"
+# todo
+
 echo "Disable - Facetime Calls From iPhone"
 defaults write "com.apple.TelephonyUtilities" "relayCallingDisabled" -bool true
 
