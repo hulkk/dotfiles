@@ -363,6 +363,8 @@
 	<string>F11683A8-66AE-44CB-9A15-310568CA5D6E</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>NeverBlockSystemShutdown</key>
