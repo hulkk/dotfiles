@@ -7,6 +7,27 @@ defaults write "com.apple.dock" "launchanim" -bool false
 echo "Minimise windows using: Scale effect"
 defaults write "com.apple.dock" "mineffect" 'scale'
 
+echo "Set Accent colour to Red"
+# todo
+
+echo "Set resolution to More Space"
+# todo
+
+echo "Disable Automatic brightness adjustment"
+# todo
+
+echo "Show bluetooth in menu bar"
+# todo
+
+echo "Show Sound in menu bar"
+# todo
+
+echo "Show battery percentage in menu bar"
+# todo
+
+echo "Disable Universal Control"
+# todo
+
 echo "Disable - Facetime Calls From iPhone"
 defaults write "com.apple.TelephonyUtilities" "relayCallingDisabled" -bool true
 
@@ -35,6 +56,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 echo "Show Status Bar"
 defaults write com.apple.finder ShowStatusBar -bool true
+
+echo "Show all filename extensions"
+# todo
 
 echo "Configure screenshots path"
 mkdir -p ~/screenshots

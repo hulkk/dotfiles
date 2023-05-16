@@ -28,14 +28,44 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## configure laptop
+## install homebrew and applications
 ### open terminal
 ```bash
-mkdir -p ~/src && mkdir -p ~/src/github.com
+mkdir -p ~/src && mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
 ```
+
+### install brew, script source https://brew.sh
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### install brew packages using brewfile
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
+```
+
+### install oh-my-zsh, script source https://ohmyz.sh
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### download powerlevel10k theme
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+### download zsh-syntax-highlighting plugin
+```bash
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+```
+
+> **Note**
+> Reboot computer
+
+## configure laptop
 
 ### enable hardening configurations based on CIS Level 1 benchmark
 ```bash
@@ -52,19 +82,6 @@ cd ~/src/github.com/dotfiles
 ./macos/configure.sh
 ```
 
-## install homebrew and applications
-### install brew, script source https://brew.sh
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-> **Note**
-> Add homebrew to your PATH as per instructions (.zprofile)
-
-### install brew packages using brewfile
-```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
-```
-
 ### install mac appstore packages using brewfile
 
 > **Note**
@@ -72,11 +89,6 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
-```
-
-### install oh-my-zsh, script source https://ohmyz.sh
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## configure terminal
@@ -105,6 +117,16 @@ tic /tmp/xterm-256color.terminfo
 ### .zshrc symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
+```
+
+### .zprofile symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+```
+
+### .p10k.zsh symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 ```
 
 ### .vimrc symbolic link
@@ -139,6 +161,10 @@ printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 
 ## configure git
 ```bash
+# configure git identity
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```

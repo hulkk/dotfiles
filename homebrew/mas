@@ -1,10 +1,7 @@
 # Mac App Store apps
-mas "1Password 7 - Password Manager", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
 mas "Bear - Markdown Notes", id: 1091189122
 mas "DaisyDisk", id: 411643860
-#mas "EasyRes", id: 688211836
-#mas "Moom", id: 419330170
 mas "Parcel - Delivery Tracking", id: 639968404
 mas "Pocket", id: 568494494
 mas "Silicio Controller Mini Player", id: 933627574
