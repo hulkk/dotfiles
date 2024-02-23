@@ -62,11 +62,20 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 ```
 
-## configure git
+### configure git
 ```bash
 # configure git identity
 git config --global user.email "email@example.com"
 git config --global --add --bool push.autoSetupRemote true
+```
+
+## install mac appstore packages using brewfile
+
+> **Note**
+> Due to mas api limitations apps can't be purchased using this method
+
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
 > **Note**
@@ -89,14 +98,6 @@ git config --global --add --bool push.autoSetupRemote true
 ./macos/configure.sh
 ```
 
-### install mac appstore packages using brewfile
-
-> **Note**
-> Due to mas api limitations apps can't be purchased using this method
-
-```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
-```
 
 ## configure terminal
 
