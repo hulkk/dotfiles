@@ -62,6 +62,13 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 ```
 
+## configure git
+```bash
+# configure git identity
+git config --global user.email "you@example.com"
+git config --global --add --bool push.autoSetupRemote true
+```
+
 > **Note**
 > Reboot computer
 
@@ -159,12 +166,3 @@ echo `tput sitm`italics`tput ritm`
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
-## configure git
-```bash
-# configure git identity
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-
-# enable diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-```
