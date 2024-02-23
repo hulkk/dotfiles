@@ -49,7 +49,7 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 
 ### install oh-my-zsh, script source https://ohmyz.sh
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### download powerlevel10k theme
