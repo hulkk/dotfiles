@@ -65,7 +65,7 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 ## configure git
 ```bash
 # configure git identity
-git config --global user.email "you@example.com"
+git config --global user.email "email@example.com"
 git config --global --add --bool push.autoSetupRemote true
 ```
 
