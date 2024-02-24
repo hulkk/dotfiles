@@ -27,6 +27,8 @@
     * reboot
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 
+</details>
+<details>
   <summary>macOS Sonoma, initial setup</summary>
 
   * language, country, regional settings, accessibility, network, skip migration assistant, apple id
