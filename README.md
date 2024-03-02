@@ -102,7 +102,7 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ## install python packages using requirements.txt
 ```bash
 rm /opt/homebrew/opt/python/Frameworks/Python.framework/Versions/Current/lib/python3.12/EXTERNALLY-MANAGED
-pip3 install -r dotfiles/python/requirements.txt --user
+pip3 install -r dotfiles/python/requirements.txt
 ```
 
 > **Note**
