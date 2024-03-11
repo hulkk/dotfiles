@@ -73,11 +73,6 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### download zsh-syntax-highlighting plugin
-```bash
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
-```
-
 ### configure git
 ```bash
 # configure git identity
