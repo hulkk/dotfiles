@@ -115,18 +115,12 @@ pip3 install -r dotfiles/python/requirements.txt
 ./macos/configure.sh
 ```
 
-
 ## configure terminal
 
 ### open iTerm
 
 > **Note**
 > For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
-
-### install the custom font from iTerm2-folder
-```bash
-cp ~/src/github.com/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
-```
 
 ### iTerm2 config 
 ```bash
