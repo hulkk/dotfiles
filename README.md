@@ -98,23 +98,6 @@ pip3 install -r dotfiles/python/requirements.txt
 > **Note**
 > Reboot computer
 
-## configure laptop
-
-### enable hardening configurations based on CIS Level 1 benchmark
-```bash
-./macos/cis_monterey_1.1_level_1.sh
-```
-
-### enable privacy related recommended settings
-```bash
-./macos/privacy.sh
-```
-
-### configure macOS settings based on personal preferences
-```bash
-./macos/configure.sh
-```
-
 ## configure terminal
 
 ### open iTerm
@@ -178,3 +161,19 @@ echo `tput sitm`italics`tput ritm`
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
+## configure laptop
+
+### enable hardening configurations based on CIS Level 1 benchmark
+```bash
+./macos/cis_monterey_1.1_level_1.sh
+```
+
+### enable privacy related recommended settings
+```bash
+./macos/privacy.sh
+```
+
+### configure macOS settings based on personal preferences
+```bash
+./macos/configure.sh
+```
