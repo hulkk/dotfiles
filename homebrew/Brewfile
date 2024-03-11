@@ -6,6 +6,7 @@ tap "warrensbox/tap"
 # terminal environment related packages
 brew "diff-so-fancy"
 brew "openssl"
+brew "powerlevel10k"
 brew "python"
 brew "thefuck"
 brew "tmux"
