@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "warrensbox/tap"
 
 # terminal environment related packages
+brew "eza"
 brew "diff-so-fancy"
 brew "openssl"
 brew "powerlevel10k"
