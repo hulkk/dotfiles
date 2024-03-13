@@ -1890,7 +1890,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Title Components</key>
-			<integer>34</integer>
+			<integer>32</integer>
 			<key>Transparency</key>
 			<real>0.10214428191489362</real>
 			<key>Underline Color</key>
@@ -2027,6 +2027,10 @@
 	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
 	<false/>
+	<key>TerminalMargin</key>
+	<integer>0</integer>
+	<key>TerminalVMargin</key>
+	<integer>0</integer>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
