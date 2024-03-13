@@ -6,6 +6,8 @@
 	<false/>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>CompactMinimalTabBarHeight</key>
+	<real>30</real>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>gruvbox-ua-dark</key>
