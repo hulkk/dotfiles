@@ -80,6 +80,11 @@ git config --global user.email "email@example.com"
 git config --global --add --bool push.autoSetupRemote true
 ```
 
+### install zsh syntax hightlighting plugin
+```bash
+git clone https://github.com/z-shell/F-Sy-H.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
+```
+
 ## install mac appstore packages using brewfile
 
 > **Note**
