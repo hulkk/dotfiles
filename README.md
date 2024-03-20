@@ -63,14 +63,14 @@ cd ~/src/github.com/dotfiles
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### install brew packages using brewfile
-```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
-```
-
 ### install oh-my-zsh, script source https://ohmyz.sh
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### install brew packages using brewfile
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
 ### configure git
