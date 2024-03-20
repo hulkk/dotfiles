@@ -83,6 +83,12 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
+### uninstall default mac apps
+```bash
+rm /Applications/GarageBand.app
+rm /Applications/iMovie.app
+```
+
 ## install python packages using requirements.txt
 ```bash
 rm /opt/homebrew/opt/python/Frameworks/Python.framework/Versions/Current/lib/python3.12/EXTERNALLY-MANAGED
