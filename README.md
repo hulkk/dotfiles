@@ -107,6 +107,12 @@ git config --global --add --bool push.autoSetupRemote true
 ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ```
 
+### .vimrc symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
+# open vim and type :PlugUpdate
+```
+
 > **Note**
 > Reboot computer
 
@@ -136,11 +142,6 @@ ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ### .p10k.zsh symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
-```
-
-### .vimrc symbolic link
-```bash
-ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
 ### .tmux.conf symbolic link
