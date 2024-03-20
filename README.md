@@ -31,17 +31,17 @@
 <details>
   <summary>macOS Sonoma, initial setup</summary>
 
-  * language, country, regional settings, accessibility, network, skip migration assistant, apple id
+  * language, country, regional settings, accessibility, network, skip migration assistant, sign in with apple id and accept iCloud terms
   * computer account (uncheck "*Allow my Apple ID to reset this password*")
   * skip icloud keychain activation
-  * find my
   * make this your new mac (customize)
     * enable location services
     * uncheck analytics
     * skip screen time setup
     * uncheck enable ask siri
     * uncheck filevault icloud unlock
-    * touch id
+    * add filevault recovery key to e.g. 1Password
+    * setup touch id
     * skip apple pay setup
     * dark mode
   * software update
