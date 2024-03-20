@@ -58,14 +58,20 @@ git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
 ```
 
-### install brew, script source https://brew.sh
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
 ### install oh-my-zsh, script source https://ohmyz.sh
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### install brew, script source https://brew.sh
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+### install brew packages using brewfile
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
 ### configure git
@@ -75,14 +81,10 @@ git config --global user.email "email@example.com"
 git config --global --add --bool push.autoSetupRemote true
 ```
 
-### install brew packages using brewfile
+## install python packages using requirements.txt
 ```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
-```
-
-### install zsh syntax hightlighting plugin
-```bash
-git clone https://github.com/z-shell/F-Sy-H.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
+rm /opt/homebrew/opt/python/Frameworks/Python.framework/Versions/Current/lib/python3.12/EXTERNALLY-MANAGED
+pip3 install -r dotfiles/python/requirements.txt
 ```
 
 ## install mac appstore packages using brewfile
@@ -92,12 +94,6 @@ git clone https://github.com/z-shell/F-Sy-H.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/c
 
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
-```
-
-## install python packages using requirements.txt
-```bash
-rm /opt/homebrew/opt/python/Frameworks/Python.framework/Versions/Current/lib/python3.12/EXTERNALLY-MANAGED
-pip3 install -r dotfiles/python/requirements.txt
 ```
 
 > **Note**
