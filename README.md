@@ -68,16 +68,16 @@ cd ~/src/github.com/dotfiles
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### install brew packages using brewfile
-```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
-```
-
 ### configure git
 ```bash
 # configure git identity
 git config --global user.email "email@example.com"
 git config --global --add --bool push.autoSetupRemote true
+```
+
+### install brew packages using brewfile
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
 ### install zsh syntax hightlighting plugin
