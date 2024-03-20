@@ -74,11 +74,13 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
-### configure git
+### install mac appstore packages using brewfile
+
+> **Note**
+> Due to mas api limitations apps can't be purchased using this method
+
 ```bash
-# configure git identity
-git config --global user.email "email@example.com"
-git config --global --add --bool push.autoSetupRemote true
+brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
 ## install python packages using requirements.txt
@@ -87,13 +89,11 @@ rm /opt/homebrew/opt/python/Frameworks/Python.framework/Versions/Current/lib/pyt
 pip3 install -r dotfiles/python/requirements.txt
 ```
 
-## install mac appstore packages using brewfile
-
-> **Note**
-> Due to mas api limitations apps can't be purchased using this method
-
+### configure git
 ```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
+# configure git identity
+git config --global user.email "email@example.com"
+git config --global --add --bool push.autoSetupRemote true
 ```
 
 > **Note**
