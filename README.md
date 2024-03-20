@@ -110,7 +110,7 @@ ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ### .vimrc symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
-# open vim and type :PlugUpdate
+# errors in first launch are expected until plugins are installed
 ```
 
 > **Note**
