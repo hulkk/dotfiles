@@ -102,6 +102,11 @@ git config --global user.email "email@example.com"
 git config --global --add --bool push.autoSetupRemote true
 ```
 
+### .zprofile symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+```
+
 > **Note**
 > Reboot computer
 
@@ -126,11 +131,6 @@ tic /tmp/xterm-256color.terminfo
 ### .zshrc symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
-```
-
-### .zprofile symbolic link
-```bash
-ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ```
 
 ### .p10k.zsh symbolic link
