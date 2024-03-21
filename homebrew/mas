@@ -1,4 +1,5 @@
 # Mac App Store apps
+mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Bear - Markdown Notes", id: 1091189122
 mas "DaisyDisk", id: 411643860
