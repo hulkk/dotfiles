@@ -120,12 +120,7 @@ ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
 
 ## configure terminal
 
-### open iTerm
-
-> **Note**
-> For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
-
-### iTerm2 config 
+### open iTerm2
 ```bash
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/src/github.com/dotfiles/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
