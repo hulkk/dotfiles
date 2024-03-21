@@ -52,9 +52,7 @@
 ## install terminal utilities and basic applications
 ### open terminal
 ```bash
-mkdir -p ~/src && mkdir -p ~/src/github.com && mkdir -p ~/.ssh && mkdir -p ~/screenshots
-defaults write com.apple.screencapture location ~/screenshots
-defaults write com.apple.screencapture show-thumbnail -bool false
+mkdir -p ~/src && mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
