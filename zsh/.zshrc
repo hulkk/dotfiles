@@ -1,153 +1,56 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+export PATH=$HOME/Library/Python/3.11/bin:$PATH
+
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
-# workaround for python fork() issue in High Sierra
-# https://github.com/ansible/ansible/issues/31869#issuecomment-337769174
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-# configure locales to UTF-8
-export LC_ALL="en_US.UTF-8"
-export LC_NUMERIC="fi_FI.UTF-8"
-export LC_TIME="fi_FI.UTF-8"
-
-# terminal color settings
-export TERM="xterm-256color"
-
-# start tmux automatically
-ZSH_TMUX_AUTOSTART='true'
-
-# set antigen path for powerlevel9k
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-
-# enable patched fonts
+# enable fonts
 POWERLEVEL9K_MODE='awesome-patched'
 
-# disable dir/git icons, leave home icon enabled
-POWERLEVEL9K_HOME_SUB_ICON=''
-POWERLEVEL9K_FOLDER_ICON=''
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
-POWERLEVEL9K_VCS_GIT_ICON=''
+# Configure theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# modify git icons
-POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
-POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
-POWERLEVEL9K_VCS_STAGED_ICON='\u002b'
-POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
-POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
+# automatically updates Oh My Zsh when a new version is available
+zstyle ':omz:update' mode auto
 
-# modify git colours
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='white'
-POWERLEVEL9K_VCS_STAGED_BACKGROUND='yellow'
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-# show status only with icon
-POWERLEVEL9K_STATUS_VERBOSE=true
-POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_STATUS_OK=true
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# prompt element settings
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
-
-# remove extra space after right prompt
-ZLE_RPROMPT_INDENT=0
-
-# custom aliases
-alias 'password=openssl rand -base64 15'
-alias 'cat=ccat'
-alias 'headers=http --follow --all -h'
-alias 'mv=mv -i'
-alias 'cp=cp -i'
-alias 'pip_upgrade_outdated=pip_upgrade_outdated -3'
-alias 'rg=rg -S'
-alias 'python=python3'
-alias 'pip=pip3'
-alias 'vdiff=vim -d'
-
-# fuck plugin
-eval $(thefuck --alias)
-
-# set vim as default editor
-export EDITOR=/usr/bin/vim
-
-# add paths for utility binaries
-export PATH=$PATH:$HOME/bin:$HOME/Library/Python/3.10/bin
-
-# hide the "user@hostname" info when you’re logged in as yourself on your local machine
-DEFAULT_USER=`whoami`
-
-# load zsh plugins
-plugins=(git-auto-fetch gitignore magic-enter vagrant web-search terraform thefuck tmux)
-
-# let macos control ls colours
-unset LSCOLORS
-
-# update oh-my-zsh automatically without prompt
-DISABLE_UPDATE_PROMPT=true
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # enable timestamps for history
 HIST_STAMPS="yyyy-mm-dd"
 
-# disable automatic title update
-DISABLE_AUTO_TITLE="true"
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git git-auto-fetch magic-enter thefuck fast-syntax-highlighting)
 
-# function to force command to be run using rosetta 2 with Apple Silicon Macs
-rosetta() {
-  arch -x86_64 $@
-}
-
-# function for shortened urls checking
-function urlxray() {
-    if [ "$1" != "" ]
-    then
-        curl $1 -Is | grep -i location | cut -f2- -d' '
-    fi
-}
-
-# function for enumerating subdomains
-function enumerate() {
-    if [ "$1" != "" ]
-    then
-        curl -s "https://crt.sh/?q=%.$1&output=json" | jq '.name_value' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u
-    fi
-}
-
-# function for checking tldr tips for command
-function howto() {
-    if [ "$1" != "" ]
-    then
-        curl cheat.sh/$1
-    fi
-}
-
-# function for renaming tmux's default session
-function rename_tmux_session() {
-    if [ "$1" = "0" ]
-    then
-        tmux rename-session -t 0 "$2"
-    fi
-}
-
-# antigen plugin manager configs
-source $(brew --prefix)/share/antigen/antigen.zsh
-antigen use oh-my-zsh
-
-antigen bundle brew
-
-antigen theme romkatv/powerlevel10k
-
-antigen bundle zdharma-continuum/fast-syntax-highlighting
-antigen bundle zlsun/solarized-man
-
-antigen apply
-
-# enable google cloud sdk
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-# initialize oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# rename tmux session
-tmux_sessions=$(tmux list-sessions)
-rename_tmux_session ${tmux_sessions:0:1} iTerm
+# User configuration
+
+# remove extra space after right prompt
+ZLE_RPROMPT_INDENT=0
+
+# Functions
+
+# Example aliases
+alias 'password=openssl rand -hex 15'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

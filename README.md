@@ -26,39 +26,50 @@
   * software update
     * reboot
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
+
+</details>
+<details>
+  <summary>macOS Sonoma, initial setup</summary>
+
+  * language, country, regional settings, accessibility, network, skip migration assistant, sign in with apple id and accept iCloud terms
+  * computer account (uncheck "*Allow my Apple ID to reset this password*")
+  * skip icloud keychain activation
+  * make this your new mac (customize)
+    * enable location services
+    * uncheck analytics
+    * skip screen time setup
+    * uncheck enable ask siri
+    * uncheck filevault icloud unlock
+    * add filevault recovery key to e.g. 1Password
+    * setup touch id
+    * skip apple pay setup
+    * dark mode
+  * software update
+    * reboot
+
 </details>
 
-## configure laptop
+## install terminal utilities and basic applications
 ### open terminal
 ```bash
-mkdir -p ~/src && mkdir -p ~/src/github.com
+mkdir -p ~/src && mkdir -p ~/src/github.com && mkdir -p ~/.ssh && mkdir -p ~/screenshots
+defaults write com.apple.screencapture location ~/screenshots
+defaults write com.apple.screencapture show-thumbnail -bool false
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
 ```
 
-### enable hardening configurations based on CIS Level 1 benchmark
+### install oh-my-zsh, script source https://ohmyz.sh
 ```bash
-./macos/cis_monterey_1.1_level_1.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### enable privacy related recommended settings
-```bash
-./macos/privacy.sh
-```
-
-### configure macOS settings based on personal preferences
-```bash
-./macos/configure.sh
-```
-
-## install homebrew and applications
 ### install brew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
-> **Note**
-> Add homebrew to your PATH as per instructions (.zprofile)
 
 ### install brew packages using brewfile
 ```bash
@@ -74,24 +85,42 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
-### install oh-my-zsh, script source https://ohmyz.sh
+### uninstall unnecessary mac apps
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo rm -rf /Applications/GarageBand.app
+sudo rm -rf /Applications/iMovie.app
 ```
+
+## install python packages using requirements.txt
+```bash
+rm /opt/homebrew/opt/python/Frameworks/Python.framework/Versions/Current/lib/python3.12/EXTERNALLY-MANAGED
+pip3 install -r dotfiles/python/requirements.txt
+```
+
+### configure git
+```bash
+# configure git identity
+git config --global user.email "email@example.com"
+git config --global --add --bool push.autoSetupRemote true
+```
+
+### .zprofile symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+```
+
+### .vimrc symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
+# errors in first launch are expected until plugins are installed
+```
+
+> **Note**
+> Reboot computer
 
 ## configure terminal
 
-### open iTerm
-
-> **Note**
-> For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
-
-### install the custom font from iTerm2-folder
-```bash
-cp ~/src/github.com/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
-```
-
-### iTerm2 config 
+### open iTerm2
 ```bash
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/src/github.com/dotfiles/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
@@ -107,9 +136,9 @@ tic /tmp/xterm-256color.terminfo
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
-### .vimrc symbolic link
+### .p10k.zsh symbolic link
 ```bash
-ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 ```
 
 ### .tmux.conf symbolic link
@@ -137,8 +166,19 @@ echo `tput sitm`italics`tput ritm`
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
-## configure git
+## configure laptop
+
+### enable hardening configurations based on CIS Level 1 benchmark
 ```bash
-# enable diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+./macos/cis_monterey_1.1_level_1.sh
+```
+
+### enable privacy related recommended settings
+```bash
+./macos/privacy.sh
+```
+
+### configure macOS settings based on personal preferences
+```bash
+./macos/configure.sh
 ```
