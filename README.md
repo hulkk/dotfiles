@@ -135,14 +135,11 @@ printf '\tsitm=\\E[3m, ritm=\\E[23m,\n' >> /tmp/xterm-256color.terminfo
 tic /tmp/xterm-256color.terminfo
 ```
 
-### .zshrc symbolic link
+### zsh symbolic links
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
-```
-
-### .p10k.zsh symbolic link
-```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 ```
 
 ### .tmux.conf symbolic link
