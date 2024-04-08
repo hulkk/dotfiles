@@ -106,7 +106,7 @@ git config --global user.signingkey ~/.ssh/mykey.pub
 git config --global commit.gpgsign true
 ```
 > **Note**
-> Signing key needs to be added to your account in e.g. Github
+> Signing key needs to be added to your account in e.g. GitHub
 
 ### .zprofile symbolic link
 ```bash
