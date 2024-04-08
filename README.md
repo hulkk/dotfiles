@@ -100,9 +100,13 @@ pip3 install -r dotfiles/python/requirements.txt
 # configure git identity
 git config --global user.email "email@example.com"
 git config --global --add --bool push.autoSetupRemote true
+# enable commit signingh with ssh
 git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/mykey.pub
+git config --global commit.gpgsign true
 ```
+> **Note**
+> Signing key needs to be added to your account in e.g. Github
 
 ### .zprofile symbolic link
 ```bash
