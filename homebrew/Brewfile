@@ -35,7 +35,7 @@ brew "watch"
 # applications
 cask "1password"
 cask "scroll-reverser"
-cask "firefox"
+cask "google-chrome"
 cask "google-cloud-sdk"
 cask "obsidian"
 cask "rectangle"
