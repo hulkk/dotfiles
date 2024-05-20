@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
-tap "homebrew/cask-fonts"
 tap "warrensbox/tap"
 
 # terminal environment related packages
