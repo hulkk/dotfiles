@@ -13,7 +13,7 @@ brew "tmux"
 brew "yamllint"
 brew "zsh"
 brew "warrensbox/tap/tfswitch"
-cask "iterm2-nightly"
+cask "iterm2@nightly"
 cask "font-fira-code-nerd-font"
 
 # cli utilities
