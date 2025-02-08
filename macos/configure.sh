@@ -11,7 +11,7 @@ echo "Disable - Facetime Calls From iPhone"
 defaults write "com.apple.TelephonyUtilities" "relayCallingDisabled" -bool true
 
 echo "Disable - Spotlight Show in Menu Bar"
-defaults delete "com.apple.Spotlight" "NSStatusItem Visible Item-0"
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 
 echo "Press globe/fn to: Do Nothing"
 defaults write "com.apple.HIToolbox" "AppleFnUsageType" '0'
@@ -25,7 +25,7 @@ defaults write "Apple Global Domain" "WebAutomaticSpellingCorrectionEnabled" -bo
 defaults write "Apple Global Domain" "NSAutomaticSpellingCorrectionEnabled" -bool false
 
 echo "Disable - Now Playing Show in Menu Bar"
-defaults write "com.apple.controlcenter" "NSStatusItem Visible NowPlaying" '0'
+# TODO
 
 echo "Disable - Show warning before emptying the Bin"
 defaults write "com.apple.finder" "WarnOnEmptyTrash" -bool false
@@ -63,5 +63,67 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 echo "Set dock icon size"
 defaults write com.apple.dock tilesize -int 36
+
+# Disable automatic capitalization as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable automatic period substitution as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# set display resolution to scaled, more space
+# TODO
+
+# disable automatically adjust brightness
+# TODO
+
+# change hostname
+# TODO
+# sudo scutil --set ComputerName mycomp
+# sudo scutil --set LocalHostName mycomp
+
+# configure night shift, custom from 21:30 to 7:30, 75% warm
+# TODO
+
+# set timezone to helsinki
+# TODO
+
+# optimized battery charging
+# TODO
+
+# show battery percentage menu bar
+# TODO
+
+# disable force click
+# TODO
+
+# safari, show status bar
+# TODO
+
+# touch hushlogin
+# TODO
+
+# disable startup sound
+# TODO
+
+# disable screensaver
+# TODO
+
+# uncheck Allow Handoff
+# TODO
+
+# Show volume on menu bar always
+# TODO
+
+# set accent color to red
+# TODO
+
+# show scroll bars always
+# TODO
+
+echo "Disable last login info in terminal"
+touch ~/.hushlogin
+
+echo "Remove GarageBand"
+#sudo rm -rf /Applications/GarageBand.app
 
 echo "Done. Restart computer or kill Dock / Finder."
