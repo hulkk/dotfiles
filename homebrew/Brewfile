@@ -8,7 +8,6 @@
 brew "python@3.12"
 brew "thefuck"
 brew "tmux"
-brew "yamllint"
 brew "zsh"
 cask "iterm2@nightly"
 
