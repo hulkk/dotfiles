@@ -49,7 +49,7 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## install command line utilities and  applications
+## install command line utilities and applications
 ### open terminal
 ```bash
 mkdir -p ~/src/github.com
@@ -83,9 +83,11 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
-> **Note**
-> Add homebrew to your PATH as per instructions (.zprofile)
 
+### uninstall unnecessary default applications
+```bash
+foo bar
+```
 
 ## configure macOS
 
