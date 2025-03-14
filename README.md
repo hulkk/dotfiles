@@ -49,23 +49,25 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## install homebrew and applications
+## install command line utilities and  applications
 ### open terminal
 ```bash
 mkdir -p ~/src/github.com
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
-cd ~/src/github.com/dotfiles
 ```
 
-### install brew, script source https://brew.sh
+### install oh-my-zsh, script source https://ohmyz.sh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### install homebrew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-> **Note**
-> Add homebrew to your PATH as per instructions (.zprofile)
 
-### install brew packages using brewfile
+### install homebrew packages using brewfile
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
@@ -78,6 +80,8 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
+> **Note**
+> Add homebrew to your PATH as per instructions (.zprofile)
 
 
 ## configure macOS
@@ -99,10 +103,6 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
 
-### install oh-my-zsh, script source https://ohmyz.sh
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
 
 ## configure terminal
 
