@@ -86,7 +86,11 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 
 ### uninstall unnecessary default applications
 ```bash
-foo bar
+chess
+garageband
+imovie
+passwords
+
 ```
 
 ## configure macOS
