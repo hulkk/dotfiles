@@ -91,8 +91,17 @@ sudo rm -rf /Applications/GarageBand.app
 sudo rm -rf /Applications/iMovie.app
 ```
 
-## configure macOS
+## configure git
+```bash
+# configure identity
+# configure auto push
+# configure signature
+# enable diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
+```
+
+## configure macOS
 
 ### enable hardening configurations based on CIS Level 1 benchmark
 ```bash
@@ -108,8 +117,6 @@ sudo rm -rf /Applications/iMovie.app
 ```bash
 ./macos/configure.sh
 ```
-
-
 
 ## configure terminal
 
@@ -177,14 +184,4 @@ echo `tput sitm`italics`tput ritm`
 ### true color
 ```bash
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
-```
-
-## configure git
-```bash
-# configure git identity
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-
-# enable diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
