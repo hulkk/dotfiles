@@ -6,9 +6,9 @@
 
 ![vim screenshot](/screenshots/vim.png?raw=true)
 
-## new laptop
+## initial macOS setup
 <details>
-  <summary>macOS Sequoia, initial setup</summary>
+  <summary>macOS Sequoia</summary>
 
   * language, country, regional settings, accessibility, network, update later, skip migration assistant, sign in with apple id
   * computer account (uncheck "*Allow my Apple Account to reset this password*")
@@ -29,7 +29,7 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 <details>
-  <summary>macOS Monterey, initial setup</summary>
+  <summary>macOS Monterey</summary>
 
   * language, country, regional settings, accessibility, network, skip migration assistant, apple id
   * computer account (uncheck "*Allow my Apple ID to reset this password*")
@@ -49,31 +49,15 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-## configure laptop
+## install homebrew and applications
 ### open terminal
 ```bash
-mkdir -p ~/src && mkdir -p ~/src/github.com
+mkdir -p ~/src/github.com
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
 ```
 
-### enable hardening configurations based on CIS Level 1 benchmark
-```bash
-./macos/cis_monterey_1.1_level_1.sh
-```
-
-### enable privacy related recommended settings
-```bash
-./macos/privacy.sh
-```
-
-### configure macOS settings based on personal preferences
-```bash
-./macos/configure.sh
-```
-
-## install homebrew and applications
 ### install brew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -94,6 +78,26 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
+
+
+## configure macOS
+
+
+### enable hardening configurations based on CIS Level 1 benchmark
+```bash
+./macos/cis_monterey_1.1_level_1.sh
+```
+
+### enable privacy related recommended settings
+```bash
+./macos/privacy.sh
+```
+
+### configure macOS settings based on personal preferences
+```bash
+./macos/configure.sh
+```
+
 
 ### install oh-my-zsh, script source https://ohmyz.sh
 ```bash
