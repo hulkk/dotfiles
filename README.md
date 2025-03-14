@@ -8,6 +8,27 @@
 
 ## new laptop
 <details>
+  <summary>macOS Sequoia, initial setup</summary>
+
+  * language, country, regional settings, accessibility, network, update later, skip migration assistant, sign in with apple id
+  * computer account (uncheck "*Allow my Apple Account to reset this password*")
+  * skip icloud keychain activation
+  * make this your new mac (customize)
+    * enable location services
+    * uncheck analytics
+    * skip screen time setup
+    * skip Apple Intelligence
+    * uncheck enable ask siri
+    * uncheck "Allow my Apple Account to unlock my disk"
+        * write down the FileVault Recovery Key
+    * touch id
+    * skip apple pay setup
+    * dark mode
+  * software update
+    * reboot
+  * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
+</details>
+<details>
   <summary>macOS Monterey, initial setup</summary>
 
   * language, country, regional settings, accessibility, network, skip migration assistant, apple id
