@@ -6,9 +6,9 @@
 
 ![vim screenshot](/screenshots/vim.png?raw=true)
 
-## new laptop
+## initial macOS setup
 <details>
-  <summary>macOS Sequoia, initial setup</summary>
+  <summary>macOS Sequoia</summary>
 
   * language, country, regional settings, accessibility, network, update later, skip migration assistant, sign in with apple id
   * computer account (uncheck "*Allow my Apple Account to reset this password*")
@@ -29,7 +29,7 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 <details>
-  <summary>macOS Monterey, initial setup</summary>
+  <summary>macOS Monterey</summary>
 
   * language, country, regional settings, accessibility, network, skip migration assistant, apple id
   * computer account (uncheck "*Allow my Apple ID to reset this password*")
@@ -52,7 +52,7 @@
 ## install homebrew and applications
 ### open terminal
 ```bash
-mkdir -p ~/src && mkdir -p ~/src/github.com && mkdir -p ~/.ssh
+mkdir -p ~/src/github.com
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 cd ~/src/github.com/dotfiles
@@ -62,31 +62,26 @@ cd ~/src/github.com/dotfiles
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+> **Note**
+> Add homebrew to your PATH as per instructions (.zprofile)
 
 ### install brew packages using brewfile
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
-### install oh-my-zsh, script source https://ohmyz.sh
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### download powerlevel10k theme
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-### download zsh-syntax-highlighting plugin
-```bash
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
-```
+### install mac appstore packages using brewfile
 
 > **Note**
-> Reboot computer
+> Due to mas api limitations apps can't be purchased using this method
 
-## configure laptop
+```bash
+brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
+```
+
+
+## configure macOS
+
 
 ### enable hardening configurations based on CIS Level 1 benchmark
 ```bash
@@ -103,13 +98,10 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 ./macos/configure.sh
 ```
 
-### install mac appstore packages using brewfile
 
-> **Note**
-> Due to mas api limitations apps can't be purchased using this method
-
+### install oh-my-zsh, script source https://ohmyz.sh
 ```bash
-brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## configure terminal
