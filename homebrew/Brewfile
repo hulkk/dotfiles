@@ -16,6 +16,7 @@ brew "vim"
 brew "watch"
 
 # applications
+cask "1password"
 cask "chatgpt"
 cask "google-chrome"
 cask "obsidian"
