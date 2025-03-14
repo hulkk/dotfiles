@@ -26,6 +26,27 @@
   * software update
     * reboot
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
+
+</details>
+<details>
+  <summary>macOS Sonoma, initial setup</summary>
+
+  * language, country, regional settings, accessibility, network, skip migration assistant, sign in with apple id and accept iCloud terms
+  * computer account (uncheck "*Allow my Apple ID to reset this password*")
+  * skip icloud keychain activation
+  * make this your new mac (customize)
+    * enable location services
+    * uncheck analytics
+    * skip screen time setup
+    * uncheck enable ask siri
+    * uncheck filevault icloud unlock
+    * add filevault recovery key to e.g. 1Password
+    * setup touch id
+    * skip apple pay setup
+    * dark mode
+  * software update
+    * reboot
+
 </details>
 
 ## install homebrew and applications
@@ -68,8 +89,11 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 ## configure laptop
 
 ### enable hardening configurations based on CIS Level 1 benchmark
+=======
+### install oh-my-zsh, script source https://ohmyz.sh
+>>>>>>> 0bd34e5 (fix)
 ```bash
-./macos/cis_monterey_1.1_level_1.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### enable privacy related recommended settings
@@ -91,19 +115,51 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
-## configure terminal
-
-### open iTerm
-
-> **Note**
-> For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
-
-### install the custom font from iTerm2-folder
+<<<<<<< HEAD
+=======
+### uninstall unnecessary mac apps
 ```bash
-cp ~/src/github.com/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
+sudo rm -rf /Applications/GarageBand.app
+sudo rm -rf /Applications/iMovie.app
 ```
 
-### iTerm2 config 
+## install python packages using requirements.txt
+```bash
+rm /opt/homebrew/opt/python/Frameworks/Python.framework/Versions/Current/lib/python3.12/EXTERNALLY-MANAGED
+pip3 install -r dotfiles/python/requirements.txt
+```
+
+### configure git
+```bash
+# configure git identity
+git config --global user.email "email@example.com"
+git config --global --add --bool push.autoSetupRemote true
+# enable commit signingh with ssh
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/mykey.pub
+git config --global commit.gpgsign true
+```
+> **Note**
+> Signing key needs to be added to your account in e.g. GitHub
+
+### .zprofile symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+```
+
+### .vimrc symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
+# errors in first launch are expected until plugins are installed
+```
+
+> **Note**
+> Reboot computer
+
+>>>>>>> 0bd34e5 (fix)
+## configure terminal
+
+### open iTerm2
 ```bash
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/src/github.com/dotfiles/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
@@ -114,9 +170,10 @@ printf '\tsitm=\\E[3m, ritm=\\E[23m,\n' >> /tmp/xterm-256color.terminfo
 tic /tmp/xterm-256color.terminfo
 ```
 
-### .zshrc symbolic link
+### zsh symbolic links
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
+<<<<<<< HEAD
 ```
 
 ### .zprofile symbolic link
@@ -132,6 +189,10 @@ ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 ### .vimrc symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
+=======
+ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
+>>>>>>> 0bd34e5 (fix)
 ```
 
 ### .tmux.conf symbolic link
@@ -159,12 +220,28 @@ echo `tput sitm`italics`tput ritm`
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
-## configure git
+## configure laptop
+
+### enable hardening configurations based on CIS Level 1 benchmark
 ```bash
+<<<<<<< HEAD
 # configure git identity
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+=======
+./macos/cis_monterey_1.1_level_1.sh
+```
+
+### enable privacy related recommended settings
+```bash
+./macos/privacy.sh
+```
+
+### configure macOS settings based on personal preferences
+```bash
+./macos/configure.sh
+>>>>>>> 0bd34e5 (fix)
 ```
