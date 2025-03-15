@@ -40,6 +40,7 @@
 # Dock
 - Remove
   - Launchpad
+  - Messages
   - Maps
   - FaceTime
   - Contacts
@@ -50,6 +51,7 @@
   - Pages
 - Add
   - 1Password
+  - Activity Monitor
   - ChatGTP
   - Google Chrome
   - iTerm 
