@@ -36,3 +36,24 @@
 - Turn display off on battery/power adapter when inactive, For 10 minutes
 - Require password after ... display is turned off, Immediately
 - Show message when locked, e.g. Owner's email and phone number
+
+# Applications
+
+## TopNotch
+- Enable
+- Enable on MacBook screen only
+- Start at login
+- Hide Menubar Icon
+
+## Obsidian
+- Link to obsidian.md
+
+## Pure Paste
+- Launch at login
+- Disable, "Show menu bar icon"
+- Remove tracking parameters from URLs
+
+## Scroll Reverser
+- Start at login
+- Disable, "Show in menu bar"
+- Disable, "Reverse Trackpad"
