@@ -1,5 +1,12 @@
 # System Settings
 
+## Network
+- Enable Firewall
+
+## Appearance
+- Accent color, Red
+- Disable Allow wallpaper tinting in windows
+
 ## Displays
 - More Space
 - Disable Automatically adjust brightness
