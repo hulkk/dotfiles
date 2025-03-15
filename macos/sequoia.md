@@ -60,12 +60,8 @@
   - Telegram
 
 # Applications
-
-## TopNotch
-- Enable
-- Enable on MacBook screen only
-- Start at login
-- Hide Menubar Icon
+## ChatGPT
+- Show ChatGPT, Only in Dock
 
 ## Obsidian
 - Link to obsidian.md
@@ -79,3 +75,10 @@
 - Start at login
 - Disable, "Show in menu bar"
 - Disable, "Reverse Trackpad"
+
+## TopNotch
+- Enable
+- Enable on MacBook screen only
+- Start at login
+- Hide Menubar Icon
+
