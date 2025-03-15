@@ -89,6 +89,7 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 sudo rm -rf /Applications/Chess.app
 sudo rm -rf /Applications/GarageBand.app
 sudo rm -rf /Applications/iMovie.app
+test
 ```
 
 ## configure git
