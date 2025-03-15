@@ -77,6 +77,8 @@
 - Disable, "Show in menu bar"
 - Disable, "Reverse Trackpad"
 
+## Telegram
+
 ## TopNotch
 - Enable
 - Enable on MacBook screen only
