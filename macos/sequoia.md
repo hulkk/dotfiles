@@ -37,6 +37,18 @@
 - Require password after ... display is turned off, Immediately
 - Show message when locked, e.g. Owner's email and phone number
 
+# Dock
+- Remove
+  - Launchpad
+  - Maps
+  - FaceTime
+  - Contacts
+  - Freeform
+  - TV
+  - Music
+  - Keynote
+  - Pages
+
 # Applications
 
 ## TopNotch
