@@ -77,6 +77,12 @@
 - Disable, "Show in menu bar"
 - Disable, "Reverse Trackpad"
 
+## Spotify
+- Streaming quality, Very high
+- Download, Very high
+- Zoom level, 80%
+- Open Spotify automatically after you log into the computer, No
+
 ## Telegram
 
 ## TopNotch
