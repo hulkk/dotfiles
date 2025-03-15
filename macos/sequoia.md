@@ -48,6 +48,14 @@
   - Music
   - Keynote
   - Pages
+- Add
+  - 1Password
+  - ChatGTP
+  - Google Chrome
+  - iTerm 
+  - Obsidian
+  - Spotify
+  - Telegram
 
 # Applications
 
