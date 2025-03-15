@@ -52,7 +52,7 @@
 ## install command line utilities and applications
 ### open terminal
 ```bash
-mkdir -p ~/src/github.com
+mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 ```
@@ -99,8 +99,8 @@ sudo rm -rf /Applications/iMovie.app
  git config --global --add --bool push.autoSetupRemote true
  # enable commit signing with ssh
  git config --global gpg.format ssh
- git config --global user.signingkey ~/.ssh/mykey.pub
- git config --global commit.gpgsign true
+ git config --global user.signingkey ~/.ssh/id_ed25519.pub
+ git config --global --bool commit.gpgsign true
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
@@ -127,10 +127,8 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 ## configure terminal
 
-### open iTerm
-
-> **Note**
-> For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
+### Enable "Full Disk Access"
+- add iTerm
 
 ### install the custom font from iTerm2-folder
 ```bash
