@@ -78,7 +78,7 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ### install mac appstore packages using brewfile
 
 > **Note**
-> Due to mas api limitations apps can't be purchased using this method
+> Due to mas api limitations first download for Apple ID must be done manually
 
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
