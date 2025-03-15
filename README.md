@@ -93,13 +93,20 @@ sudo rm -rf /Applications/iMovie.app
 
 ## configure git
 ```bash
-# configure identity
-# configure auto push
-# configure signature
+ # configure git identity
+ git config --global user.email "email@example.com"
+# configure "auto push" for new branches
+ git config --global --add --bool push.autoSetupRemote true
+ # enable commit signingh with ssh
+ git config --global gpg.format ssh
+ git config --global user.signingkey ~/.ssh/mykey.pub
+ git config --global commit.gpgsign true
 # enable diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 ```
+ > **Note**
+ > Signing key needs to be added to your account in e.g. GitHub
 
 ## configure macOS
 
