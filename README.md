@@ -97,7 +97,7 @@ sudo rm -rf /Applications/iMovie.app
  git config --global user.email "email@example.com"
 # configure "auto push" for new branches
  git config --global --add --bool push.autoSetupRemote true
- # enable commit signingh with ssh
+ # enable commit signing with ssh
  git config --global gpg.format ssh
  git config --global user.signingkey ~/.ssh/mykey.pub
  git config --global commit.gpgsign true
