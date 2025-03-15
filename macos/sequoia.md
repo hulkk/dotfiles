@@ -16,14 +16,15 @@
 ## Displays
 - More Space
 - Disable Automatically adjust brightness
+  - Automatic brightness adjustment messes with contrast/gamma settings
 
 ### Advanced
 - Disable Allow your pointer and keyboard to move between any nearby Mac or iPad
 
 ### Night Shift
 - Schedule, Custom
-- From 22:00 to 07:00
-- Color temperature "75%" Warm
+- From 21:30 to 08:00
+- Color temperature "80%" Warm
 
 ## Wallpaper
 - Hello Silver, Dark
