@@ -54,7 +54,10 @@
 ```bash
 mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
+# anonymous clone
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
+# authenticated clone
+# git clone git@github.com:hulkk/dotfiles.git ~/src/github.com/dotfiles
 ```
 
 ### install oh-my-zsh, script source https://ohmyz.sh
