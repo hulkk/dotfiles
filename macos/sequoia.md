@@ -25,6 +25,12 @@
 - From 22:00 to 07:00
 - Color temperature "75%" Warm
 
+## Wallpaper
+- Hello Silver, Dark
+
+## Sound
+- Disable, "Play sound on startup"
+
 ## Lock Screen
 - Start screen Saver when inactive, never
 - Turn display off on battery/power adapter when inactive, For 10 minutes
