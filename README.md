@@ -93,6 +93,7 @@ sudo rm -rf /Applications/GarageBand.app
 sudo rm -rf /Library/Application\ Support/GarageBand
 sudo rm -rf /Library/Audio/Apple\ Loops
 sudo rm -rf /Library/Application\ Support/Logic
+sudo rm -rf /Library/Audio/Impulse\ Responses/Apple
 sudo rm -rf /Applications/iMovie.app
 ```
 
