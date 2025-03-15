@@ -1,0 +1,6 @@
+# applications
+cask "elgato-control-center"
+cask "elgato-camera-hub"
+cask "raspberry-pi-imager"
+cask "steam"
+cask "teamviewer"
