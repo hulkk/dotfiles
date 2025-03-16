@@ -29,4 +29,13 @@
   - 04 Projects
   - Attachments
   - Templates
+  - New
+- Settings
+  - Files and links
+    - Disable "Confirm file deletion"
+    - Default location for new notes, In the folder specified below, "New"
+    - Default location for new attachments, In the folder specified below, "Attachments"
 - Delete "Welcome" note
+- Configure Plugins
+  - Core
+  - Community
