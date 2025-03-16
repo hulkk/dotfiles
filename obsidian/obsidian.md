@@ -22,3 +22,11 @@
   - "Hider" by @kepano
   - "Iconize" by FlorianWoelki
   - "Style Settings" by mgmeyers
+- Create folders, e.g.
+  - 01 Leadership
+  - 02 Team
+  - 03 Customers
+  - 04 Projects
+  - Attachments
+  - Templates
+- Delete "Welcome" note
