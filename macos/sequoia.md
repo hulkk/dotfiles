@@ -3,6 +3,10 @@
 ## Network
 - Enable Firewall
 
+## General
+- AirDrop & Handoff
+  - Disable "Allow Handoff between this Mac and your iCloud devices"
+
 ## Appearance
 - Accent color, Red
 - Disable "Allow wallpaper tinting in windows"
