@@ -7,6 +7,15 @@
 - Accent color, Red
 - Disable "Allow wallpaper tinting in windows"
 
+## Control Center
+- Modules 
+  - Now Playing, Don't show in Menu Bar
+- Battery
+  - Show Percentage
+  - Show Energy Mode, Always
+- Menu Bar Only
+  - Spotlight, Don't show in Menu Bar
+
 ## Desktop & Dock
 - Dock Size "25%"
 - Disable "Animate opening applications"
@@ -72,6 +81,8 @@
 - Disable, "Show menu bar icon"
 - Remove tracking parameters from URLs
 
+## Safari
+
 ## Scroll Reverser
 - Start at login
 - Disable, "Show in menu bar"
@@ -90,4 +101,3 @@
 - Enable on MacBook screen only
 - Start at login
 - Hide Menubar Icon
-
