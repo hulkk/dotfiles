@@ -1,0 +1,24 @@
+- Create a local vault or open an existing one
+- Disable Core Plugins
+  - Backlinks
+  - Bookmarks
+  - Daily notes
+  - Graph view
+  - Note composer
+  - Outgoing links
+  - Outline
+  - Page preview
+  - Quick switcher
+  - Sync
+  - Tags view
+  - Word count
+- Turn on community plugins
+- Install & enable community plugins
+  - "Advanced Canvas" by Developer-Mike
+  - "Checklist" by delashum
+  - "Editing Toolbar" by Cuman
+  - "Excalidraw" by Zsolt Viczian
+  - "File Color" by ecustic
+  - "Hider" by @kepano
+  - "Iconize" by FlorianWoelki
+  - "Style Settings" by mgmeyers
