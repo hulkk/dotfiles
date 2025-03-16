@@ -92,6 +92,9 @@
 ## ChatGPT
 - Show ChatGPT, Only in Dock
 
+## Google Chrome
+- Disable "Warn Before Quitting"
+
 ## Obsidian
 - Link to obsidian.md
 
