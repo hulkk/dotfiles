@@ -101,8 +101,6 @@
 - Launch AdGuard for Safari at Login
 - Disable, "Show AdGuard for Safari in the menu bar"
 - Filters
-  - Annoyances
-    - "AdGuard Cookie Notices filter"
   - Security
     - "Online Malicious URL Blocklist"
   - Language-specific
