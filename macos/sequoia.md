@@ -17,7 +17,7 @@
   - Spotlight, Don't show in Menu Bar
 
 ## Desktop & Dock
-- Dock Size "25%"
+- Dock Size "20%"
 - Disable "Animate opening applications"
 - Disable "Show suggested and recent apps in Dock"
 - Disable "Tiled windows have margins"
