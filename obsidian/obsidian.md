@@ -28,7 +28,7 @@
   - 03 Customers
   - 04 Projects
   - 05 Vendors
-  - 06 Personal notes
+  - 06 Personal
   - Attachments
   - Templates
   - New
