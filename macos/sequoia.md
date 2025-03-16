@@ -108,6 +108,13 @@
 - Open Spotify automatically after you log into the computer, No
 
 ## Telegram
+- Enlarge window to show chats and contents
+- Disable "Replace Emoji Automatically"
+- Disable "Show Calls Tab"
+- Disable "Show Icon in Menu Bar"
+### Appearance
+- Color Theme "System"
+- Text Size, 2nd from the left
 
 ## TopNotch
 - Enable

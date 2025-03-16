@@ -45,3 +45,4 @@
     - Templates
       - Template folder location, "Templates"
   - Community
+- Create a Template
