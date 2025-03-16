@@ -67,23 +67,23 @@
 - Sort & Add*
   - Finder
   - Calendar
-  - App Store
-  - System Settings
-  - 1Password*
-  - Telegram
-  - Spotify
-  - Bear
+  - Spotify*
+  - Bear*
   - Safari
   - Google Chrome* 
   - Mail
   - Reminders
   - Notes
   - Numbers
-  - Obsidian
-  - Parcel
-  - iTerm
-  - ChatGTP
-  - Activity Monitor
+  - Obsidian*
+  - Telegram*
+  - ChatGTP*
+  - Parcel*
+  - iTerm*
+  - 1Password*
+  - System Settings
+  - App Store
+  - Activity Monitor*
 
 # Applications
 ## 1Password
