@@ -30,8 +30,8 @@
   - 05 Vendors
   - 06 Personal
   - Attachments
-  - Templates
   - New
+  - Templates
 - Settings
   - Files and links
     - Disable "Confirm file deletion"
