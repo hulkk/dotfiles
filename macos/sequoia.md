@@ -70,6 +70,13 @@
   - Telegram
 
 # Applications
+## 1Password
+- Disable "Keep 1Password in the menu bar"
+- Density, Compact
+- Interface Zoom, 90%
+- Always Show in Sidebar, Disable "Tags"
+- Disable "Check for passkeys"
+
 ## ChatGPT
 - Show ChatGPT, Only in Dock
 
@@ -82,6 +89,12 @@
 - Remove tracking parameters from URLs
 
 ## Safari
+- AutoFill
+  - Disable all
+- Extensions
+  - 1Password for Safari
+    - Always Allow on Every Website
+  - Disable "Share across devices"
 
 ## Scroll Reverser
 - Start at login
