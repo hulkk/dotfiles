@@ -38,4 +38,10 @@
 - Delete "Welcome" note
 - Configure Plugins
   - Core
+    - Canvas
+      - Default location for new canvas files, "Same folder as current file"
+    - Command palette
+      - New pinned command, to be defined
+    - Templates
+      - Template folder location, "Templates"
   - Community
