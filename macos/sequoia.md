@@ -55,19 +55,31 @@
   - FaceTime
   - Contacts
   - Freeform
+  - Photos
   - TV
   - Music
   - Keynote
   - Pages
-- Add
-  - 1Password
-  - Activity Monitor
-  - ChatGTP
-  - Google Chrome
-  - iTerm 
-  - Obsidian
-  - Spotify
+- Sort & Add*
+  - Finder
+  - Calendar
+  - App Store
+  - System Settings
+  - 1Password*
   - Telegram
+  - Spotify
+  - Bear
+  - Safari
+  - Google Chrome* 
+  - Mail
+  - Reminders
+  - Notes
+  - Numbers
+  - Obsidian
+  - Parcel
+  - iTerm
+  - ChatGTP
+  - Activity Monitor
 
 # Applications
 ## 1Password
@@ -114,6 +126,7 @@
 - Disable "Show Icon in Menu Bar"
 ### Appearance
 - Color Theme "System"
+- Disable "Bubble Mode"
 - Text Size, 2nd from the left
 
 ## TopNotch
