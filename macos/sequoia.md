@@ -93,6 +93,21 @@
 - Always Show in Sidebar, Disable "Tags"
 - Disable "Check for passkeys"
 
+## Activity Monitor
+- Dock Icon - Show CPU History
+
+## AdGuard for Safari
+- (Permissions in Safari)
+- Launch AdGuard for Safari at Login
+- Disable, "Show AdGuard for Safari in the menu bar"
+- Filters
+  - Annoyances
+    - "AdGuard Cookie Notices filter"
+  - Security
+    - "Online Malicious URL Blocklist"
+  - Language-specific
+    - "Adblock List for Finland"
+
 ## ChatGPT
 - Show ChatGPT, Only in Dock
 
@@ -113,6 +128,13 @@
 - Extensions
   - 1Password for Safari
     - Always Allow on Every Website
+  - AdGuard, enable
+    - Custom
+    - General
+    - Other
+    - Privacy
+    - Security
+    - Social
   - Disable "Share across devices"
 
 ## Scroll Reverser
