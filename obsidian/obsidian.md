@@ -21,6 +21,7 @@
   - "File Color" by ecustic
   - "Hider" by @kepano
   - "Iconize" by FlorianWoelki
+  - "Plugin Update Tracker" by Steven Swartz
   - "Style Settings" by mgmeyers
 - Create folders, e.g.
   - 01 Leadership
