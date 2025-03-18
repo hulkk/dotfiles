@@ -135,6 +135,12 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 ### Enable "Full Disk Access"
 - add iTerm
+- add ghostty
+
+### ghostty config
+```bash
+ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+```
 
 ### install the custom font from iTerm2-folder
 ```bash
