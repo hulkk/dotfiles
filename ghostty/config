@@ -46,3 +46,4 @@ title = " "
 macos-titlebar-proxy-icon = hidden
 background-opacity = 0.9
 background-blur = 10
+theme = GruvboxDark 
