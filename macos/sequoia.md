@@ -79,7 +79,7 @@
   - Telegram*
   - ChatGTP*
   - Parcel*
-  - iTerm*
+  - Ghostty*
   - 1Password*
   - System Settings
   - App Store
