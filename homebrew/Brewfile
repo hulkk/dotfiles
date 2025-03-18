@@ -1,8 +1,9 @@
 # terminal environment related packages
 brew "python@3.12"
-brew "tmux"
+#brew "tmux"
 brew "zsh"
-cask "iterm2@nightly"
+#cask "iterm2@nightly"
+cask "ghostty"
 
 # cli utilities
 brew "git"
