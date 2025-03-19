@@ -107,9 +107,10 @@ sudo rm -rf /Applications/iMovie.app
  git config --global gpg.format ssh
  git config --global user.signingkey ~/.ssh/id_ed25519.pub
  git config --global --bool commit.gpgsign true
-# enable diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-
+ # always rebase your local branch if the upstream branch has additional commits
+ git config --global --bool pull.rebase true
+# use delta to display output of git diff
+git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
 ```
  > **Note**
  > Signing key needs to be added to your account in e.g. GitHub
