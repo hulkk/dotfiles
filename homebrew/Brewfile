@@ -6,7 +6,9 @@ brew "zsh"
 cask "ghostty"
 
 # cli utilities
+brew "eza"
 brew "git"
+brew "git-delta"
 brew "jq"
 brew "nmap"
 brew "mas"
