@@ -117,46 +117,17 @@ git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
 
 ## configure macOS
 
-### enable hardening configurations based on CIS Level 1 benchmark
-```bash
-./macos/cis_monterey_1.1_level_1.sh
-```
-
-### enable privacy related recommended settings
-```bash
-./macos/privacy.sh
-```
-
-### configure macOS settings based on personal preferences
-```bash
-./macos/configure.sh
-```
+### Sequoia
+link to sequoia.md
 
 ## configure terminal
 
 ### Enable "Full Disk Access"
-- add iTerm
 - add ghostty
 
 ### ghostty config
 ```bash
 ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
-```
-
-### install the custom font from iTerm2-folder
-```bash
-cp ~/src/github.com/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
-```
-
-### iTerm2 config 
-```bash
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/src/github.com/dotfiles/iterm2"
-defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-# Override local entry to enable italics without breaking outgoing SSH connections
-infocmp xterm-256color > /tmp/xterm-256color.terminfo
-printf '\tsitm=\\E[3m, ritm=\\E[23m,\n' >> /tmp/xterm-256color.terminfo
-tic /tmp/xterm-256color.terminfo
 ```
 
 ### .zshrc symbolic link
@@ -179,19 +150,9 @@ ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
-### .tmux.conf symbolic link
-```bash
-ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-```
-
 ### yaml lint symbolic link
 ```bash
 mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
-```
-
-### install tmux plugin manager
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ## test advanced formatting
