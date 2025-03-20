@@ -1,8 +1,8 @@
 # terminal environment related packages
-brew "python@3.12"
-#brew "tmux"
-brew "zsh"
 cask "ghostty"
+brew "zsh"
+cask "jandedobbeleer/oh-my-posh/oh-my-posh"
+brew "python@3.13"
 
 # cli utilities
 brew "eza"
