@@ -38,6 +38,10 @@
     - Disable "Confirm file deletion"
     - Default location for new notes, In the folder specified below, "New"
     - Default location for new attachments, In the folder specified below, "Attachments"
+  - Appearance
+    - Interface font, SN Pro
+    - Text font, SN Pro
+    - Monospace font, FiraCode Nerd Font Mono
 - Delete "Welcome" note
 - Configure Plugins
   - Core
@@ -48,4 +52,6 @@
     - Templates
       - Template folder location, "Templates"
   - Community
-- Create a Template
+- Create Templates, e.g.
+  - Default
+  - On-call
