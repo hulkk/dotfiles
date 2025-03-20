@@ -17,6 +17,10 @@ brew "tree"
 brew "vim"
 brew "watch"
 
+# fonts
+cask "font-fira-code-nerd-font"
+cask "font-sn-pro"
+
 # applications
 cask "1password"
 cask "chatgpt"
