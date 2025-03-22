@@ -102,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(oh-my-posh init zsh --config ~/src/github.com/dotfiles/oh-my-posh/gruvbox.omp.json)"
