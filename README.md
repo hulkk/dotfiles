@@ -68,8 +68,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ### install homebrew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo >> ~/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
@@ -130,9 +128,10 @@ link to sequoia.md
 ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
-### .zshrc symbolic link
+### zsh symbolic links
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ```
 
 ### .zprofile symbolic link
