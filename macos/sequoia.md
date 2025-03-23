@@ -24,6 +24,7 @@
 - Dock Size "20%"
 - Disable "Animate opening applications"
 - Disable "Show suggested and recent apps in Dock"
+- Disable "Show Items On Desktop"
 - Disable "Tiled windows have margins"
 
 ## Displays
