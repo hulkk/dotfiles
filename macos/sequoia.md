@@ -113,6 +113,10 @@
 ## Google Chrome
 - Disable "Warn Before Quitting"
 
+## Mail
+- New message sound, none
+- Composing, Send new messages from
+
 ## Obsidian
 - Link to obsidian.md
 
@@ -122,19 +126,33 @@
 - Remove tracking parameters from URLs
 
 ## Safari
-- AutoFill
-  - Disable all
-- Extensions
-  - 1Password for Safari
-    - Always Allow on Every Website
-  - AdGuard, enable
-    - Custom
+- Settings
     - General
-    - Other
-    - Privacy
-    - Security
-    - Social
-  - Disable "Share across devices"
+      - Disable, Open "safe" files after downloading
+    - Tabs
+      - Always show website titles in tabs
+    - AutoFill
+      - Disable all
+    - Websites
+      - Location, When visiting other websites, Deny
+      - Disable "Share across devices"
+    - Extensions
+      - 1Password for Safari
+        - Always Allow on Every Website
+      - AdGuard, enable
+        - Custom
+        - General
+        - Other
+        - Privacy
+        - Security
+        - Social
+      - Disable "Share across devices"
+    - Advanced
+      - Enable, Show full website address
+      - Enable, Show features for web developers
+- View
+  - Show favorites bar
+  - Show status bar
 
 ## Scroll Reverser
 - Start at login
