@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-auto-fetch magic-enter thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,4 +103,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(oh-my-posh init zsh --config ~/src/github.com/dotfiles/oh-my-posh/gruvbox.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/src/github.com/dotfiles/oh-my-posh/config.toml)"
