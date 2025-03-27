@@ -7,6 +7,9 @@
 - AirDrop & Handoff
   - Disable "Allow Handoff between this Mac and your iCloud devices"
 
+## Accessibility
+- Reduce motion
+
 ## Appearance
 - Accent color, Red
 - Disable "Allow wallpaper tinting in windows"
@@ -51,6 +54,13 @@
 - Turn display off on battery/power adapter when inactive, For 10 minutes
 - Require password after ... display is turned off, Immediately
 - Show message when locked, e.g. Owner's email and phone number
+
+## Keyboard
+- Text Input
+  - Input Sources, Edit
+    - Disable, Correct spelling automatically
+    - Disable, Capitalize words automatically
+    - Disable, Use smart quotes and dashes
 
 # Dock
 - Remove
