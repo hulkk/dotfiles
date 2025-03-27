@@ -125,6 +125,7 @@
 
 ## Mail
 - New message sound, none
+- Viewing, List preview, 1 Line
 - Composing, Send new messages from
 
 ## Obsidian
