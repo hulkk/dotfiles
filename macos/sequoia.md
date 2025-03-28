@@ -1,5 +1,10 @@
 # System Settings
 
+## iCloud
+- Disable, Safari
+- Disable, Stocks
+- Disable, Siri
+
 ## Network
 - Enable Firewall
 
