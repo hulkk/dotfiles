@@ -123,6 +123,11 @@ link to sequoia.md
 ### Enable "Full Disk Access"
 - add ghostty
 
+### Disable last login info
+```bash
+touch ~/.hushlogin
+```
+
 ### ghostty config
 ```bash
 ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
