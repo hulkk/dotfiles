@@ -51,6 +51,13 @@
 ## Wallpaper
 - Hello Silver, Dark
 
+## Notifications
+- Disable, Allow notifications when the screen is locked
+
+### Application Notifications
+- Mail, Enable only Badge application icon
+- Telegram, Enable only Badge application icon
+
 ## Sound
 - Disable, "Play sound on startup"
 
