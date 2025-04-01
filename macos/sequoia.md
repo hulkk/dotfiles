@@ -141,7 +141,7 @@
 - Composing, Send new messages from
 
 ## Obsidian
-- Link to obsidian.md
+- [Configuration notes](../obsidian/obsidian.md)
 
 ## Pure Paste
 - Launch at login
