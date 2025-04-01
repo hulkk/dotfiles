@@ -51,5 +51,4 @@ macos-icon = chalkboard
 window-width = 120
 window-height = 30
 font-family = FiraCode Nerd Font
-cursor-style = underline
 auto-update = check

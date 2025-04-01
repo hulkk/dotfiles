@@ -139,11 +139,6 @@ ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ```
 
-### omp symbolic link
-```bash
-ln -sf ~/src/github.com/dotfiles/oh-my-posh/config.toml ~/.CHANGETHIS
-```
-
 ### .vimrc symbolic link
 ```bash
 ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
