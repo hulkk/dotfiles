@@ -116,7 +116,7 @@ git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
 ## configure macOS
 
 ### Sequoia
-link to sequoia.md
+[Configuration notes](macos/sequoia.md)
 
 ## configure terminal
 
