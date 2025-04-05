@@ -2,6 +2,7 @@
 - Disable Core Plugins
   - Backlinks
   - Bookmarks
+  - Canvas(?)
   - Daily notes
   - Graph view
   - Note composer
@@ -21,6 +22,7 @@
   - "File Color" by ecustic
   - "Hider" by @kepano
   - "Iconize" by FlorianWoelki
+  - "Minimal Theme Settings" by kepano
   - "Plugin Update Tracker" by Steven Swartz
   - "Style Settings" by mgmeyers
 - Create folders, e.g.
@@ -39,6 +41,7 @@
     - Default location for new notes, In the folder specified below, "New"
     - Default location for new attachments, In the folder specified below, "Attachments"
   - Appearance
+    - Themes, Manage, install "Minimal" by kepano
     - Interface font, SN Pro
     - Text font, SN Pro
     - Monospace font, FiraCode Nerd Font Mono
@@ -52,6 +55,10 @@
     - Templates
       - Template folder location, "Templates"
   - Community
+    - File color
+      - Add following to the palette from Gruvbox, dark text
+        - Blue, yellow, red, green, purple, orange
+      - Remember to Save
 - Create Templates, e.g.
   - Default
   - On-call
