@@ -90,23 +90,23 @@
 - Sort & Add*
   - Finder
   - Calendar
-  - Spotify*
-  - Bear*
-  - Safari
-  - Google Chrome* 
-  - Mail
-  - Reminders
-  - Notes
-  - Numbers
-  - Obsidian*
   - Telegram*
+  - 1Password*
+  - Spotify*
+  - Safari
+  - Bear*
+  - Notes
+  - Obsidian*
+  - Mail
+  - Google Chrome*
+  - Numbers
+  - Reminders
+  - Ghostty*
   - ChatGTP*
   - Parcel*
-  - Ghostty*
-  - 1Password*
+  - Activity Monitor*
   - System Settings
   - App Store
-  - Activity Monitor*
 
 # Applications
 ## 1Password
