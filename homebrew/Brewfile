@@ -9,12 +9,12 @@ brew "eza"
 brew "git"
 brew "git-delta"
 brew "jq"
+brew "neovim"
 brew "nmap"
 brew "mas"
 brew "ripgrep"
 brew "thefuck"
 brew "tree"
-brew "vim"
 brew "watch"
 
 # fonts
