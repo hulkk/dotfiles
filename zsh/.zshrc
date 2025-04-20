@@ -76,6 +76,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+unsetopt AUTO_CD
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
