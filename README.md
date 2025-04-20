@@ -139,9 +139,10 @@ ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ```
 
-### .vimrc symbolic link
+### nvim symbolic links
 ```bash
-ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
+mkdir -p ~/.config/nvim/lua/plugins && mkdir ~/.config/nvim/lua/core
+ln -sf ~/src/github.com/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 ```
 
 ### yaml lint symbolic link
