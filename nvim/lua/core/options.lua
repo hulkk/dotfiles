@@ -4,5 +4,6 @@ vim.o.ignorecase = true
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.showmode = false
+vim.opt.updatetime = 100
 --vim.o.autoindent = true
 --vim.o.smartindent = true
