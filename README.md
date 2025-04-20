@@ -143,6 +143,9 @@ ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ```bash
 mkdir -p ~/.config/nvim/lua/plugins && mkdir ~/.config/nvim/lua/core
 ln -sf ~/src/github.com/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/core/options.lua ~/.config/nvim/lua/core/options.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua/plugins/lualine.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
 ```
 
 ### yaml lint symbolic link
