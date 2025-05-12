@@ -129,6 +129,10 @@
   - Language-specific
     - "Adblock List for Finland"
 
+## Calendar
+- Advanced
+  - Show week numbers
+
 ## ChatGPT
 - Show ChatGPT, Only in Dock
 
