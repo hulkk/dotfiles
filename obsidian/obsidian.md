@@ -55,6 +55,15 @@
     - Templates
       - Template folder location, "Templates"
   - Community
+    - Editing toolbar
+      - Appearance
+        - Editing toolbar auto-hide, enable
+      - Toolbar Commands
+        - Remove
+          - highlight
+          - submenu-align
+          - cycle checklist
+          - workplace fullscreen
     - File color
       - Add following to the palette from Gruvbox, dark text
         - Blue, yellow, red, green, purple, orange
