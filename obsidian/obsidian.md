@@ -45,6 +45,7 @@
     - Interface font, SN Pro
     - Text font, SN Pro
     - Monospace font, FiraCode Nerd Font Mono
+    - Show tab title bar, disable
 - Delete "Welcome" note
 - Configure Plugins
   - Core
@@ -61,6 +62,8 @@
       - Toolbar Commands
         - Remove
           - highlight
+          - headers + submenu
+          - submenu (copy-paste)
           - submenu-align
           - cycle checklist
           - workplace fullscreen
