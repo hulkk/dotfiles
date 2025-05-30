@@ -71,6 +71,9 @@
       - Add following to the palette from Gruvbox, dark text
         - Blue, yellow, red, green, purple, orange
       - Remember to Save
+    - Hider
+      - Hide vault name
+      - Hide file explorer buttons
 - Create Templates, e.g.
   - Default
   - On-call
