@@ -60,7 +60,7 @@ mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
 # anonymous clone
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
-# authenticated clone
+# authenticated clone, after ssh key configured
 # git clone git@github.com:hulkk/dotfiles.git ~/src/github.com/dotfiles
 ```
 
