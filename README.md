@@ -9,6 +9,7 @@
 ## initial macOS setup
 <details>
   <summary>macOS Sequoia</summary>
+
   * language, country, skip migration assistant, regional settings, accessibility, network, create a mac account - uncheck "Allow computer account password to be reset with your Apple Account", sign in with apple account
   * enable location services
   * uncheck analytics
@@ -42,7 +43,7 @@
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 
-### uninstall unnecessary default applications
+### uninstall unnecessary default applications (pre macOS 15.5?)
 ```bash
 sudo rm -rf /Applications/GarageBand.app
 sudo rm -rf /Library/Application\ Support/GarageBand
