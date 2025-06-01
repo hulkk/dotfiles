@@ -2,7 +2,6 @@
 cask "ghostty"
 cask "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "tmux"
-brew "zsh"
 
 # cli utilities
 brew "eza"
@@ -12,7 +11,7 @@ brew "jq"
 brew "neovim"
 brew "nmap"
 brew "mas"
-brew "python@3.13"
+brew "python3"
 brew "ripgrep"
 brew "thefuck"
 brew "tree"
