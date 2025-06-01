@@ -94,7 +94,6 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ### Sequoia
 [Configuration notes](macos/sequoia.md)
 
-
 ## configure terminal
 
 ### configure git
@@ -128,17 +127,17 @@ touch ~/.hushlogin
 ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
+### zsh symbolic links
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
+ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
+```
+
 ### tmux config
 ```bash
 ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-### zsh symbolic links
-```bash
-ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
-ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
-ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 ```
 
 ### nvim symbolic links
