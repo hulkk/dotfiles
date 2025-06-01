@@ -9,24 +9,17 @@
 ## initial macOS setup
 <details>
   <summary>macOS Sequoia</summary>
-
-  * language, country, regional settings, accessibility, network, update later, skip migration assistant, sign in with apple id
-  * computer account (uncheck "*Allow my Apple Account to reset this password*")
-  * skip icloud keychain activation
-  * make this your new mac (customize)
-    * enable location services
-    * uncheck analytics
-    * skip screen time setup
-    * skip Apple Intelligence
-    * uncheck enable ask siri
-    * uncheck "Allow my Apple Account to unlock my disk"
-        * write down the FileVault Recovery Key
-    * touch id
-    * skip apple pay setup
-    * dark mode
+  * language, country, skip migration assistant, regional settings, accessibility, network, create a mac account - uncheck "Allow computer account password to be reset with your Apple Account", sign in with apple account
+  * enable location services
+  * uncheck analytics
+  * skip screen time setup
+  * skip/enable apple intelligence?
+  * uncheck enable ask siri
+  * touch id
+  * dark mode
+  * update mac automatically
   * software update
     * reboot
-  * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
 <details>
   <summary>macOS Monterey</summary>
@@ -48,6 +41,16 @@
     * reboot
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 </details>
+
+### uninstall unnecessary default applications
+```bash
+sudo rm -rf /Applications/GarageBand.app
+sudo rm -rf /Library/Application\ Support/GarageBand
+sudo rm -rf /Library/Audio/Apple\ Loops
+sudo rm -rf /Library/Application\ Support/Logic
+sudo rm -rf /Library/Audio/Impulse\ Responses/Apple
+sudo rm -rf /Applications/iMovie.app
+```
 
 ## install command line utilities and applications
 ### open terminal
@@ -85,17 +88,15 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
-### uninstall unnecessary default applications
-```bash
-sudo rm -rf /Applications/GarageBand.app
-sudo rm -rf /Library/Application\ Support/GarageBand
-sudo rm -rf /Library/Audio/Apple\ Loops
-sudo rm -rf /Library/Application\ Support/Logic
-sudo rm -rf /Library/Audio/Impulse\ Responses/Apple
-sudo rm -rf /Applications/iMovie.app
-```
+## configure macOS
 
-## configure git
+### Sequoia
+[Configuration notes](macos/sequoia.md)
+
+
+## configure terminal
+
+### configure git
 ```bash
  # configure git identity
  git config --global user.email "email@example.com"
@@ -113,13 +114,6 @@ git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
  > **Note**
  > Signing key needs to be added to your account in e.g. GitHub
 
-## configure macOS
-
-### Sequoia
-[Configuration notes](macos/sequoia.md)
-
-## configure terminal
-
 ### Enable "Full Disk Access"
 - add ghostty
 
@@ -133,12 +127,17 @@ touch ~/.hushlogin
 ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
+### tmux config
+```bash
+ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 ### zsh symbolic links
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
 ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
-
 ```
 
 ### nvim symbolic links
@@ -148,6 +147,7 @@ ln -sf ~/src/github.com/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/core/options.lua ~/.config/nvim/lua/core/options.lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua/plugins/lualine.lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lua/plugins/gitsigns.lua
 ```
 
 ### yaml lint symbolic link
