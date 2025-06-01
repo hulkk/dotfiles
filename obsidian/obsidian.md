@@ -2,7 +2,6 @@
 - Disable Core Plugins
   - Backlinks
   - Bookmarks
-  - Canvas(?)
   - Daily notes
   - Graph view
   - Note composer
@@ -24,7 +23,6 @@
   - "Iconize" by FlorianWoelki
   - "Minimal Theme Settings" by kepano
   - "Plugin Update Tracker" by Steven Swartz
-  - "Style Settings" by mgmeyers
 - Create folders, e.g.
   - 01 Leadership
   - 02 Team
@@ -36,6 +34,8 @@
   - New
   - Templates
 - Settings
+  - Editor
+    - Disable spellcheck
   - Files and links
     - Disable "Confirm file deletion"
     - Default location for new notes, In the folder specified below, "New"
@@ -50,9 +50,7 @@
 - Configure Plugins
   - Core
     - Canvas
-      - Default location for new canvas files, "Same folder as current file"
-    - Command palette
-      - New pinned command, to be defined
+      - Default location for new canvas files, In the folder specified below, "New"
     - Templates
       - Template folder location, "Templates"
   - Community
@@ -74,6 +72,10 @@
     - Hider
       - Hide vault name
       - Hide file explorer buttons
+    - Minimal Theme settings
+      - Dark
+        - Gruvbox
+        - Low contrast
 - Create Templates, e.g.
   - Default
   - On-call
