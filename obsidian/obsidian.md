@@ -66,7 +66,7 @@
           - cycle checklist
           - workplace fullscreen
     - File color
-      - Add following to the palette from Gruvbox, dark text
+      - Add following to the palette from Gruvbox, dark text - https://github.com/morhetz/gruvbox
         - Blue, yellow, red, green, purple, orange
       - Remember to Save
     - Hider
