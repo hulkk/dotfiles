@@ -59,11 +59,12 @@
         - Editing toolbar auto-hide, enable
       - Toolbar Commands
         - Remove
-          - highlight
           - headers + submenu
+          - highlight
           - submenu (copy-paste)
-          - submenu-align
           - cycle checklist
+          - submenu-align
+          - fullscreen focus mode
           - workplace fullscreen
     - File color
       - Add following to the palette from Gruvbox, dark mode & dark text - https://github.com/morhetz/gruvbox
@@ -76,6 +77,7 @@
       - Dark
         - Gruvbox
         - Low contrast
+      - Colorful active states, enable
 - Create Templates, e.g.
   - Default
   - On-call
