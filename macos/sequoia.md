@@ -22,6 +22,7 @@
 ## Control Center
 - Modules 
   - Now Playing, Don't show in Menu Bar
+  - Sound, Always Show in Menu Bar
 - Battery
   - Show Percentage
   - Show Energy Mode, Always
