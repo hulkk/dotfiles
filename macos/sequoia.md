@@ -68,6 +68,10 @@
 - Require password after ... display is turned off, Immediately
 - Show message when locked, e.g. Owner's email and phone number
 
+## Privacy & Security
+### Local Network
+- Ghostty, Enable
+
 ## Keyboard
 - Text Input
   - Input Sources, Edit
