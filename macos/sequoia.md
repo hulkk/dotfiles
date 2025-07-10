@@ -73,6 +73,10 @@
 - Ghostty, Enable
 
 ## Keyboard
+- Keyboard Shortcuts
+  - Modifier Keys (when windows keyboard in use)
+    - Option -> Command
+    - Command -> Option
 - Text Input
   - Input Sources, Edit
     - Disable, Correct spelling automatically
