@@ -29,9 +29,9 @@
   - 2. Team
   - 3. Customers
   - 4. Projects
-  - 5. Responsibilities
-  - 6. Vendors
-  - 7. Personal
+  - 5. Vendors
+  - 6. Personal
+  - 7. Ideas
   - 8. Attachments
   - 9. Templates
 - Settings
