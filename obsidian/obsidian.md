@@ -24,15 +24,16 @@
   - "Minimal Theme Settings" by kepano
   - "Plugin Update Tracker" by Steven Swartz
 - Create folders, e.g.
-  - 01 Leadership
-  - 02 Team
-  - 03 Customers
-  - 04 Projects
-  - 05 Vendors
-  - 06 Personal
-  - Attachments
-  - New
-  - Templates
+  - 0. New
+  - 1. Leadership
+  - 2. Team
+  - 3. Customers
+  - 4. Projects
+  - 5. Responsibilities
+  - 6. Vendors
+  - 7. Personal
+  - 8. Attachments
+  - 9. Templates
 - Settings
   - Editor
     - Disable spellcheck
@@ -68,7 +69,7 @@
           - workplace fullscreen
     - File color
       - Add following to the palette from Gruvbox, dark mode & dark text - https://github.com/morhetz/gruvbox
-        - Blue (131, 165, 152), yellow (250, 189, 47), red (251, 73, 52), green (184, 187, 38), purple (211, 134, 155), orange (254, 128, 25)
+        - Blue (131, 165, 152), yellow (250, 189, 47), red (251, 73, 52), green (184, 187, 38), purple (211, 134, 155), orange (254, 128, 25), aqua (142, 192, 124)
       - Remember to Save
     - Hider
       - Hide vault name
