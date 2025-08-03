@@ -1,6 +1,6 @@
 # terminal environment related packages
 cask "ghostty"
-#cask "jandedobbeleer/oh-my-posh/oh-my-posh"
+cask "oh-my-posh"
 brew "tmux"
 
 # cli utilities
