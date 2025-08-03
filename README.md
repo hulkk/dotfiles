@@ -41,9 +41,8 @@
   * software update
     * reboot
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
-</details>
 
-### uninstall unnecessary default applications (pre macOS 15.5?)
+*uninstall unnecessary default applications*
 ```bash
 sudo rm -rf /Applications/GarageBand.app
 sudo rm -rf /Library/Application\ Support/GarageBand
@@ -52,6 +51,7 @@ sudo rm -rf /Library/Application\ Support/Logic
 sudo rm -rf /Library/Audio/Impulse\ Responses/Apple
 sudo rm -rf /Applications/iMovie.app
 ```
+</details>
 
 ## install command line utilities and applications
 ### open terminal
