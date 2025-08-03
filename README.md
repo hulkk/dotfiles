@@ -10,17 +10,17 @@
 <details>
   <summary>macOS Sequoia</summary>
 
-  * language, country, skip migration assistant, regional settings, accessibility, network, create a mac account - uncheck "Allow computer account password to be reset with your Apple Account", sign in with apple account
+  * language, country, skip migration assistant, regional settings, skip accessibility settings, network
+  * create a mac account - uncheck "Allow computer account password to be reset with your Apple Account", sign in with apple account
   * enable location services
   * uncheck analytics
   * skip screen time setup
-  * skip/enable apple intelligence?
-  * uncheck enable ask siri
+  * apple intelligence???
+  * skip siri setup
   * touch id
   * dark mode
   * update mac automatically
-  * software update
-    * reboot
+  * check software update & reboot
 </details>
 <details>
   <summary>macOS Monterey</summary>
