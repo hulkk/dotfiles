@@ -64,11 +64,6 @@ git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
 # git clone git@github.com:hulkk/dotfiles.git ~/src/github.com/dotfiles
 ```
 
-### install oh-my-zsh, script source https://ohmyz.sh
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
 ### install homebrew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -87,6 +82,11 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
+```
+
+### install oh-my-zsh, script source https://ohmyz.sh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## configure macOS
