@@ -107,8 +107,8 @@ ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/c
 ### zsh symbolic links
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 #ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
-#ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
 ### nvim symbolic links
