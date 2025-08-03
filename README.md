@@ -89,12 +89,48 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-## configure macOS
-
-### Sequoia
-[Configuration notes](macos/sequoia.md)
-
 ## configure terminal
+
+### Enable "Full Disk Access"
+- add ghostty
+
+### Disable last login info
+```bash
+touch ~/.hushlogin
+```
+
+### ghostty config
+```bash
+ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
+```
+
+### zsh symbolic links
+```bash
+ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+#ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
+#ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
+```
+
+### nvim symbolic links
+```bash
+mkdir -p ~/.config/nvim/lua/plugins && mkdir ~/.config/nvim/lua/core
+ln -sf ~/src/github.com/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/core/options.lua ~/.config/nvim/lua/core/options.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua/plugins/lualine.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lua/plugins/gitsigns.lua
+```
+
+### tmux config
+```bash
+ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+### yaml lint symbolic link
+```bash
+mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
+```
 
 ### configure git
 ```bash
@@ -114,53 +150,18 @@ git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
  > **Note**
  > Signing key needs to be added to your account in e.g. GitHub
 
-### Enable "Full Disk Access"
-- add ghostty
 
-### Disable last login info
-```bash
-touch ~/.hushlogin
-```
-
-### ghostty config
-```bash
-ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
-```
-
-### zsh symbolic links
-```bash
-ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
-ln -sf ~/src/github.com/dotfiles/zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
-ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
-```
-
-### tmux config
-```bash
-ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-### nvim symbolic links
-```bash
-mkdir -p ~/.config/nvim/lua/plugins && mkdir ~/.config/nvim/lua/core
-ln -sf ~/src/github.com/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
-ln -sf ~/src/github.com/dotfiles/nvim/lua/core/options.lua ~/.config/nvim/lua/core/options.lua
-ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua/plugins/lualine.lua
-ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
-ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lua/plugins/gitsigns.lua
-```
-
-### yaml lint symbolic link
-```bash
-mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
-```
-
-## test advanced formatting
-### italics
+### test advanced formatting
+#### italics
 ```
 echo `tput sitm`italics`tput ritm`
 ```
-### true color
+#### true color
 ```bash
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
+
+## configure macOS
+
+### Sequoia
+[Configuration notes](macos/sequoia.md)
