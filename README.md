@@ -134,16 +134,16 @@ mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config 
 
 ### configure git
 ```bash
- # configure git identity
- git config --global user.email "email@example.com"
+# configure git identity
+git config --global user.email "email@example.com"
 # configure "auto push" for new branches
- git config --global --add --bool push.autoSetupRemote true
- # enable commit signing with ssh key
- git config --global gpg.format ssh
- git config --global user.signingkey ~/.ssh/id_ed25519.pub
- git config --global --bool commit.gpgsign true
- # always rebase your local branch if the upstream branch has additional commits
- git config --global --bool pull.rebase true
+git config --global --add --bool push.autoSetupRemote true
+# enable commit signing with ssh key
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+git config --global --bool commit.gpgsign true
+# always rebase your local branch if the upstream branch has additional commits
+git config --global --bool pull.rebase true
 # use delta to display output of git diff
 git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
 ```
@@ -153,7 +153,7 @@ git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
 
 ### test advanced formatting
 #### italics
-```
+```bash
 echo `tput sitm`italics`tput ritm`
 ```
 #### true color
