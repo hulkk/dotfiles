@@ -147,8 +147,8 @@ git config --global --bool pull.rebase true
 # use delta to display output of git diff
 git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
 ```
- > **Note**
- > Signing key needs to be added to your account in e.g. GitHub
+> **Note**
+> Signing key needs to be added to your account in e.g. GitHub
 
 
 ### test advanced formatting
