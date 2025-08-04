@@ -84,9 +84,9 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
-### install oh-my-zsh, script source https://ohmyz.sh
+### install zimfw, script source https://zimfw.sh
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 ```
 
 ## configure terminal
