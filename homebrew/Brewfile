@@ -2,6 +2,7 @@
 cask "ghostty"
 brew "oh-my-posh"
 brew "tmux"
+brew "zimfw"
 
 # cli utilities
 brew "eza"
