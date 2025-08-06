@@ -25,5 +25,6 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
     require 'plugins.gruvbox',
-    require 'plugins.lualine'
+    require 'plugins.lualine',
+    require 'plugins.gitsigns'
 })
