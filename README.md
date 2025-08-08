@@ -1,6 +1,6 @@
 # dotfiles - macOS laptop setup
 
-## terminal screenshots
+## terminal screenshots (needs update)
 
 ![terminal screenshot](/screenshots/terminal.png?raw=true)
 
@@ -120,6 +120,8 @@ ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lua/plugins/gitsigns.lua
 ```
+> **Note**
+> rest of the readme is under review
 
 ### tmux config
 ```bash
