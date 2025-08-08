@@ -2,5 +2,6 @@
 cask "elgato-control-center"
 cask "raspberry-pi-imager"
 cask "steam"
+brew "warrensbox/tap/tfswitch"
 cask "whatsapp"
 cask "rustdesk"
