@@ -58,9 +58,9 @@ sudo rm -rf /Applications/iMovie.app
 ```bash
 mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
-# anonymous clone
+# https clone
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
-# authenticated clone, after ssh key configured
+# ssh clone, after ssh has been configured
 # git clone git@github.com:hulkk/dotfiles.git ~/src/github.com/dotfiles
 ```
 
