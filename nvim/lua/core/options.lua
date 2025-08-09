@@ -1,9 +1,9 @@
-vim.wo.number = true
+vim.o.number = true
 vim.o.clipboard = 'unnamedplus'
 vim.o.ignorecase = true
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.showmode = false
 vim.opt.updatetime = 100
---vim.o.autoindent = true
---vim.o.smartindent = true
+vim.o.cursorline = true
+vim.o.scrolloff = 10
