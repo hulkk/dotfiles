@@ -111,7 +111,7 @@ ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/src/github.com/dotfiles/zsh/.zimrc ~/.zimrc
 ```
 
-### nvim symbolic links
+### neovim symbolic links
 ```bash
 mkdir -p ~/.config/nvim/lua/plugins && mkdir ~/.config/nvim/lua/core
 ln -sf ~/src/github.com/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
