@@ -1,14 +1,29 @@
 # dotfiles - macOS laptop setup
 
-## terminal screenshots
+## terminal screenshots (needs update)
 
 ![terminal screenshot](/screenshots/terminal.png?raw=true)
 
 ![vim screenshot](/screenshots/vim.png?raw=true)
 
-## new laptop
+## initial macOS setup
 <details>
-  <summary>macOS Monterey, initial setup</summary>
+  <summary>macOS Sequoia</summary>
+
+  * language, country, skip migration assistant, regional settings, skip accessibility settings, network
+  * create a mac account - uncheck "Allow computer account password to be reset with your Apple Account", sign in with apple account
+  * enable location services
+  * uncheck analytics
+  * skip screen time setup
+  * apple intelligence???
+  * skip siri setup
+  * touch id
+  * dark mode
+  * update mac automatically
+  * check software update & reboot
+</details>
+<details>
+  <summary>macOS Monterey</summary>
 
   * language, country, regional settings, accessibility, network, skip migration assistant, apple id
   * computer account (uncheck "*Allow my Apple ID to reset this password*")
@@ -26,117 +41,92 @@
   * software update
     * reboot
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
+
+*uninstall unnecessary default applications*
+```bash
+sudo rm -rf /Applications/GarageBand.app
+sudo rm -rf /Library/Application\ Support/GarageBand
+sudo rm -rf /Library/Audio/Apple\ Loops
+sudo rm -rf /Library/Application\ Support/Logic
+sudo rm -rf /Library/Audio/Impulse\ Responses/Apple
+sudo rm -rf /Applications/iMovie.app
+```
 </details>
 
-## install homebrew and applications
+## install command line utilities and applications
 ### open terminal
 ```bash
-mkdir -p ~/src && mkdir -p ~/src/github.com && mkdir -p ~/.ssh
+mkdir -p ~/src/github.com && mkdir -p ~/.ssh
 xcode-select --install
+# https clone
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
-cd ~/src/github.com/dotfiles
+# ssh clone, after ssh has been configured
+# git clone git@github.com:hulkk/dotfiles.git ~/src/github.com/dotfiles
 ```
 
-### install brew, script source https://brew.sh
+### install homebrew, script source https://brew.sh
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-### install brew packages using brewfile
+### install homebrew packages using brewfile
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
-```
-
-### install oh-my-zsh, script source https://ohmyz.sh
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### download powerlevel10k theme
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-### download zsh-syntax-highlighting plugin
-```bash
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
-```
-
-> **Note**
-> Reboot computer
-
-## configure laptop
-
-### enable hardening configurations based on CIS Level 1 benchmark
-```bash
-./macos/cis_monterey_1.1_level_1.sh
-```
-
-### enable privacy related recommended settings
-```bash
-./macos/privacy.sh
-```
-
-### configure macOS settings based on personal preferences
-```bash
-./macos/configure.sh
 ```
 
 ### install mac appstore packages using brewfile
 
 > **Note**
-> Due to mas api limitations apps can't be purchased using this method
+> Due to mas api limitations first download for Apple ID must be done manually
 
 ```bash
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
+### install zimfw, script source https://zimfw.sh
+```bash
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+```
+
 ## configure terminal
 
-### open iTerm
+### Enable "Full Disk Access"
+- add ghostty
 
-> **Note**
-> For the first time the app needs to be opened in Finder with ctrl click due to Apple security features
-
-### install the custom font from iTerm2-folder
+### Disable last login info
 ```bash
-cp ~/src/github.com/dotfiles/iterm2/fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/Library/Fonts
+touch ~/.hushlogin
 ```
 
-### iTerm2 config 
+### ghostty config
 ```bash
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/src/github.com/dotfiles/iterm2"
-defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-# Override local entry to enable italics without breaking outgoing SSH connections
-infocmp xterm-256color > /tmp/xterm-256color.terminfo
-printf '\tsitm=\\E[3m, ritm=\\E[23m,\n' >> /tmp/xterm-256color.terminfo
-tic /tmp/xterm-256color.terminfo
+ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
-### .zshrc symbolic link
-```bash
-ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
-```
-
-### .zprofile symbolic link
+### zsh symbolic links
 ```bash
 ln -sf ~/src/github.com/dotfiles/zsh/.zprofile ~/.zprofile
+ln -sf ~/src/github.com/dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/src/github.com/dotfiles/zsh/.zimrc ~/.zimrc
 ```
 
-### .p10k.zsh symbolic link
+### neovim symbolic links
 ```bash
-ln -sf ~/src/github.com/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+mkdir -p ~/.config/nvim/lua/plugins && mkdir ~/.config/nvim/lua/core
+ln -sf ~/src/github.com/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/core/options.lua ~/.config/nvim/lua/core/options.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua/plugins/lualine.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
+ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lua/plugins/gitsigns.lua
 ```
+> **Note**
+> rest of the readme is under review
 
-### .vimrc symbolic link
-```bash
-ln -sf ~/src/github.com/dotfiles/vim/.vimrc ~/.vimrc
-```
-
-### .tmux.conf symbolic link
+### tmux config
 ```bash
 ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ### yaml lint symbolic link
@@ -144,27 +134,36 @@ ln -sf ~/src/github.com/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
 
-### install tmux plugin manager
+### configure git
 ```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# configure git identity
+git config --global user.email "email@example.com"
+# configure "auto push" for new branches
+git config --global --add --bool push.autoSetupRemote true
+# enable commit signing with ssh key
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+git config --global --bool commit.gpgsign true
+# always rebase your local branch if the upstream branch has additional commits
+git config --global --bool pull.rebase true
+# use delta to display output of git diff
+git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
 ```
+> **Note**
+> Signing key needs to be added to your account in e.g. GitHub
 
-## test advanced formatting
-### italics
-```
+
+### test advanced formatting
+#### italics
+```bash
 echo `tput sitm`italics`tput ritm`
 ```
-### true color
+#### true color
 ```bash
 printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
-## configure git
-```bash
-# configure git identity
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+## configure macOS
 
-# enable diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-```
+### Sequoia
+[Configuration notes](macos/sequoia.md)

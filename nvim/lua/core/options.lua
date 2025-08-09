@@ -1,0 +1,9 @@
+vim.o.number = true
+vim.o.clipboard = 'unnamedplus'
+vim.o.ignorecase = true
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.showmode = false
+vim.o.updatetime = 100
+vim.o.cursorline = true
+vim.o.scrolloff = 10

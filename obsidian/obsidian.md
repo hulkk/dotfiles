@@ -1,0 +1,84 @@
+- Create a local vault or open an existing one
+- Disable Core Plugins
+  - Backlinks
+  - Bookmarks
+  - Daily notes
+  - Graph view
+  - Note composer
+  - Outgoing links
+  - Outline
+  - Page preview
+  - Quick switcher
+  - Sync
+  - Tags view
+  - Word count
+- Turn on community plugins
+- Install & enable community plugins
+  - "Advanced Canvas" by Developer-Mike
+  - "Checklist" by delashum
+  - "Editing Toolbar" by Cuman
+  - "Excalidraw" by Zsolt Viczian
+  - "File Color" by ecustic
+  - "Hider" by @kepano
+  - "Iconize" by FlorianWoelki
+  - "Minimal Theme Settings" by kepano
+  - "Plugin Update Tracker" by Steven Swartz
+- Create folders, e.g.
+  - 0. New
+  - 1. Leadership
+  - 2. Team
+  - 3. Customers
+  - 4. Projects
+  - 5. Vendors
+  - 6. Personal
+  - 7. Ideas
+  - 8. Attachments
+  - 9. Templates
+- Settings
+  - Editor
+    - Disable spellcheck
+  - Files and links
+    - Disable "Confirm file deletion"
+    - Default location for new notes, In the folder specified below, "New"
+    - Default location for new attachments, In the folder specified below, "Attachments"
+  - Appearance
+    - Themes, Manage, install "Minimal" by kepano
+    - Interface font, SN Pro
+    - Text font, SN Pro
+    - Monospace font, FiraCode Nerd Font Mono
+    - Show tab title bar, disable
+- Delete "Welcome" note
+- Configure Plugins
+  - Core
+    - Canvas
+      - Default location for new canvas files, In the folder specified below, "New"
+    - Templates
+      - Template folder location, "Templates"
+  - Community
+    - Editing toolbar
+      - Appearance
+        - Editing toolbar auto-hide, enable
+      - Toolbar Commands
+        - Remove
+          - headers + submenu
+          - highlight
+          - submenu (copy-paste)
+          - cycle checklist
+          - submenu-align
+          - fullscreen focus mode
+          - workplace fullscreen
+    - File color
+      - Add following to the palette from Gruvbox, dark mode & dark text - https://github.com/morhetz/gruvbox
+        - Blue (131, 165, 152), yellow (250, 189, 47), red (251, 73, 52), green (184, 187, 38), purple (211, 134, 155), orange (254, 128, 25), aqua (142, 192, 124)
+      - Remember to Save
+    - Hider
+      - Hide vault name
+      - Hide file explorer buttons
+    - Minimal Theme settings
+      - Dark
+        - Gruvbox
+        - Low contrast
+      - Colorful active states, enable
+- Create Templates, e.g.
+  - Default
+  - On-call

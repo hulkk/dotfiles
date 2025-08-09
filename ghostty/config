@@ -1,0 +1,32 @@
+# This is the configuration file for Ghostty.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+title = " "
+macos-titlebar-proxy-icon = hidden
+background-opacity = 0.9
+background-blur = 15
+theme = GruvboxDark 
+macos-icon = chalkboard
+window-width = 120
+window-height = 30
+font-family = FiraCode Nerd Font
+font-size = 14
+auto-update = check
