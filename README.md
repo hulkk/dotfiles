@@ -8,7 +8,12 @@
 
 ## initial macOS setup
 <details>
-  <summary>macOS Sequoia</summary>
+  <summary>macOS Tahoe (2025)</summary>
+
+  * TBD
+</details>
+<details>
+  <summary>macOS Sequoia (2024)</summary>
 
   * language, country, skip migration assistant, regional settings, skip accessibility settings, network
   * create a mac account - uncheck "Allow computer account password to be reset with your Apple Account", sign in with apple account
@@ -23,7 +28,42 @@
   * check software update & reboot
 </details>
 <details>
-  <summary>macOS Monterey</summary>
+  <summary>macOS Sonoma (2023)</summary>
+
+  * language, country, regional settings, accessibility, network, skip migration assistant, sign in with apple id and accept iCloud terms
+   * computer account (uncheck "*Allow my Apple ID to reset this password*")
+  * skip icloud keychain activation
+  * make this your new mac (customize)
+    * enable location services
+    * uncheck analytics
+    * skip screen time setup
+    * uncheck enable ask siri
+    * uncheck filevault icloud unlock
+    * add filevault recovery key to e.g. 1Password
+    * setup touch id
+    * skip apple pay setup
+    * dark mode
+  * software update
+    * reboot
+
+*uninstall unnecessary default applications*
+```bash
+sudo rm -rf /Applications/GarageBand.app
+sudo rm -rf /Library/Application\ Support/GarageBand
+sudo rm -rf /Library/Audio/Apple\ Loops
+sudo rm -rf /Library/Application\ Support/Logic
+sudo rm -rf /Library/Audio/Impulse\ Responses/Apple
+sudo rm -rf /Applications/iMovie.app
+```
+
+</details>
+<details>
+  <summary>macOS Ventura (2022)</summary>
+
+  * TBD
+</details>
+<details>
+  <summary>macOS Monterey (2021)</summary>
 
   * language, country, regional settings, accessibility, network, skip migration assistant, apple id
   * computer account (uncheck "*Allow my Apple ID to reset this password*")
@@ -42,15 +82,6 @@
     * reboot
   * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
 
-*uninstall unnecessary default applications*
-```bash
-sudo rm -rf /Applications/GarageBand.app
-sudo rm -rf /Library/Application\ Support/GarageBand
-sudo rm -rf /Library/Audio/Apple\ Loops
-sudo rm -rf /Library/Application\ Support/Logic
-sudo rm -rf /Library/Audio/Impulse\ Responses/Apple
-sudo rm -rf /Applications/iMovie.app
-```
 </details>
 
 ## install command line utilities and applications
