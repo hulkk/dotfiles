@@ -57,32 +57,6 @@ sudo rm -rf /Applications/iMovie.app
 ```
 
 </details>
-<details>
-  <summary>macOS Ventura (2022)</summary>
-
-  * TBD
-</details>
-<details>
-  <summary>macOS Monterey (2021)</summary>
-
-  * language, country, regional settings, accessibility, network, skip migration assistant, apple id
-  * computer account (uncheck "*Allow my Apple ID to reset this password*")
-  * skip icloud keychain activation
-  * find my
-  * make this your new mac (customize)
-    * enable location services
-    * uncheck analytics
-    * skip screen time setup
-    * uncheck enable ask siri
-    * uncheck filevault encryption (will be enabled later)
-    * touch id
-    * skip apple pay setup
-    * dark mode
-  * software update
-    * reboot
-  * uncheck "*Store files from Documents and Desktop in iCloud Drive*"
-
-</details>
 
 ## install command line utilities and applications
 ### open terminal
