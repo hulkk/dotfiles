@@ -11,8 +11,17 @@
 # History
 #
 
-# Remove older command from the history if a duplicate is to be added.
+# Enable persistent history
+HISTSIZE=50000
+SAVEHIST=50000
+HISTFILE=~/.zsh_history
+
+# No duplicate commands
 setopt HIST_IGNORE_ALL_DUPS
+# Skip commands starting with space
+setopt HIST_IGNORE_SPACE
+# Share command history between sessions
+setopt SHARE_HISTORY
 
 #
 # Input/output
