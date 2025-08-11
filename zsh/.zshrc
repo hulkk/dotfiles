@@ -1,8 +1,3 @@
-# Start configuration added by Zim install {{{
-#
-# User configuration sourced by interactive shells
-#
-
 # -----------------
 # Zsh configuration
 # -----------------
@@ -35,9 +30,6 @@ alias history='fc -lt "%F %T" 1'
 #
 # Input/output
 #
-
-# Customize spelling correction prompt.
-#SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
