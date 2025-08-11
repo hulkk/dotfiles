@@ -20,6 +20,8 @@ HISTFILE=~/.zsh_history
 setopt HIST_IGNORE_ALL_DUPS
 # Skip commands starting with space
 setopt HIST_IGNORE_SPACE
+# Save commands as you run them
+setopt INC_APPEND_HISTORY
 # Share command history between sessions
 setopt SHARE_HISTORY
 
