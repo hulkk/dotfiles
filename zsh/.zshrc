@@ -18,7 +18,6 @@ HISTFILE=~/.zsh_history
 
 # Extended metadata
 setopt EXTENDED_HISTORY
-
 # No duplicate commands
 setopt HIST_IGNORE_ALL_DUPS
 # Skip commands starting with space
@@ -27,6 +26,8 @@ setopt HIST_IGNORE_SPACE
 setopt INC_APPEND_HISTORY
 # Share command history between sessions
 setopt SHARE_HISTORY
+# Don't execute the command directly
+setopt HIST_VERIFY
 
 # Nicer viewing: show all, with readable timestamps
 alias history='fc -lt "%F %T" 1'
