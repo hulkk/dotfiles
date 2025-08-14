@@ -49,6 +49,8 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
     type = 'git'
     style = 'powerline'
     background_templates = [
+      # Untracked files only -> Gruvbox gray
+      '{{ if and (gt .Working.Untracked 0) (not .Working.Changed) }}#928374{{ end }}',
       # Changed files in working or staging area -> Gruvbox orange
       '{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}',
       # Branch both ahead and behind -> bright reddish-orange
