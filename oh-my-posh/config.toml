@@ -49,16 +49,16 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
     type = 'git'
     style = 'powerline'
     background_templates = [
+      # Changed files in working or staging area -> Gruvbox orange
+      '{{ if or (.Working.Changed) (.Staging.Changed) }}#FE8819{{ end }}',
       # Untracked files only -> Gruvbox gray
       '{{ if and (gt .Working.Untracked 0) (not .Working.Changed) }}#928374{{ end }}',
       # Branch both ahead and behind -> bright reddish-orange
       '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}',
-      # Changed files in working or staging area -> Gruvbox orange
-      '{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}',
-      # Ahead of remote -> Gruvbox purple
-      '{{ if gt .Ahead 0 }}#B388FF{{ end }}',
+      # Ahead of remote -> Gruvbox aqua
+      '{{ if gt .Ahead 0 }}#8ec07c{{ end }}',
       # Behind remote -> Gruvbox purple
-      '{{ if gt .Behind 0 }}#B388FF{{ end }}'
+      '{{ if gt .Behind 0 }}#D3869B{{ end }}'
     ]
 
     [blocks.segments.properties]
