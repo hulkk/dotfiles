@@ -36,7 +36,7 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
     type = 'path'
     style = 'powerline'
     [blocks.segments.properties]
-      style='full'
+      style = 'full'
 
 
   [[blocks.segments]]
