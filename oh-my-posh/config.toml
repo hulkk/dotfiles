@@ -12,12 +12,21 @@ final_space = true
   type = 'prompt'
   alignment = 'left'
 
-  [[blocks.segments]]
-    template = '{{ if .WSL }}WSL at{{ end }} {{.Icon}} '
-    foreground = '#ffffff'
-    background = '#3A3A3A'
-    type = 'os'
-    style = 'powerline'
+# Replace your first [[blocks.segments]] (type = 'os') with this:
+[[blocks.segments]]
+type = 'status'
+style = 'powerline'
+template = ' {{ .String }} '
+foreground = '#282828'          # matches your other segments
+background = '#98971A'          # default (gruvbox green)
+powerline_symbol = ''
+background_templates = [
+  '{{ if .Error }}#CC241D{{ end }}',  # gruvbox red when non-zero exit
+  '{{ if not .Error }}#98971A{{ end }}'
+]
+[blocks.segments.properties]
+always_enabled = true            # show even when the code is 0
+# status_template defaults to '{{ .Code }}', so you’ll see the number
 
   [[blocks.segments]]
     template = ' {{ .Path }} '
