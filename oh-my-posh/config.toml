@@ -50,7 +50,7 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
     style = 'powerline'
     background_templates = [
       # Changed files in working or staging area -> Gruvbox orange
-      '{{ if or (.Working.Changed) (.Staging.Changed) }}#FE8819{{ end }}',
+      '{{ if or (gt .Working.Modified 0) (gt .Working.Added 0) (gt .Working.Deleted 0) (.Staging.Changed) }}#FE8819{{ end }}',
       # Untracked files only -> Gruvbox gray
       '{{ if and (gt .Working.Untracked 0) (not .Working.Changed) }}#928374{{ end }}',
       # Branch both ahead and behind -> bright reddish-orange
