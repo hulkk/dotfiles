@@ -54,7 +54,7 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
       # Changed files in working or staging area -> Gruvbox orange
       '{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}',
       # Branch both ahead and behind -> bright reddish-orange
-      '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}',
+      '{{ if or (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}',
       # Ahead of remote -> Gruvbox purple
       '{{ if gt .Ahead 0 }}#B388FF{{ end }}',
       # Behind remote -> Gruvbox purple
