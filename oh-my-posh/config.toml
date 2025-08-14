@@ -31,7 +31,7 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
   [[blocks.segments]]
     template = ' {{ .Path }} '
     foreground = '#282828'
-    powerline_symbol = ' '
+    powerline_symbol = ''
     background = '#458588'
     type = 'path'
     style = 'powerline'
