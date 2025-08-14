@@ -38,7 +38,6 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
     [blocks.segments.properties]
       style = 'full'
 
-
   [[blocks.segments]]
     leading_diamond = ''
     trailing_diamond = ''
