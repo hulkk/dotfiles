@@ -145,6 +145,8 @@ mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config 
 git config --global user.email "email@example.com"
 # configure "auto push" for new branches
 git config --global --add --bool push.autoSetupRemote true
+# use zdiff3 merge conflict algorithm
+git config --global merge.conflictStyle zdiff3
 # enable commit signing with ssh key
 git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519.pub

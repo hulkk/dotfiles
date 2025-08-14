@@ -13,11 +13,18 @@ final_space = true
   alignment = 'left'
 
   [[blocks.segments]]
-    template = '{{ if .WSL }}WSL at{{ end }} {{.Icon}} '
-    foreground = '#ffffff'
-    background = '#3A3A3A'
-    type = 'os'
+    type = 'status'
     style = 'powerline'
+    template = ' {{ if eq .Code 0 }}✔{{ else }}✘{{ end }} '
+    foreground_templates = [
+      '{{ if eq .Code 0 }}#B8BB26{{ end }}', # gruvbox green ✔
+      '{{ if ne .Code 0 }}#FB4934{{ end }}'  # gruvbox red ✘
+    ]
+    background = '#282828'  # dark gruvbox background
+
+    [blocks.segments.properties]
+      always_enabled = true # show even when the code is 0
+      status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
 
   [[blocks.segments]]
     template = ' {{ .Path }} '
@@ -33,17 +40,28 @@ final_space = true
   [[blocks.segments]]
     leading_diamond = ''
     trailing_diamond = ''
-    template = ' {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+    template = ' {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
     foreground = '#282828'
     powerline_symbol = ''
     background = '#98971A'
     type = 'git'
     style = 'powerline'
-    background_templates = ['{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}', '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}', '{{ if gt .Ahead 0 }}#B388FF{{ end }}', '{{ if gt .Behind 0 }}#B388FF{{ end }}']
+    background_templates = [
+      # Changes in tracked files -> Gruvbox orange
+      '{{ if or (gt .Working.Modified 0) (gt .Working.Added 0) (gt .Working.Deleted 0) (.Staging.Changed) }}#FE8819{{ end }}',
+      # Ahead of remote -> Gruvbox aqua
+      '{{ if gt .Ahead 0 }}#8EC07C{{ end }}',
+      # Behind remote -> Gruvbox purple
+      '{{ if gt .Behind 0 }}#D3869B{{ end }}',
+      # Untracked files only -> Gruvbox gray
+      '{{ if gt .Working.Untracked 0 }}#928374{{ end }}',
+      # Branch both ahead and behind -> bright reddish-orange
+      '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}'
+    ]
 
     [blocks.segments.properties]
-      branch_icon = ' '
-      branch_identical_icon = '●'
+      branch_icon = ' '
+      branch_identical_icon = ''
       branch_template = '{{ trunc 25 .Branch }}'
       fetch_stash_count = true
       fetch_status = true
@@ -60,17 +78,6 @@ final_space = true
       fetch_version = true
 
   [[blocks.segments]]
-    template = '  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
-    foreground = '#111111'
-    powerline_symbol = ''
-    background = '#4063D8'
-    type = 'julia'
-    style = 'powerline'
-
-    [blocks.segments.properties]
-      fetch_version = true
-
-  [[blocks.segments]]
     template = '  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
     foreground = '#111111'
     powerline_symbol = ''
@@ -81,18 +88,6 @@ final_space = true
     [blocks.segments.properties]
       display_mode = 'files'
       fetch_virtual_env = false
-
-  [[blocks.segments]]
-    template = '  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
-    foreground = '#ffffff'
-    powerline_symbol = ''
-    background = '#AE1401'
-    type = 'ruby'
-    style = 'powerline'
-
-    [blocks.segments.properties]
-      display_mode = 'files'
-      fetch_version = true
 
   [[blocks.segments]]
     template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
