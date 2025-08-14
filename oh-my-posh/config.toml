@@ -92,18 +92,6 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
       fetch_virtual_env = false
 
   [[blocks.segments]]
-    template = '  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
-    foreground = '#ffffff'
-    powerline_symbol = ''
-    background = '#AE1401'
-    type = 'ruby'
-    style = 'powerline'
-
-    [blocks.segments.properties]
-      display_mode = 'files'
-      fetch_version = true
-
-  [[blocks.segments]]
     template = ' {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} '
     foreground = '#ffffff'
     powerline_symbol = ''
