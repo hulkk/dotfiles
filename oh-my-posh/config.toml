@@ -12,33 +12,22 @@ final_space = true
   type = 'prompt'
   alignment = 'left'
 
-# Replace your first [[blocks.segments]] (type = 'os') with this:
 [[blocks.segments]]
 type = 'status'
 style = 'powerline'
-template = ' {{ .String }} '
-foreground = '#282828'          # matches your other segments
-background = '#98971A'          # default (gruvbox green)
-powerline_symbol = ''
-background_templates = [
-  '{{ if .Error }}#CC241D{{ end }}',  # gruvbox red when non-zero exit
-  '{{ if not .Error }}#98971A{{ end }}'
+template = ' {{ if eq .Code 0 }}✔{{ else }}✘{{ end }} '
+foreground_templates = [
+  '{{ if eq .Code 0 }}#98971A{{ end }}', # gruvbox green ✔
+  '{{ if ne .Code 0 }}#CC241D{{ end }}'  # gruvbox red ✘
 ]
+foreground = '#98971A'  # fallback (green)
+background = '#282828'  # dark gruvbox background
+#powerline_symbol = ''
 [blocks.segments.properties]
 always_enabled = true            # show even when the code is 0
 status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
 # status_template defaults to '{{ .Code }}', so you’ll see the number
 
-  [[blocks.segments]]
-    template = ' {{ .Path }} '
-    foreground = '#282828'
-    powerline_symbol = ''
-    background = '#458588'
-    type = 'path'
-    style = 'powerline'
-
-    [blocks.segments.properties]
-      style = 'full'
 
   [[blocks.segments]]
     leading_diamond = ''
