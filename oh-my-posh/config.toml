@@ -28,15 +28,15 @@ always_enabled = true            # show even when the code is 0
 status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
 # status_template defaults to '{{ .Code }}', so you’ll see the number
 
-[[blocks.segments]]
-template = ' {{ .Path }}'
-foreground = '#282828'
-powerline_symbol = ' '
-background = '#458588'
-type = 'path'
-style = 'powerline'
-[blocks.segments.properties]
-style='full'
+  [[blocks.segments]]
+    template = ' {{ .Path }}'
+    foreground = '#282828'
+    powerline_symbol = ' '
+    background = '#458588'
+    type = 'path'
+    style = 'powerline'
+  [blocks.segments.properties]
+    style='full'
 
 
   [[blocks.segments]]
