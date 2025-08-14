@@ -51,7 +51,7 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
     background_templates = ['{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}', '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}', '{{ if gt .Ahead 0 }}#B388FF{{ end }}', '{{ if gt .Behind 0 }}#B388FF{{ end }}']
 
     [blocks.segments.properties]
-      branch_icon = ' '
+      branch_icon = ' '
       branch_identical_icon = '●'
       branch_template = '{{ trunc 25 .Branch }}'
       fetch_stash_count = true
