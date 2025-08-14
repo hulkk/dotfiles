@@ -12,21 +12,19 @@ final_space = true
   type = 'prompt'
   alignment = 'left'
 
-[[blocks.segments]]
-type = 'status'
-style = 'powerline'
-template = ' {{ if eq .Code 0 }}✔{{ else }}✘{{ end }} '
-foreground_templates = [
-  '{{ if eq .Code 0 }}#98971A{{ end }}', # gruvbox green ✔
-  '{{ if ne .Code 0 }}#CC241D{{ end }}'  # gruvbox red ✘
-]
-foreground = '#98971A'  # fallback (green)
-background = '#282828'  # dark gruvbox background
-#powerline_symbol = ''
-[blocks.segments.properties]
-always_enabled = true            # show even when the code is 0
-status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
-# status_template defaults to '{{ .Code }}', so you’ll see the number
+  [[blocks.segments]]
+    type = 'status'
+    style = 'powerline'
+    template = ' {{ if eq .Code 0 }}✔{{ else }}✘{{ end }} '
+    foreground_templates = [
+      '{{ if eq .Code 0 }}#B8BB26{{ end }}', # gruvbox green ✔
+      '{{ if ne .Code 0 }}#FB4934{{ end }}'  # gruvbox red ✘
+    ]
+    background = '#282828'  # dark gruvbox background
+
+    [blocks.segments.properties]
+      always_enabled = true # show even when the code is 0
+      status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
 
   [[blocks.segments]]
     template = ' {{ .Path }} '
