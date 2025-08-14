@@ -26,6 +26,7 @@ background_templates = [
 ]
 [blocks.segments.properties]
 always_enabled = true            # show even when the code is 0
+status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
 # status_template defaults to '{{ .Code }}', so you’ll see the number
 
   [[blocks.segments]]
