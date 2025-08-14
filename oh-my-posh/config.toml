@@ -52,7 +52,7 @@ status_template = '{{ if eq .Code 0 }}✔{{ else }}✖ {{ .Code }}{{ end }}'
 
     [blocks.segments.properties]
       branch_icon = ' '
-      branch_identical_icon = '●'
+      branch_identical_icon = ''
       branch_template = '{{ trunc 25 .Branch }}'
       fetch_stash_count = true
       fetch_status = true
