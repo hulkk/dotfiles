@@ -61,7 +61,7 @@ sudo rm -rf /Applications/iMovie.app
 ## install command line utilities and applications
 ### open terminal
 ```bash
-mkdir -p ~/src/github.com && mkdir -p ~/.ssh
+mkdir -p ~/src/github.com && mkdir -p ~/.ssh && mkdir ~/screenshots
 xcode-select --install
 # https clone
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles

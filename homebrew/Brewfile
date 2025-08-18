@@ -4,6 +4,7 @@ brew "oh-my-posh"
 brew "tmux"
 
 # cli utilities
+brew "ansible" # enough for casual use
 brew "eza"
 brew "git"
 brew "git-delta"
