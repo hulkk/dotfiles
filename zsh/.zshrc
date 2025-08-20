@@ -119,6 +119,23 @@ source ${ZIM_HOME}/init.zsh
 # Post-init module configuration
 # ------------------------------
 
+# oh-my-zsh like magic-enter
+magic-enter() {
+  if [[ -n "$BUFFER" || "$CONTEXT" != start ]]; then
+    zle .accept-line
+    return
+  fi
+
+  if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    BUFFER="git status"
+  else
+    BUFFER="ll"
+  fi
+  zle accept-line
+}
+zle -N magic-enter
+bindkey '^M' magic-enter
+
 #
 # zsh-history-substring-search
 #
