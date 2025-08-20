@@ -121,21 +121,17 @@ source ${ZIM_HOME}/init.zsh
 
 # oh-my-zsh like magic-enter
 magic-enter() {
-  # only trigger on an empty line at a fresh prompt
-  if [[ -z "$BUFFER" && "$CONTEXT" == start ]]; then
-    zle -I  # clear any pending input/echo
-
-    if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-      command git status
-    else
-      command ll
-    fi
-
-    zle reset-prompt   # redraw prompt cleanly
-    return 0
+  if [[ -n "$BUFFER" || "$CONTEXT" != start ]]; then
+    zle .accept-line
+    return
   fi
 
-  zle .accept-line     # normal Enter behavior
+  if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    BUFFER="git status"
+  else
+    BUFFER="ll"
+  fi
+  zle accept-line
 }
 zle -N magic-enter
 bindkey '^M' magic-enter
