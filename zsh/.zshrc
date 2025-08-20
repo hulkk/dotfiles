@@ -127,9 +127,9 @@ magic-enter() {
   fi
 
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-    BUFFER="git status"
+    BUFFER="git status 2>/dev/null"
   else
-    BUFFER="ls -lh"
+    BUFFER="ls -lh 2>/dev/null"
   fi
   zle accept-line
 }
