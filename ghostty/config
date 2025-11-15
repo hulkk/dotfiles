@@ -30,3 +30,4 @@ window-height = 30
 font-family = FiraCode Nerd Font
 font-size = 14
 auto-update = check
+term = xterm-256color
