@@ -21,8 +21,13 @@ else
 fi
 
 # Calculate time until reset (Claude Code uses 5-hour blocks)
-current_hour=$(date +%H)
-current_minute=$(date +%M)
+# Remove leading zeros to avoid octal interpretation
+current_hour=$(date +%H | sed 's/^0//')
+current_minute=$(date +%M | sed 's/^0//')
+
+# Handle midnight (empty string after removing leading zero)
+[ -z "$current_hour" ] && current_hour=0
+[ -z "$current_minute" ] && current_minute=0
 
 # Calculate minutes since midnight
 minutes_since_midnight=$((current_hour * 60 + current_minute))
@@ -59,32 +64,25 @@ else
   reset_time=$(printf "%02d:00" "$next_reset_hour")
 fi
 
-# Check for updates (cache for 1 hour to avoid excessive npm calls)
+# Check for updates (cache for 1 hour to avoid excessive checks)
 cache_file="$HOME/.claude/version_check_cache"
 cache_duration=3600  # 1 hour in seconds
 latest_version=""
 
 if [ -f "$cache_file" ]; then
-  # Check if cache exists and get its age
-  if [[ "$OSTYPE" == "darwin"* ]]; then
-    # macOS
-    cache_age=$(($(date +%s) - $(stat -f %m "$cache_file" 2>/dev/null)))
-  else
-    # Linux
-    cache_age=$(($(date +%s) - $(stat -c %Y "$cache_file" 2>/dev/null)))
-  fi
+  cache_age=$(($(date +%s) - $(stat -f %m "$cache_file")))
   
   if [ $cache_age -lt $cache_duration ]; then
     # Use cached result
     latest_version=$(cat "$cache_file")
   else
     # Cache expired, check again
-    latest_version=$(npm view claude-code version 2>/dev/null || echo "")
+    latest_version=$(/opt/homebrew/bin/claude -v 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)
     echo "$latest_version" > "$cache_file"
   fi
 else
   # No cache, check for the first time
-  latest_version=$(npm view claude-code version 2>/dev/null || echo "")
+  latest_version=$(/opt/homebrew/bin/claude -v 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)
   mkdir -p "$HOME/.claude"
   echo "$latest_version" > "$cache_file"
 fi
@@ -118,7 +116,7 @@ else
 fi
 
 # Output the statusline with stopwatch icon and optional update section
-printf "${CYAN}%s${RESET} | ${BLUE}%s${RESET} | ${ctx_color}%d%%${RESET} | ${ORANGE}⏱ %s (%dh %dm)${RESET}%s" \
+printf "${CYAN}%s${RESET} | ${BLUE}%s${RESET} | ${ctx_color}%d%%${RESET} | ${ORANGE}⏱ %s (%dh %dm)${RESET}%s\n" \
   "$dir_name" \
   "$model" \
   "$percentage" \
