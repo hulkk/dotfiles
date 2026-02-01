@@ -129,7 +129,6 @@ ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lu
 ```bash
 ln -sf ~/src/github.com/dotfiles/claude/settings.json ~/.claude/settings.json
 ln -sf ~/src/github.com/dotfiles/claude/statusline.sh ~/.claude/statusline.sh
-
 ```
 
 > **Note**
