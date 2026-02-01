@@ -84,4 +84,3 @@ printf "${CYAN}%s${RESET} | ${BLUE}%s${RESET} | ${ctx_color}%d%%${RESET} | ${ORA
   "$reset_time" \
   "$hours_remaining" \
   "$mins_remaining"
-```
