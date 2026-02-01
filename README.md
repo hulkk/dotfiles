@@ -125,6 +125,12 @@ ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lua/plugins/gitsigns.lua
 ```
+### claude symbolic links
+```bash
+ln -sf ~/src/github.com/dotfiles/claude/settings.json ~/.claude/settings.json
+ln -sf ~/src/github.com/dotfiles/claude/statusline.sh ~/.claude/statusline.sh
+```
+
 > **Note**
 > rest of the readme is under review
 
@@ -141,20 +147,17 @@ mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config 
 
 ### configure git
 ```bash
-# configure git identity
-git config --global user.email "email@example.com"
-# configure "auto push" for new branches
-git config --global --add --bool push.autoSetupRemote true
-# use zdiff3 merge conflict algorithm
-git config --global merge.conflictStyle zdiff3
-# enable commit signing with ssh key
-git config --global gpg.format ssh
-git config --global user.signingkey ~/.ssh/id_ed25519.pub
-git config --global --bool commit.gpgsign true
-# always rebase your local branch if the upstream branch has additional commits
-git config --global --bool pull.rebase true
-# use delta to display output of git diff
-git config --global core.pager "delta --side-by-side --hunk-header-style=omit"
+ln -sf ~/src/github.com/dotfiles/git/.gitconfig ~/.gitconfig
+```
+
+Create `~/.gitconfig.local` for user-specific settings:
+```bash
+cat > ~/.gitconfig.local << 'EOF'
+[user]
+	name = Your Name
+	email = your.email@example.com
+	signingkey = ~/.ssh/id_ed25519.pub
+EOF
 ```
 > **Note**
 > Signing key needs to be added to your account in e.g. GitHub
