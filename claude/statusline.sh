@@ -7,6 +7,7 @@ read -r input
 model=$(echo "$input" | jq -r '.model.display_name // "Unknown"')
 current_dir=$(echo "$input" | jq -r '.workspace.current_dir // "~"')
 dir_name=$(basename "$current_dir")
+current_version=$(echo "$input" | jq -r '.version // "unknown"')
 
 # Extract context window information
 context_used=$(echo "$input" | jq -r '.context_window.used // 0')
@@ -58,6 +59,45 @@ else
   reset_time=$(printf "%02d:00" "$next_reset_hour")
 fi
 
+# Check for updates (cache for 1 hour to avoid excessive npm calls)
+cache_file="$HOME/.claude/version_check_cache"
+cache_duration=3600  # 1 hour in seconds
+latest_version=""
+
+if [ -f "$cache_file" ]; then
+  # Check if cache exists and get its age
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    cache_age=$(($(date +%s) - $(stat -f %m "$cache_file" 2>/dev/null)))
+  else
+    # Linux
+    cache_age=$(($(date +%s) - $(stat -c %Y "$cache_file" 2>/dev/null)))
+  fi
+  
+  if [ $cache_age -lt $cache_duration ]; then
+    # Use cached result
+    latest_version=$(cat "$cache_file")
+  else
+    # Cache expired, check again
+    latest_version=$(npm view claude-code version 2>/dev/null || echo "")
+    echo "$latest_version" > "$cache_file"
+  fi
+else
+  # No cache, check for the first time
+  latest_version=$(npm view claude-code version 2>/dev/null || echo "")
+  mkdir -p "$HOME/.claude"
+  echo "$latest_version" > "$cache_file"
+fi
+
+# Build update section only if update is available
+update_section=""
+if [ -n "$latest_version" ] && [ "$latest_version" != "$current_version" ]; then
+  # Simple version comparison (works for semantic versioning)
+  if [ "$(printf '%s\n' "$latest_version" "$current_version" | sort -V | head -n1)" != "$latest_version" ]; then
+    update_section=" | ${MAGENTA}update to: ${latest_version}${RESET}"
+  fi
+fi
+
 # Color codes (Gruvbox-friendly)
 BLUE='\033[1;34m'
 GREEN='\033[1;32m'
@@ -65,6 +105,7 @@ YELLOW='\033[1;33m'
 RED='\033[1;31m'
 CYAN='\033[1;36m'
 ORANGE='\033[1;33m'
+MAGENTA='\033[1;35m'
 RESET='\033[0m'
 
 # Choose color based on usage
@@ -76,11 +117,12 @@ else
   ctx_color="$RED"
 fi
 
-# Output the statusline with stopwatch icon
-printf "${CYAN}%s${RESET} | ${BLUE}%s${RESET} | ${ctx_color}%d%%${RESET} | ${ORANGE}⏱ %s (%dh %dm)${RESET}" \
+# Output the statusline with stopwatch icon and optional update section
+printf "${CYAN}%s${RESET} | ${BLUE}%s${RESET} | ${ctx_color}%d%%${RESET} | ${ORANGE}⏱ %s (%dh %dm)${RESET}%s" \
   "$dir_name" \
   "$model" \
   "$percentage" \
   "$reset_time" \
   "$hours_remaining" \
-  "$mins_remaining"
+  "$mins_remaining" \
+  "$update_section"
