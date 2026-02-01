@@ -14,14 +14,14 @@ read -r input
 
 # Extract data using jq (single call for performance)
 IFS=$'\t' read -r model current_dir current_version tokens_used context_size percentage <<< \
-  "$(echo "$input" | jq -r '[
+  "$(jq -r '[
     .model.display_name // "Unknown",
     .workspace.current_dir // "~",
     .version // "unknown",
     .context_window.total_input_tokens // 0,
     .context_window.context_window_size // 200000,
     .context_window.used_percentage // 0
-  ] | @tsv')"
+  ] | @tsv' <<< "$input")"
 dir_name=$(basename "$current_dir")
 
 # Format tokens as "24k/200k"
