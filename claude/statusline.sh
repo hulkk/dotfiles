@@ -47,22 +47,19 @@ fetch_latest_version() {
     jq -r '(.casks[0].version // .formulae[0].versions.stable) // empty' 2>/dev/null
 }
 
+# Always use cached value immediately (non-blocking), refresh in background if stale
 if [ -f "$cache_file" ]; then
+  latest_version=$(cat "$cache_file")
   cache_age=$(($(date +%s) - $(stat -f %m "$cache_file")))
 
-  if [ $cache_age -lt $cache_duration ]; then
-    # Use cached result
-    latest_version=$(cat "$cache_file")
-  else
-    # Cache expired, check again
-    latest_version=$(fetch_latest_version)
-    [ -n "$latest_version" ] && echo "$latest_version" > "$cache_file"
+  if [ $cache_age -ge $cache_duration ]; then
+    # Cache expired, refresh in background (non-blocking)
+    (fetch_latest_version > "$cache_file" 2>/dev/null &)
   fi
 else
-  # No cache, check for the first time
-  latest_version=$(fetch_latest_version)
+  # No cache yet, create directory and fetch in background
   mkdir -p "$HOME/.claude"
-  [ -n "$latest_version" ] && echo "$latest_version" > "$cache_file"
+  (fetch_latest_version > "$cache_file" 2>/dev/null &)
 fi
 
 # Build update section only if update is available
