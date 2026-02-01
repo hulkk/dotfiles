@@ -7,6 +7,7 @@ read -r input
 model=$(echo "$input" | jq -r '.model.display_name // "Unknown"')
 current_dir=$(echo "$input" | jq -r '.workspace.current_dir // "~"')
 dir_name=$(basename "$current_dir")
+current_version=$(echo "$input" | jq -r '.version // "unknown"')
 
 # Extract context window information
 context_used=$(echo "$input" | jq -r '.context_window.used // 0')
@@ -20,8 +21,13 @@ else
 fi
 
 # Calculate time until reset (Claude Code uses 5-hour blocks)
-current_hour=$(date +%H)
-current_minute=$(date +%M)
+# Remove leading zeros to avoid octal interpretation
+current_hour=$(date +%H | sed 's/^0//')
+current_minute=$(date +%M | sed 's/^0//')
+
+# Handle midnight (empty string after removing leading zero)
+[ -z "$current_hour" ] && current_hour=0
+[ -z "$current_minute" ] && current_minute=0
 
 # Calculate minutes since midnight
 minutes_since_midnight=$((current_hour * 60 + current_minute))
@@ -58,6 +64,38 @@ else
   reset_time=$(printf "%02d:00" "$next_reset_hour")
 fi
 
+# Check for updates (cache for 1 hour to avoid excessive checks)
+cache_file="$HOME/.claude/version_check_cache"
+cache_duration=3600  # 1 hour in seconds
+latest_version=""
+
+if [ -f "$cache_file" ]; then
+  cache_age=$(($(date +%s) - $(stat -f %m "$cache_file")))
+  
+  if [ $cache_age -lt $cache_duration ]; then
+    # Use cached result
+    latest_version=$(cat "$cache_file")
+  else
+    # Cache expired, check again
+    latest_version=$(/opt/homebrew/bin/claude -v 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)
+    echo "$latest_version" > "$cache_file"
+  fi
+else
+  # No cache, check for the first time
+  latest_version=$(/opt/homebrew/bin/claude -v 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)
+  mkdir -p "$HOME/.claude"
+  echo "$latest_version" > "$cache_file"
+fi
+
+# Build update section only if update is available
+update_section=""
+if [ -n "$latest_version" ] && [ "$latest_version" != "$current_version" ]; then
+  # Simple version comparison (works for semantic versioning)
+  if [ "$(printf '%s\n' "$latest_version" "$current_version" | sort -V | head -n1)" != "$latest_version" ]; then
+    update_section=" | ${MAGENTA}update to: ${latest_version}${RESET}"
+  fi
+fi
+
 # Color codes (Gruvbox-friendly)
 BLUE='\033[1;34m'
 GREEN='\033[1;32m'
@@ -65,6 +103,7 @@ YELLOW='\033[1;33m'
 RED='\033[1;31m'
 CYAN='\033[1;36m'
 ORANGE='\033[1;33m'
+MAGENTA='\033[1;35m'
 RESET='\033[0m'
 
 # Choose color based on usage
@@ -76,11 +115,12 @@ else
   ctx_color="$RED"
 fi
 
-# Output the statusline with stopwatch icon
-printf "${CYAN}%s${RESET} | ${BLUE}%s${RESET} | ${ctx_color}%d%%${RESET} | ${ORANGE}⏱ %s (%dh %dm)${RESET}" \
+# Output the statusline with stopwatch icon and optional update section
+printf "${CYAN}%s${RESET} | ${BLUE}%s${RESET} | ${ctx_color}%d%%${RESET} | ${ORANGE}⏱ %s (%dh %dm)${RESET}%s\n" \
   "$dir_name" \
   "$model" \
   "$percentage" \
   "$reset_time" \
   "$hours_remaining" \
-  "$mins_remaining"
+  "$mins_remaining" \
+  "$update_section"
