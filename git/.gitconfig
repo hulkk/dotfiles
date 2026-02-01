@@ -1,0 +1,45 @@
+# Git configuration - shared settings
+# Symlink: ln -sf ~/src/github.com/dotfiles/git/.gitconfig ~/.gitconfig
+#
+# User-specific settings (name, email, signingkey) go in ~/.gitconfig.local
+# which is included below and not tracked in this repo.
+
+[include]
+	# Local config for user-specific settings (not tracked in repo)
+	path = ~/.gitconfig.local
+
+[init]
+	defaultBranch = main
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	format = ssh
+
+[push]
+	# Auto-setup remote tracking for new branches
+	autoSetupRemote = true
+
+[pull]
+	# Always rebase local commits on top of fetched commits
+	rebase = true
+
+[fetch]
+	# Remove deleted remote branches on fetch
+	prune = true
+
+[merge]
+	# Show base commit in merge conflicts for easier resolution
+	conflictStyle = zdiff3
+
+[diff]
+	# Highlight moved lines differently from added/removed
+	colorMoved = default
+
+[core]
+	# Use delta for better diff output
+	pager = delta --side-by-side --hunk-header-style=omit
+	# Global gitignore
+	excludesfile = ~/.gitignore_global
+
