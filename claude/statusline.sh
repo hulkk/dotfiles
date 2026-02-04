@@ -42,7 +42,8 @@ cache_duration=3600  # 1 hour in seconds
 latest_version=""
 
 fetch_latest_version() {
-  # Query Homebrew for the latest available version of Claude Code CLI
+  # Update Homebrew's package index first, then query for latest version
+  /opt/homebrew/bin/brew update >/dev/null 2>&1
   /opt/homebrew/bin/brew info --json=v2 claude-code 2>/dev/null | \
     jq -r '(.casks[0].version // .formulae[0].versions.stable) // empty' 2>/dev/null
 }

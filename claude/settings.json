@@ -1,4 +1,7 @@
 {
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",
