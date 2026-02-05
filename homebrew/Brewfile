@@ -5,6 +5,7 @@ brew "tmux"
 
 # cli utilities
 brew "ansible" # enough for casual use
+cask "claude-code"
 brew "eza"
 brew "git"
 brew "git-delta"
@@ -26,6 +27,7 @@ cask "font-sn-pro"
 # applications
 cask "1password"
 cask "chatgpt"
+cask "claude"
 cask "google-chrome"
 cask "obsidian"
 cask "rectangle"

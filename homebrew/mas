@@ -1,8 +1,8 @@
 # Mac App Store apps
 mas "1Password for Safari", id: 1569813296
-mas "AdGuard for Safari", id: 1440147259
+mas "AdGuard Mini", id: 1440147259
 mas "Bear - Markdown Notes", id: 1091189122
-mas "Numbers", id: 409203825
+mas "Numbers: Make Spreadsheets", id: 361304891
 mas "Parcel - Delivery Tracking", id: 639968404
 mas "Pure Paste", id: 1611378436
 mas "Silicio Controller Mini Player", id: 933627574
