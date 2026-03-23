@@ -26,11 +26,15 @@
 - Create folders, e.g.
   - 00 Unsorted
   - 01 Customers
+    - _Archive
+    - _Presales
   - 02 Vendors & Partners
   - 03 Projects
+    - _Archive
   - 04 Internal meetings
-  - 05 Knowledge & Ideas
+  - 05 Ideas & Research
   - 06 On-call diary
+    - 2026
   - 07 Attachments
   - 08 Templates
   - 09 Archive
