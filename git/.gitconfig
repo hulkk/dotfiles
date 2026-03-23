@@ -25,6 +25,14 @@
 	# Always rebase local commits on top of fetched commits
 	rebase = true
 
+[rebase]
+	# Auto-stash uncommitted changes before rebase
+	autoStash = true
+
+[transfer]
+	# Verify object integrity on fetch/push
+	fsckObjects = true
+
 [fetch]
 	# Remove deleted remote branches on fetch
 	prune = true
@@ -34,12 +42,20 @@
 	conflictStyle = zdiff3
 
 [diff]
-	# Highlight moved lines differently from added/removed
+	algorithm = histogram
 	colorMoved = default
 
+[help]
+	autocorrect = prompt
+
+[log]
+	date = iso
+
 [core]
-	# Use delta for better diff output
-	pager = delta --side-by-side --hunk-header-style=omit
-	# Global gitignore
+	pager = delta
 	excludesfile = ~/.gitignore_global
+
+[delta]
+	side-by-side = true
+	hunk-header-style = omit
 
