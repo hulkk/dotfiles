@@ -24,16 +24,16 @@
   - "Minimal Theme Settings" by kepano
   - "Plugin Update Tracker" by Steven Swartz
 - Create folders, e.g.
-  - 0. New
-  - 1. Leadership
-  - 2. Team
-  - 3. Customers
-  - 4. Projects
-  - 5. Vendors
-  - 6. Personal
-  - 7. Ideas
-  - 8. Attachments
-  - 9. Templates
+  - 00 Unsorted
+  - 01 Customers
+  - 02 Vendors & Partners
+  - 03 Projects
+  - 04 Internal meetings
+  - 05 Knowledge & Ideas
+  - 06 On-call diary
+  - 07 Attachments
+  - 08 Templates
+  - 09 Archive
 - Settings
   - Editor
     - Disable spellcheck
@@ -82,3 +82,15 @@
 - Create Templates, e.g.
   - Default
   - On-call
+
+Review:
+Editor - Vim keybindings ??? 
+Change application icon to red
+Settings search, plugin
+Recent files, plugin
+Paste image rename, plugin
+Omnisearch, plugin
+Colorful headings, option
+H1 colour (default red) change to
+Colorful active state, option
+Automatic plugin updates native feature
