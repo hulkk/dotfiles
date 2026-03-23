@@ -84,7 +84,6 @@
   - On-call
 
 Review:
-Editor - Vim keybindings ??? 
 Change application icon to red
 Settings search, plugin
 Recent files, plugin
