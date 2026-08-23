@@ -1,52 +1,57 @@
 - Create a local vault or open an existing one
 - Disable Core Plugins
   - Backlinks
+  - Bases
   - Bookmarks
+  - Canvas (migrate current notes to excalidraw)?
   - Daily notes
   - Graph view
   - Note composer
   - Outgoing links
-  - Outline
   - Page preview
   - Quick switcher
+  - Search
   - Sync
   - Tags view
   - Word count
 - Turn on community plugins
 - Install & enable community plugins
-  - "Advanced Canvas" by Developer-Mike
-  - "Checklist" by delashum
+  - "Checklist" by delashum (EOL)
   - "Editing Toolbar" by Cuman
   - "Excalidraw" by Zsolt Viczian
-  - "File Color" by ecustic
+  - "File Color" by ecustic (EOL)
   - "Hider" by @kepano
-  - "Iconize" by FlorianWoelki
-  - "Minimal Theme Settings" by kepano
-  - "Plugin Update Tracker" by Steven Swartz
+  - "Iconize" by FlorianWoelki (EOL)
+  - "Minimal Theme Settings" by kepano???
+  - "Omnisearch" by Simon Cambier
+- Enable "Automatically check for plugin updates"
 - Create folders, e.g.
-  - 0. New
-  - 1. Leadership
-  - 2. Team
-  - 3. Customers
-  - 4. Projects
-  - 5. Vendors
-  - 6. Personal
-  - 7. Ideas
-  - 8. Attachments
-  - 9. Templates
+  - 00 Unsorted
+  - 01 Customers
+    - _Archive
+    - _Presales
+  - 02 Vendors & Partners
+  - 03 Projects
+    - _Archive
+  - 04 Internal meetings
+  - 05 Ideas & Research
+  - 06 On-call diary
+    - 2026
+  - 07 Attachments
+  - 08 Templates
+  - 09 Archive
 - Settings
   - Editor
     - Disable spellcheck
   - Files and links
-    - Disable "Confirm file deletion"
     - Default location for new notes, In the folder specified below, "New"
     - Default location for new attachments, In the folder specified below, "Attachments"
+    - Disable "Confirm before deleting files"
   - Appearance
-    - Themes, Manage, install "Minimal" by kepano
+    - Themes, Manage, install "Obsidian gruvbox" by insanum
     - Interface font, SN Pro
     - Text font, SN Pro
     - Monospace font, FiraCode Nerd Font Mono
-    - Show tab title bar, disable
 - Delete "Welcome" note
 - Configure Plugins
   - Core
@@ -67,6 +72,10 @@
           - submenu-align
           - fullscreen focus mode
           - workplace fullscreen
+    - Excalidraw
+        - Disable "Display Release Notes after update"
+        - Disable "Show splash screen in new drawings"
+        - Define "Excalidraw folder"
     - File color
       - Add following to the palette from Gruvbox, dark mode & dark text - https://github.com/morhetz/gruvbox
         - Blue (131, 165, 152), yellow (250, 189, 47), red (251, 73, 52), green (184, 187, 38), purple (211, 134, 155), orange (254, 128, 25), aqua (142, 192, 124)
@@ -82,3 +91,10 @@
 - Create Templates, e.g.
   - Default
   - On-call
+
+Review:
+Change application icon to red
+Paste image rename, plugin
+Colorful headings, option
+H1 colour (default red) change to
+Colorful active state, option
