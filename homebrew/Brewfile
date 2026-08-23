@@ -1,14 +1,15 @@
 # terminal environment related packages
 cask "ghostty"
 brew "oh-my-posh"
-brew "tmux"
 
 # cli utilities
 brew "ansible" # enough for casual use
 cask "claude-code"
+brew "dockutil"
 brew "eza"
 brew "git"
 brew "git-delta"
+brew "gh"
 brew "jq"
 brew "neovim"
 brew "nmap"
@@ -16,7 +17,6 @@ brew "mas"
 brew "openssl"
 brew "python3"
 brew "ripgrep"
-brew "thefuck"
 brew "tree"
 brew "watch"
 
@@ -34,3 +34,5 @@ cask "rectangle"
 cask "scroll-reverser"
 cask "spotify"
 cask "topnotch"
+cask "warrensbox/tap/tfswitch"
+cask "zed"
