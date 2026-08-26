@@ -65,8 +65,8 @@ mkdir -p ~/src/github.com && mkdir -p ~/.ssh && mkdir ~/screenshots
 xcode-select --install
 # https clone
 git clone https://github.com/hulkk/dotfiles.git ~/src/github.com/dotfiles
-# ssh clone, after ssh has been configured
-# git clone git@github.com:hulkk/dotfiles.git ~/src/github.com/dotfiles
+# update repository to use ssh, after ssh client has been configured
+git remote set-url origin git@github.com:hulkk/dotfiles.git
 ```
 
 ### install homebrew, script source https://brew.sh
@@ -89,11 +89,6 @@ brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 brew bundle --file=~/src/github.com/dotfiles/homebrew/mas
 ```
 
-### install zimfw, script source https://zimfw.sh
-```bash
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-```
-
 ## configure terminal
 
 ### Enable "Full Disk Access"
@@ -108,6 +103,23 @@ touch ~/.hushlogin
 ```bash
 ln -sf ~/src/github.com/dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
+
+### configure git
+```bash
+ln -sf ~/src/github.com/dotfiles/git/.gitconfig ~/.gitconfig
+```
+
+Create `~/.gitconfig.local` for user-specific settings:
+```bash
+cat > ~/.gitconfig.local << 'EOF'
+[user]
+	name = Your Name
+	email = your.email@example.com
+	signingkey = ~/.ssh/id_ed25519.pub
+EOF
+```
+> **Note**
+> Signing key needs to be added to your account in e.g. GitHub
 
 ### zsh symbolic links
 ```bash
@@ -131,6 +143,46 @@ ln -sf ~/src/github.com/dotfiles/claude/settings.json ~/.claude/settings.json
 ln -sf ~/src/github.com/dotfiles/claude/statusline.sh ~/.claude/statusline.sh
 ```
 
+## configure macos
+### configure dock
+```bash
+# clean
+dockutil --remove 'Apps' --no-restart
+dockutil --remove 'Messages' --no-restart
+dockutil --remove 'Mail' --no-restart
+dockutil --remove 'Maps' --no-restart
+dockutil --remove 'Photos' --no-restart
+dockutil --remove 'FaceTime' --no-restart
+dockutil --remove 'Phone' --no-restart
+dockutil --remove 'Contacts' --no-restart
+dockutil --remove 'Reminders' --no-restart
+dockutil --remove 'Notes' --no-restart
+dockutil --remove 'TV' --no-restart
+dockutil --remove 'Music' --no-restart
+dockutil --remove 'Keynote' --no-restart
+dockutil --remove 'Pages' --no-restart
+dockutil --remove 'Games'  # Last one restarts the Dock
+# add
+dockutil --add /Applications/Ghostty.app --no-restart
+dockutil --add /Applications/1Password.app --no-restart
+dockutil --add /Applications/Spotify.app --no-restart
+dockutil --add /Applications/Obsidian.app --no-restart
+dockutil --add /Applications/Google\ Chrome.app
+# configure
+defaults write com.apple.dock show-recents -bool false
+defaults write com.apple.dock tilesize -int 46
+```
+
+### disable widgets
+```bash
+defaults write com.apple.WindowManager GloballyEnabled -bool false
+defaults write com.apple.WindowManager StandardHideWidgets -bool true
+defaults write com.apple.WindowManager StageManagerHideWidgets -bool true
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
+killall WindowManager
+```
+
 > **Note**
 > rest of the readme is under review
 
@@ -144,23 +196,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```bash
 mkdir -p ~/.config/yamllint && ln -sf ~/src/github.com/dotfiles/yamllint/config ~/.config/yamllint/config
 ```
-
-### configure git
-```bash
-ln -sf ~/src/github.com/dotfiles/git/.gitconfig ~/.gitconfig
-```
-
-Create `~/.gitconfig.local` for user-specific settings:
-```bash
-cat > ~/.gitconfig.local << 'EOF'
-[user]
-	name = Your Name
-	email = your.email@example.com
-	signingkey = ~/.ssh/id_ed25519.pub
-EOF
-```
-> **Note**
-> Signing key needs to be added to your account in e.g. GitHub
 
 
 ### test advanced formatting
