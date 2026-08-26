@@ -1,0 +1,8 @@
+# end of life since July 2025
+# latest python 2 compatible version
+# for legacy environments
+# ansible-core==2.16.*
+
+# supported until May 2027
+# requires python 3.9 from target nodes
+ansible-core==2.20.*
