@@ -143,46 +143,6 @@ ln -sf ~/src/github.com/dotfiles/claude/settings.json ~/.claude/settings.json
 ln -sf ~/src/github.com/dotfiles/claude/statusline.sh ~/.claude/statusline.sh
 ```
 
-## configure macos
-### configure dock
-```bash
-# clean
-dockutil --remove 'Apps' --no-restart
-dockutil --remove 'Messages' --no-restart
-dockutil --remove 'Mail' --no-restart
-dockutil --remove 'Maps' --no-restart
-dockutil --remove 'Photos' --no-restart
-dockutil --remove 'FaceTime' --no-restart
-dockutil --remove 'Phone' --no-restart
-dockutil --remove 'Contacts' --no-restart
-dockutil --remove 'Reminders' --no-restart
-dockutil --remove 'Notes' --no-restart
-dockutil --remove 'TV' --no-restart
-dockutil --remove 'Music' --no-restart
-dockutil --remove 'Keynote' --no-restart
-dockutil --remove 'Pages' --no-restart
-dockutil --remove 'Games'  # Last one restarts the Dock
-# add
-dockutil --add /Applications/Ghostty.app --no-restart
-dockutil --add /Applications/1Password.app --no-restart
-dockutil --add /Applications/Spotify.app --no-restart
-dockutil --add /Applications/Obsidian.app --no-restart
-dockutil --add /Applications/Google\ Chrome.app
-# configure
-defaults write com.apple.dock show-recents -bool false
-defaults write com.apple.dock tilesize -int 46
-```
-
-### disable widgets
-```bash
-defaults write com.apple.WindowManager GloballyEnabled -bool false
-defaults write com.apple.WindowManager StandardHideWidgets -bool true
-defaults write com.apple.WindowManager StageManagerHideWidgets -bool true
-defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
-
-killall WindowManager
-```
-
 > **Note**
 > rest of the readme is under review
 
