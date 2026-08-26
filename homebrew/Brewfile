@@ -3,7 +3,6 @@ cask "ghostty"
 brew "oh-my-posh"
 
 # cli utilities
-brew "ansible" # enough for casual use
 cask "claude-code"
 brew "dockutil"
 brew "eza"
