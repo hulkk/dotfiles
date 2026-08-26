@@ -19,6 +19,7 @@ brew "python3"
 brew "ripgrep"
 brew "tree"
 brew "watch"
+brew "zimfw"
 
 # fonts
 cask "font-fira-code-nerd-font"
