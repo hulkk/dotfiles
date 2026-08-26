@@ -3,7 +3,6 @@ cask "ghostty"
 brew "oh-my-posh"
 
 # cli utilities
-brew "ansible" # enough for casual use
 cask "claude-code"
 brew "dockutil"
 brew "eza"
@@ -19,6 +18,7 @@ brew "python3"
 brew "ripgrep"
 brew "tree"
 brew "watch"
+brew "zimfw"
 
 # fonts
 cask "font-fira-code-nerd-font"
