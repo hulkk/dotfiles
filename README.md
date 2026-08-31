@@ -80,6 +80,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file=~/src/github.com/dotfiles/homebrew/Brewfile
 ```
 
+### install pip packages
+```bash
+pip3 install -r ~/src/github.com/dotfiles/python/requirements.txt
+```
+
 ### install mac appstore packages using brewfile
 
 > **Note**
