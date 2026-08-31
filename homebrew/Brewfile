@@ -34,5 +34,5 @@ cask "rectangle"
 cask "scroll-reverser"
 cask "spotify"
 cask "topnotch"
-cask "warrensbox/tap/tfswitch" trusted: true
+cask "warrensbox/tap/tfswitch", trusted: true
 cask "zed"
