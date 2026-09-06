@@ -22,7 +22,6 @@ brew "zimfw"
 
 # fonts
 cask "font-fira-code-nerd-font"
-cask "font-hack"
 cask "font-sn-pro"
 
 # applications
