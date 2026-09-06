@@ -142,6 +142,12 @@ ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/lualine.lua ~/.config/nvim/lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gruvbox.lua ~/.config/nvim/lua/plugins/gruvbox.lua
 ln -sf ~/src/github.com/dotfiles/nvim/lua/plugins/gitsigns.lua ~/.config/nvim/lua/plugins/gitsigns.lua
 ```
+
+### zed symbolic link
+```bash
+ln -sf ~/src/github.com/dotfiles/zed/settings.json ~/.config/zed/settings.json
+
+```
 ### claude symbolic links
 ```bash
 ln -sf ~/src/github.com/dotfiles/claude/settings.json ~/.claude/settings.json
